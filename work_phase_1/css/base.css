@@ -1,0 +1,61 @@
+/* Base Styles - Global Styles*/
+
+/* Color variables (from Style Guide) */
+:root {
+    --color-primary: #999ac6; /* Primary color - Highlights, H1 */
+    --color-secondary: #0b3954; /* Secondary color - Highlights, H4 & H5 */
+    --text-color: #222; /* Default text color */
+    --background-color: #fcfafa; /* Page background */
+}
+
+/* Global font and base text settings */
+body {
+    font-family: "Urbanist", Arial, sans-serif; /* Font family from Style Guide */
+    font-size: 1rem; /* Normal text: 1rem = 16px */
+    line-height: 1.5; /* Global line height: 1.5 */
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 0;
+}
+
+/* Headings and paragraph spacing & line height */
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+    line-height: 1.5;
+    margin: 0 0 0.5em;
+    font-weight: 400; /* Default normal weight, overridden for h4/h5 */
+}
+
+/* Heading sizes and colors (from Style Guide) */
+h1 {
+    font-size: 4rem; /* 64px */
+    color: var(--color-primary);
+}
+
+h2 {
+    font-size: 3rem; /* 48px */
+}
+
+h3 {
+    font-size: 1.5rem; /* 24px */
+}
+
+h4 {
+    font-size: 1rem; /* 16px */
+    font-weight: 700; /* Bold */
+    color: var(--color-secondary);
+}
+
+h5 {
+    font-size: 0.75rem; /* 12px */
+    font-weight: 700; /* Bold */
+    color: var(--color-secondary);
+}
+
+p {
+    font-size: 1rem; /* Paragraph default size */
+}
