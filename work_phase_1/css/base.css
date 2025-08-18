@@ -4,7 +4,9 @@
 :root {
     --color-primary: #999ac6; /* Primary color - Highlights, H1 */
     --color-secondary: #0b3954; /* Secondary color - Highlights, H4 & H5 */
-    --text-color: #222; /* Default text color */
+    --color-dark: #274e2d;
+    --color-bright: #e56051;
+    --text-color: #2c670e; /* Default text color */
     --background-color: #fcfafa; /* Page background */
 }
 
