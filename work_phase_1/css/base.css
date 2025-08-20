@@ -4,8 +4,9 @@
 :root {
     --color-primary: #999ac6; /* Primary color - Highlights, H1 */
     --color-secondary: #0b3954; /* Secondary color - Highlights, H4 & H5 */
-    --color-dark: #274e2d;
-    --color-bright: #e56051;
+    --color-light: #FFF9EC; /* Light color for card background */
+    --color-dark: #798071; /* Dark color for subdued elements */
+    --color-bright: #FF5A5F; /* Bright color for buttons and warning text */
     --text-color: #2c670e; /* Default text color */
     --background-color: #fcfafa; /* Page background */
 }
