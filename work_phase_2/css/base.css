@@ -1,0 +1,28 @@
+body {
+    color: var(--text-color); /* color applies to text */
+    background-color: var(--background-color);
+    font-family: 'Nunito', sans-serif; /* new */
+    color: var(--text-color);
+    background-color: var(--background-color);
+}
+
+/* Typography (Using Golden Ratio) */
+h1 {
+    font-size: 4.2rem; /* 2.6 x 1.618 rounded */
+    color: var(--primary-color);
+}
+
+h2 {
+    font-size: 2.6rem; /* 1.6 x 1.618 rounded */
+    font-weight: 700; /* Bold */
+}
+
+h3 {
+    font-size: 1.6rem; /* 1 x 1.618 rounded */
+    font-weight: 700; /* Bold */
+}
+
+p {
+    font-size: 1rem; /* generally 16px Paragraph default size */
+}
+
