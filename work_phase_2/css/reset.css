@@ -73,7 +73,7 @@ html, body {
     width: 100%;
     background: none;
     font-size: 100%;
-    line-height: 1;
+    line-height: 1.5;
     scroll-behavior: auto;
     overscroll-behavior: none;
 }

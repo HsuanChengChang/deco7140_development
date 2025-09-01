@@ -2,7 +2,12 @@
 /* Base Highlight Style */
 .interactive-highlight {
     position: relative; /* Allows for positioning of extra elements (e.g., tooltip numbers) */
-    background-color: rgba(255, 215, 0, 0.3); /* Light yellow highlight with 30% transparency */
+    background-color: rgba(
+        255,
+        215,
+        0,
+        0.3
+    ); /* Light yellow highlight with 30% transparency */
     cursor: pointer; /* Changes cursor to indicate interactivity */
     padding: 2px 5px; /* Adds small space inside the highlight for better readability */
     border-radius: 5px; /* Rounds the corners slightly for a softer look */
@@ -38,4 +43,155 @@
 .interactive-highlight:focus::after,
 .interactive-highlight:active::after {
     opacity: 1;
+}
+
+/* Value cards */
+.value-box {
+    /* Layout & spacing */
+    display: block;
+    padding: 1rem 1.25rem; /* Inner space */
+    margin: 0.75rem 0; /* Space between cards */
+
+    /* Visuals */
+    background: #fff; /* Card surface on light page */
+    color: var(--text-color);
+    border: 2px solid rgba(52, 152, 219, 0.35); /* Soft outline using --secondary-color */
+    border-radius: 14px; /* Rounded corners */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05); /* Subtle lift */
+
+    /* Interaction */
+    transition: border-color 0.2s ease, box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+/* Emphasise the title inside each card */
+.value-box h3 {
+    margin: 0; /* Remove default gap */
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--primary-color); /* Dark blue heading */
+    line-height: 1.35;
+}
+
+/* Hover / focus states for mouse and keyboard */
+.value-box:hover,
+.value-box:focus-within {
+    border-color: var(--secondary-color); /* Bright blue outline */
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    transform: translateY(-1px);
+}
+
+/* Optional: a left accent bar for extra visual cue (comment out if you prefer full box only) */
+.value-box {
+    position: relative;
+}
+.value-box::before {
+    content: "";
+    position: absolute;
+    left: -2px; /* Sits on top of the border */
+    top: -2px;
+    bottom: -2px;
+    width: 6px;
+    border-radius: 12px 0 0 12px;
+    background: var(--secondary-color);
+    opacity: 0.75; /* Softer accent */
+    pointer-events: none;
+}
+
+/* Make the last “empty/add more” style look lighter if you use that pattern */
+.value-box.is-placeholder h3 {
+    color: var(--text-color);
+    font-weight: 500;
+    opacity: 0.8;
+    font-style: italic;
+}
+
+
+/* Flip Cards - Client Needs analysis*/
+/* Mobile-First Grid (Default: 1 Column) */
+.flip-card-container {
+    display: grid;
+    grid-template-columns: 1fr; /* Mobile: Single column */
+    gap: 20px;
+    padding: 20px;
+}
+/* 3 columns on larger screens */
+@media (min-width: 768px) {
+    .flip-card-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+/*Flip Card Base Styles */
+.flip-card {
+    width: 100%;
+    height: 180px;
+    perspective: 1000px; /* Adds depth to make the flip look 3D */
+    cursor: pointer; /* Adds indication of interactivity */
+    outline: none; /* Removes default focus outline */
+}
+
+/* Flip Card Inner - the rotating part of the card */
+.flip-card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d; /* creates a 3D space */
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Front & Back Common Styles */
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex; /* we are using flex inside our cards */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 1rem;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
+
+/* set the colour for the front */
+.flip-card-front {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* set the colour for the back */
+.flip-card-back {
+    background: var(--secondary-color);
+    color: white;
+    transform: rotateY(180deg);
+}
+
+
+
+/* Flip Animation (Desktop Hover) */
+@media (hover: hover) {
+    .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+    }
+}
+
+/* Mobile-Friendly Flip (Focus & Tap) */
+.flip-card:focus .flip-card-inner,
+.flip-card:active .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front strong,
+.flip-card-back strong {
+  font-weight: 700;   /* 強制粗體 */
+}
+
+.flip-card-front p:first-child,
+.flip-card-back p:first-child {
+  margin-bottom: 12px;  /* 多留一行間隔 */
 }
