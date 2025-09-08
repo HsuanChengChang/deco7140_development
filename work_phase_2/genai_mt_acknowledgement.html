@@ -13,18 +13,88 @@
         <title>Work Phase 2</title>
     </head>
     <body>
+        <nav class="navbar">
+            <!-- Button for toggling menu on small screens -->
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                ☰
+            </button>
+
+            <!-- Navigation menu -->
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="clients_needs_analysis.html">Client Needs</a></li>
+                <li><a href="user_stories.html">User Stories</a></li>
+                <li>
+                    <a
+                        href="accessibility_assessment.html"
+                        aria-current="Accessibility"
+                        >Accessibility</a
+                    >
+                </li>
+                <li><a href="ethics_assessment.html">Ethics</a></li>
+                <li>
+                    <a href="genai_mt_acknowledgement.html"
+                        >GenAI Acknowledgement</a
+                    >
+                </li>
+            </ul>
+        </nav>
         <div class="container">
-            <header>
-                <h1>Chang's Work Phase 2</h1>
-            </header>
-            <section>
-                <h2>What's in this website?</h2>
-                <p>
-                    This is the second phase of my work. I will be completing A2
-                    Design Research during this page. But all of that assessment
-                    will be created as pages in this website.
-                </p>
+            <section class="genai-acknowledgement">
+                <header>
+                    <h2>GenAI Acknowledgement</h2>
+                    <p>
+                        In preparing this assignment, I used Generative AI tools
+                        (e.g., ChatGPT) to assist my work. The following
+                        outlines how AI was applied, its limitations, and my
+                        responsibility for the final submission.
+                    </p>
+                </header>
+
+                <div class="assessment-block">
+                    <h3>How AI Assisted</h3>
+                    <ul>
+                        <li>
+                            Brainstorming and drafting interview questions for
+                            user research.
+                        </li>
+                        <li>
+                            Summarising lecture content on Accessibility and
+                            Ethics.
+                        </li>
+                        <li>
+                            Rephrasing text into clearer and more concise
+                            English.
+                        </li>
+                        <li>
+                            Providing examples of HTML, CSS, and JavaScript
+                            structures.
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="assessment-block">
+                    <h3>Limitations</h3>
+                    <p>
+                        AI outputs may contain inaccuracies or irrelevant
+                        details. I critically evaluated all suggestions,
+                        cross-checked them against official course materials,
+                        and revised them to suit the assignment context.
+                    </p>
+                </div>
+
+                <div class="assessment-block">
+                    <h3>Responsibility</h3>
+                    <p>
+                        I acknowledge full responsibility for the final
+                        submission. All AI-assisted outputs were reviewed,
+                        rewritten, and integrated by me to ensure academic
+                        integrity and originality.
+                    </p>
+                </div>
             </section>
         </div>
+        <!--JavaScript Linking -->
+        <script type="module" src="js/genai.js"></script>
     </body>
 </html>

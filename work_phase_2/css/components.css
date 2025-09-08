@@ -17,7 +17,7 @@
 /* Change Background Color on Hover (Desktop only) */
 @media (hover: hover) {
     .interactive-highlight:hover {
-        background-color: rgba(255, 215, 0, 0.8);
+        background-color: var(--hightlight-color);
     }
 }
 /* Change Background Color on Tap (Mobile) */
@@ -321,4 +321,44 @@
 .interactive-highlight-stories:active::before {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Accessibility Assessment - Indentation and Block Styling */
+.accessibility-assessment {
+    margin: 2rem 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.accessibility-assessment h2,
+.accessibility-assessment h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: #1e3a56;
+}
+
+/* Q&A blocks styled like the User Stories */
+.assessment-block {
+    background-color: #f2f8ff; /* light blue shade */
+    border-left: 4px solid #1e3a56; /* accent line */
+    padding: 1rem 1.25rem;
+    margin: 1rem 0;
+    border-radius: 6px;
+}
+
+/* List inside blocks */
+.assessment-block ul {
+    margin: 0.5rem 0 0.5rem 1.5rem; /* indentation for bullets */
+    padding: 0;
+}
+
+.assessment-block li {
+    margin-bottom: 0.5rem;
+}
+
+.ethics-assessment h2,
+.ethics-assessment h3 {
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: #1e3a56;
 }

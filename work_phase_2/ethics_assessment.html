@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- CSS Linking -->
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/base.css" />
+        <link rel="stylesheet" href="css/layout.css" />
+        <link rel="stylesheet" href="css/components.css" />
+
+        <title>Work Phase 2</title>
+    </head>
+    <body>
+        <nav class="navbar">
+            <!-- Button for toggling menu on small screens -->
+            <button class="menu-toggle" aria-label="Toggle navigation">
+                ☰
+            </button>
+
+            <!-- Navigation menu -->
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="clients_needs_analysis.html">Client Needs</a></li>
+                <li><a href="user_stories.html">User Stories</a></li>
+                <li>
+                    <a
+                        href="accessibility_assessment.html"
+                        aria-current="Accessibility"
+                        >Accessibility</a
+                    >
+                </li>
+                <li><a href="ethics_assessment.html">Ethics</a></li>
+                <li>
+                    <a href="genai_mt_acknowledgement.html"
+                        >GenAI Acknowledgement</a
+                    >
+                </li>
+            </ul>
+        </nav>
+        <div class="container">
+            <section class="ethics-assessment">
+                <header>
+                    <h2>Ethics Assessment — Newsletter Subscription Feature</h2>
+                    <p>
+                        This assessment identifies potential harms arising from
+                        the newsletter subscription feature, maps them to ACS
+                        values and principles, and proposes practical mitigation
+                        options.
+                    </p>
+                </header>
+
+                <!-- Additional Requirement context -->
+                <div class="assessment-block">
+                    <h3>Context</h3>
+                    <ul>
+                        <li>
+                            Client request: add a third-party newsletter
+                            subscription/plugin.
+                        </li>
+                        <li>
+                            Goal: grow community engagement while protecting
+                            users’ rights and interests.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Step 2: Potential Harms -->
+                <div class="assessment-block">
+                    <h3>Potential Harms</h3>
+                    <ul>
+                        <li>
+                            <strong>Unexpected data collection</strong> —
+                            collecting more than email (e.g., name, location,
+                            device IDs) without clear notice.
+                        </li>
+                        <li>
+                            <strong>Secondary use</strong> — data used for
+                            advertising/profiling beyond the subscription
+                            purpose.
+                        </li>
+                        <li>
+                            <strong>Security risks</strong> — breach, weak
+                            consent logs, poor deletion practices.
+                        </li>
+                        <li>
+                            <strong>Dark patterns</strong> — pre-ticked boxes,
+                            confusing opt-out, bundled consent.
+                        </li>
+                        <li>
+                            <strong>Exclusion</strong> — inaccessible signup
+                            (keyboard, labels, error messages) blocking some
+                            users.
+                        </li>
+                        <li>
+                            <strong>Reputation harm</strong> — loss of trust if
+                            users feel tracked or misled.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Step 3: ACS Values & Principles → Solutions -->
+                <div class="assessment-block">
+                    <h3>ACS Values &amp; Principles → Solutions</h3>
+                    <ul>
+                        <li>
+                            <em>Public Interest / Quality of Life</em> →
+                            <strong
+                                >Purpose limitation &amp; data
+                                minimisation</strong
+                            >: collect only email by default; make extra fields
+                            optional and clearly justified.
+                        </li>
+                        <li>
+                            <em>Honesty / Transparency</em> →
+                            <strong>Clear consent</strong>: plain-language
+                            notice (what, why, how long, who can access), no
+                            pre-ticked boxes, separate marketing consent.
+                        </li>
+                        <li>
+                            <em>Competence / Professionalism</em> →
+                            <strong>Security &amp; lifecycle</strong>: TLS,
+                            hashed opt-in logs, role-based access, retention
+                            policy, easy unsubscribe, verified deletion.
+                        </li>
+                        <li>
+                            <em>Public Interest / Fairness</em> →
+                            <strong>Accessibility</strong>: keyboard operable
+                            form, visible focus, labels &amp; error text, ARIA
+                            where appropriate.
+                        </li>
+                        <li>
+                            <em>Quality of Life / Public Interest</em> →
+                            <strong>Third-party governance</strong>: evaluate
+                            vendor (data location, sub-processors, DPIA),
+                            contract clauses on use, breach notice, deletion on
+                            request.
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Step 4: Navigating Tensions -->
+                <div class="assessment-block">
+                    <h3>Navigating Tensions (Options for the Client)</h3>
+                    <ul>
+                        <li>
+                            <strong
+                                >Option A — Minimal, privacy-first
+                                (recommended)</strong
+                            >: email-only, double opt-in, no tracking pixels,
+                            first-party send; slower list growth but highest
+                            trust.
+                        </li>
+                        <li>
+                            <strong>Option B — Vendor with controls</strong>:
+                            use a reputable ESP with granular consent, analytics
+                            off by default; moderate growth with safeguards.
+                        </li>
+                        <li>
+                            <strong>Option C — Growth-focused</strong>: richer
+                            profiling and automations; only if explicit,
+                            separate consent and DPIA completed; higher
+                            risk/trade-offs.
+                        </li>
+                    </ul>
+                    <p>
+                        <em>Rationale:</em> There is no single “correct” answer
+                        in ethics; document choices, user benefits, and
+                        mitigations tied to ACS principles.
+                    </p>
+                </div>
+
+                <!-- What we will implement -->
+                <div class="assessment-block">
+                    <h3>Chosen Approach &amp; Implementation</h3>
+                    <ul>
+                        <li>
+                            Default to <strong>Option A</strong>; revisit in
+                            future after user feedback and DPIA if expanding
+                            scope.
+                        </li>
+                        <li>
+                            Consent copy: “We use your email only to send our
+                            newsletter. No ads. Unsubscribe anytime.”
+                        </li>
+                        <li>
+                            Form: required <code>email</code> only; optional
+                            fields collapsed with clear purpose text.
+                        </li>
+                        <li>
+                            Controls: double opt-in, one-click unsubscribe,
+                            delete-on-request within 30 days.
+                        </li>
+                        <li>
+                            Security: access logs, quarterly review, vendor SAQ
+                            if third-party used.
+                        </li>
+                        <li>
+                            Accessibility: keyboard operable, labels, error
+                            messages, focus styles (aligns with WCAG 2.1 AA).
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Step 5: What goes on this page -->
+                <div class="assessment-block">
+                    <h3>What This Page Demonstrates</h3>
+                    <ul>
+                        <li>
+                            The potential harms list and how they map to ACS
+                            values/principles.
+                        </li>
+                        <li>
+                            The options presented to the client and the
+                            rationale for our chosen approach.
+                        </li>
+                        <li>
+                            Concrete safeguards we will implement in the
+                            subscription flow.
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </div>
+        <!--JavaScript Linking -->
+        <script type="module" src="js/ethics.js"></script>
+    </body>
+</html>
