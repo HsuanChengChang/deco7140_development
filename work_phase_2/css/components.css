@@ -207,27 +207,118 @@
 }
 
 .response ul {
-  list-style: none;        /* Turn off the browser's default bullets */
-  padding-left: 0;         /* Remove default left padding */
-  margin: .5rem 0;         /* Add vertical spacing above and below */
+    list-style: none; /* Turn off the browser's default bullets */
+    padding-left: 0; /* Remove default left padding */
+    margin: 0.5rem 0; /* Add vertical spacing above and below */
 }
 
 .response li {
-  position: relative;      /* Allow positioning of the custom marker */
-  padding-left: 1.75rem;   /* Make space on the left for the carrot */
+    position: relative; /* Allow positioning of the custom marker */
+    padding-left: 1.75rem; /* Make space on the left for the carrot */
 }
 
 .response li::before {
-  content: "🥕";           /* Use a carrot emoji as the custom bullet */
-  position: absolute;      /* Position it relative to the list item */
-  left: 0; top: 0.1em;     /* Adjust placement for alignment */
-  font-size: 1.2em;        /* Make the carrot slightly larger */
-  line-height: 1;          /* Keep consistent spacing */
+    content: "🥕"; /* Use a carrot emoji as the custom bullet */
+    position: absolute; /* Position it relative to the list item */
+    left: 0;
+    top: 0.1em; /* Adjust placement for alignment */
+    font-size: 1.2em; /* Make the carrot slightly larger */
+    line-height: 1; /* Keep consistent spacing */
 }
 
 /* using a colour variable but changing the opacity/transparency */
 .response {
     border-left: 2px solid var(--secondary-color);
     font-style: italic;
-    background-color: color-mix(in srgb, var(--secondary-color) 10%, transparent); /* color variable transparency */
+    background-color: color-mix(
+        in srgb,
+        var(--secondary-color) 10%,
+        transparent
+    ); /* color variable transparency */
+}
+
+/* INTERACTIVE HIGHLIGHTING — USER STORIES */
+.interactive-highlight-stories {
+    position: relative; /* anchor for tooltip */
+    background-color: rgba(255, 215, 0, 0.3); /* yellow highlight */
+    cursor: pointer;
+    padding: 2px 5px;
+    border-radius: 5px;
+    transition: background 0.25s ease;
+}
+
+/* Stronger highlight on hover / focus */
+@media (hover: hover) {
+    .interactive-highlight-stories:hover {
+        background-color: rgba(255, 215, 0, 0.8);
+    }
+}
+.interactive-highlight-stories:focus,
+.interactive-highlight-stories:active {
+    background-color: rgba(255, 215, 0, 0.8);
+}
+
+/* Tooltip bubble (blue box) */
+.interactive-highlight-stories::after {
+    content: attr(data-userstory); /* show the user story text */
+    position: absolute;
+    left: 0;
+    top: 120%; /* place below the span */
+    z-index: 20;
+
+    /* Visual style */
+    background: #0066cc; /* solid blue background */
+    color: #fff;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    font-weight: 500;
+    border-radius: 8px;
+    padding: 0.8rem 1rem;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+
+    /* Wider shape */
+    min-width: 240px; /* set a wider minimum */
+    max-width: 380px; /* prevent it from being too wide */
+    white-space: normal; /* allow wrapping */
+
+    /* Animation / hidden state */
+    opacity: 0;
+    transform: translateY(-6px);
+    pointer-events: none;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+/* Tooltip arrow */
+.interactive-highlight-stories::before {
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: calc(120% - 6px);
+    width: 12px;
+    height: 12px;
+    background: #0066cc;
+    transform: rotate(45deg);
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.15);
+    border-radius: 2px;
+    opacity: 0;
+    transition: opacity 0.25s ease, transform 0.25s ease;
+    z-index: 19;
+}
+
+/* Show tooltip on desktop hover */
+@media (hover: hover) {
+    .interactive-highlight-stories:hover::after,
+    .interactive-highlight-stories:hover::before {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Show tooltip on tap / focus (mobile + accessibility) */
+.interactive-highlight-stories:focus::after,
+.interactive-highlight-stories:active::after,
+.interactive-highlight-stories:focus::before,
+.interactive-highlight-stories:active::before {
+    opacity: 1;
+    transform: translateY(0);
 }
