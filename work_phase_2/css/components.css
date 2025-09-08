@@ -13,6 +13,19 @@
     border-radius: 5px; /* Rounds the corners slightly for a softer look */
     transition: background 0.3s ease; /* Smooth transition effect when background changes */
 }
+
+/* Change Background Color on Hover (Desktop only) */
+@media (hover: hover) {
+    .interactive-highlight:hover {
+        background-color: rgba(255, 215, 0, 0.8);
+    }
+}
+/* Change Background Color on Tap (Mobile) */
+.interactive-highlight:active,
+.interactive-highlight:focus {
+    background-color: rgba(255, 215, 0, 0.8);
+}
+
 /* Tooltip Styling for Highlighted Text */
 .interactive-highlight::after {
     content: attr(data-card); /* See the explanation */
@@ -30,7 +43,7 @@
     justify-content: center; /* Horizontally centers the text inside the tooltip */
     border-radius: 10%; /* Creates rounded corners */
     opacity: 0; /* Initially hides the tooltip */
-    transition: opacity 0.3s ease; /* Smoothly fades in the tooltip by changing the opacity */
+    transition: opacity 1s ease; /* Smoothly fades in the tooltip by changing the opacity */
 }
 /* Show Number on Hover (Desktop) */
 @media (hover: hover) {
@@ -106,7 +119,6 @@
     font-style: italic;
 }
 
-
 /* Flip Cards - Client Needs analysis*/
 /* Mobile-First Grid (Default: 1 Column) */
 .flip-card-container {
@@ -121,7 +133,6 @@
         grid-template-columns: repeat(3, 1fr);
     }
 }
-
 
 /*Flip Card Base Styles */
 .flip-card {
@@ -142,7 +153,8 @@
 }
 
 /* Front & Back Common Styles */
-.flip-card-front, .flip-card-back {
+.flip-card-front,
+.flip-card-back {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -155,7 +167,7 @@
     border-radius: 10px;
     padding: 10px;
     font-size: 1rem;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 /* set the colour for the front */
@@ -170,8 +182,6 @@
     color: white;
     transform: rotateY(180deg);
 }
-
-
 
 /* Flip Animation (Desktop Hover) */
 @media (hover: hover) {
@@ -188,10 +198,36 @@
 
 .flip-card-front strong,
 .flip-card-back strong {
-  font-weight: 700;   /* 強制粗體 */
+    font-weight: 700; /* */
 }
 
 .flip-card-front p:first-child,
 .flip-card-back p:first-child {
-  margin-bottom: 12px;  /* 多留一行間隔 */
+    margin-bottom: 12px; /*  */
+}
+
+.response ul {
+  list-style: none;        /* Turn off the browser's default bullets */
+  padding-left: 0;         /* Remove default left padding */
+  margin: .5rem 0;         /* Add vertical spacing above and below */
+}
+
+.response li {
+  position: relative;      /* Allow positioning of the custom marker */
+  padding-left: 1.75rem;   /* Make space on the left for the carrot */
+}
+
+.response li::before {
+  content: "🥕";           /* Use a carrot emoji as the custom bullet */
+  position: absolute;      /* Position it relative to the list item */
+  left: 0; top: 0.1em;     /* Adjust placement for alignment */
+  font-size: 1.2em;        /* Make the carrot slightly larger */
+  line-height: 1;          /* Keep consistent spacing */
+}
+
+/* using a colour variable but changing the opacity/transparency */
+.response {
+    border-left: 2px solid var(--secondary-color);
+    font-style: italic;
+    background-color: color-mix(in srgb, var(--secondary-color) 10%, transparent); /* color variable transparency */
 }

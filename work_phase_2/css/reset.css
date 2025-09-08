@@ -19,10 +19,7 @@
     animation: none !important;
 }
 
-/* Remove default list styles */
-ol, ul, menu {
-    list-style: none;
-}
+
 
 /* Remove default quotes */
 blockquote, q {
