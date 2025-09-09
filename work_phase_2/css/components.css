@@ -17,7 +17,7 @@
 /* Change Background Color on Hover (Desktop only) */
 @media (hover: hover) {
     .interactive-highlight:hover {
-        background-color: var(--hightlight-color);
+        background-color: rgba(255, 215, 0, 0.8);
     }
 }
 /* Change Background Color on Tap (Mobile) */
