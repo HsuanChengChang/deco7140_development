@@ -1,50 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <meta charset="UTF-8" />
+        <title>Value Box Demo</title>
         <style>
-            a {
-                background-color: blue;
+            :root {
+                --secondary-color: #3b82f6; /* Bright blue accent */
+                --text-color: #333;
             }
-            h1 {
-                border: 4px dashed red;
-            }
-            footer {
-                color: yellow;
-                text-align: left;
-            }
-            section {
+
+            body {
+                font-family: sans-serif;
+                background: #f9f9f9;
+                padding: 2rem;
                 display: flex;
-                gap: 20px;
-                justify-content: center;
+                gap: 2rem;
             }
+
+            .value-box {
+                position: relative; /* Needed for ::before positioning */
+                width: 220px;
+                padding: 1rem;
+                border: 2px solid #ddd;
+                border-radius: 12px;
+                background: white;
+                transition: 0.3s;
+            }
+
+            /* Accent bar on the left side */
+            .value-box::before {
+                content: "";
+                position: absolute;
+                left: -2px; /* sits slightly over the border */
+                top: -2px;
+                bottom: -2px;
+                width: 6px;
+                border-radius: 12px 0 0 12px;
+                background: var(--secondary-color);
+                opacity: 0.75;
+                pointer-events: none;
+            }
+
+            /* Hover/focus effect */
+            .value-box:hover,
+            .value-box:focus-within {
+                border-color: var(--secondary-color);
+                box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+                transform: translateY(-1px);
+            }
+
         </style>
-        <title>My Portfolio</title>
     </head>
     <body>
-        <header>
-            <h1>My Awesome Portfolio Website!</h1>
-            <nav>
-                <a href="#">Project 1</a>
-                <a href="#">Project 2</a>
-            </nav>
-        </header>
+        <!-- Normal Value Box -->
+        <div class="value-box">
+            <h3>Community Engagement</h3>
+            <p>Users can share their stories and connect with others.</p>
+        </div>
 
-        <main>
-            <h2>Projects</h2>
-            <section>
-                <figure>
-                    <img src="p1.jpg" alt="Project 1 image" />
-                    <a href="#">Project 1</a>
-                </figure>
-                <figure>
-                    <img src="p2.jpg" alt="Project 2 image" />
-                    <a href="#">Project 2</a>
-                </figure>
-            </section>
-        </main>
-
-        <footer>
-            <p>©2025 All rights reserved</p>
-        </footer>
+        <!-- Placeholder Value Box -->
+        <div class="value-box is-placeholder">
+            <h3>Add new value…</h3>
+        </div>
     </body>
 </html>

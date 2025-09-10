@@ -11,7 +11,7 @@
     cursor: pointer; /* Changes cursor to indicate interactivity */
     padding: 2px 5px; /* Adds small space inside the highlight for better readability */
     border-radius: 5px; /* Rounds the corners slightly for a softer look */
-    transition: background 0.3s ease; /* Smooth transition effect when background changes */
+    transition: background-color 1.0s ease; /* Smooth transition effect when background changes */
 }
 
 /* Change Background Color on Hover (Desktop only) */
@@ -43,7 +43,7 @@
     justify-content: center; /* Horizontally centers the text inside the tooltip */
     border-radius: 10%; /* Creates rounded corners */
     opacity: 0; /* Initially hides the tooltip */
-    transition: opacity 1s ease; /* Smoothly fades in the tooltip by changing the opacity */
+    transition: opacity 0.5s ease; /* Smoothly fades in the tooltip by changing the opacity */
 }
 /* Show Number on Hover (Desktop) */
 @media (hover: hover) {
@@ -119,7 +119,7 @@
     font-style: italic;
 }
 
-/* Flip Cards - Client Needs analysis*/
+/*--------- Flip Cards - Client Needs analysis -----------*/
 /* Mobile-First Grid (Default: 1 Column) */
 .flip-card-container {
     display: grid;
@@ -176,7 +176,7 @@
     color: white;
 }
 
-/* set the colour for the back */
+/*---- set the transform 180 for the card and colour --------*/
 .flip-card-back {
     background: var(--secondary-color);
     color: white;
@@ -205,6 +205,9 @@
 .flip-card-back p:first-child {
     margin-bottom: 12px; /*  */
 }
+
+
+/*----- response section with carrot bullets ----*/
 
 .response ul {
     list-style: none; /* Turn off the browser's default bullets */
