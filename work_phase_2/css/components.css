@@ -243,7 +243,7 @@
 /* INTERACTIVE HIGHLIGHTING — USER STORIES */
 .interactive-highlight-stories {
     position: relative; /* anchor for tooltip */
-    background-color: rgba(255, 215, 0, 0.3); /* yellow highlight */
+    background-color: red; /* yellow highlight */
     cursor: pointer;
     padding: 2px 5px;
     border-radius: 5px;
