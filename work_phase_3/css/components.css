@@ -1,0 +1,102 @@
+/* MENUS */
+/*====== Default display: show mobile nav, hide desktop nav =======*/
+#nav-desktop {
+    display: none; /* Desktop nav is hidden on small screens */
+}
+
+#nav-mobile {
+    display: block; /* Mobile nav is visible on small screens */
+}
+
+/*====== Screens (768px and above), show desktop nav and hide mobile nav ======*/
+@media screen and (min-width: 768px) {
+    #nav-desktop {
+        display: block; /* Show desktop nav */
+        background-color: var(--secondary-color);
+    }
+
+    #nav-mobile {
+        display: none; /* Hide mobile nav */
+    }
+}
+
+/*====== make both Mobile and Desktop menu horizontal ======*/
+nav ul {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: row; /* Arrange items in a row */
+    justify-content: space-around; /* Even spacing around items */
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+
+
+/*====== Mobile menu position and color ======*/
+#nav-mobile {
+    position: fixed;  /*-fix the position-*/
+    bottom: 0;        /*-put the bottom-*/
+    width: 100vw;
+    background-color: var(--secondary-color);
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    height: calc(
+        var(--nav-mobile-h) + env(safe-area-inset-bottom)
+    ); /* iOS notch safe */
+}
+
+/* Mobile menu bottom decoration*/
+#nav-mobile ul li a {
+    display: block;
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+/*====== Desktop menu position and color ======*/
+#nav-desktop ul li a {
+    display: block;
+    position: relative;
+    padding: 0.6rem 0.9rem;
+    font-size: 1.25rem;
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 8px;
+    transition: color 0.18s ease, background-color 0.18s ease,
+                box-shadow 0.18s ease, transform 0.18s ease;
+}
+/*======= Desktop menu micro-interaction ==========*/
+/* define the effect after hover underline grows from center */
+#nav-desktop ul li a::after {
+    content: "";                     /* Create a pseudo-element (empty box) */
+    position: absolute;              /* Position it relative to the link */
+    left: 50%;                       /* Place its anchor point at the horizontal center */
+    bottom: 6px;                     /* Distance from the text baseline */
+    width: 0%;                       /* Start with zero width (invisible) */
+    height: 2px;                     /* Thin rectangle, visually like an underline */
+    background: currentColor;        /* Use the same color as the text */
+    transform: translateX(-50%);     /* Shift left by 50% to keep it centered */
+    transition: width 0.18s ease;    /* Animate the width when it changes */
+}
+
+/* Hover / keyboard focus feedback for color and shift*/
+#nav-desktop ul li a:hover,
+#nav-desktop ul li a:focus-visible {
+    color: var(--primary-color);                 /* Change text color to primary */
+    background-color: var(--accent-color);       /* Change background to accent color */
+    transform: translateY(-1px);                 /* Slightly lift the link (1px up) */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);  /* Add a soft shadow for a raised effect */
+}
+/* Hover / keyboard focus feedback for create the under rectangle*/
+#nav-desktop ul li a:hover::after,
+#nav-desktop ul li a:focus-visible::after {
+    width: 60%;  /* Animate underline to expand to 60% width from the center */
+}
+
+/*===== Accessibility Respect users who prefer reduced motion =======*/
+@media (prefers-reduced-motion: reduce) {
+    #nav-desktop ul li a,
+    #nav-desktop ul li a::after {
+        transition: none;
+        transform: none;
+    }
+}
