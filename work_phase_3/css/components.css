@@ -1,3 +1,4 @@
+@import "./component_skeletons/accordion.css";
 /* MENUS */
 /*====== Default display: show mobile nav, hide desktop nav =======*/
 #nav-desktop {
@@ -30,12 +31,10 @@ nav ul {
     margin: 0; /* Remove default margin */
 }
 
-
-
 /*====== Mobile menu position and color ======*/
 #nav-mobile {
-    position: fixed;  /*-fix the position-*/
-    bottom: 0;        /*-put the bottom-*/
+    position: fixed; /*-fix the position-*/
+    bottom: 0; /*-put the bottom-*/
     width: 100vw;
     background-color: var(--secondary-color);
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
@@ -62,34 +61,36 @@ nav ul {
     text-decoration: none;
     border-radius: 8px;
     transition: color 0.18s ease, background-color 0.18s ease,
-                box-shadow 0.18s ease, transform 0.18s ease;
+        box-shadow 0.18s ease, transform 0.18s ease;
 }
 /*======= Desktop menu micro-interaction ==========*/
 /* define the effect after hover underline grows from center */
 #nav-desktop ul li a::after {
-    content: "";                     /* Create a pseudo-element (empty box) */
-    position: absolute;              /* Position it relative to the link */
-    left: 50%;                       /* Place its anchor point at the horizontal center */
-    bottom: 6px;                     /* Distance from the text baseline */
-    width: 0%;                       /* Start with zero width (invisible) */
-    height: 2px;                     /* Thin rectangle, visually like an underline */
-    background: currentColor;        /* Use the same color as the text */
-    transform: translateX(-50%);     /* Shift left by 50% to keep it centered */
-    transition: width 0.18s ease;    /* Animate the width when it changes */
+    content: ""; /* Create a pseudo-element (empty box) */
+    position: absolute; /* Position it relative to the link */
+    left: 50%; /* Place its anchor point at the horizontal center */
+    bottom: 6px; /* Distance from the text baseline */
+    width: 0%; /* Start with zero width (invisible) */
+    height: 2px; /* Thin rectangle, visually like an underline */
+    background: currentColor; /* Use the same color as the text */
+    transform: translateX(-50%); /* Shift left by 50% to keep it centered */
+    transition: width 0.18s ease; /* Animate the width when it changes */
 }
 
 /* Hover / keyboard focus feedback for color and shift*/
 #nav-desktop ul li a:hover,
 #nav-desktop ul li a:focus-visible {
-    color: var(--primary-color);                 /* Change text color to primary */
-    background-color: var(--accent-color);       /* Change background to accent color */
-    transform: translateY(-1px);                 /* Slightly lift the link (1px up) */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);  /* Add a soft shadow for a raised effect */
+    color: var(--primary-color); /* Change text color to primary */
+    background-color: var(
+        --accent-color
+    ); /* Change background to accent color */
+    transform: translateY(-1px); /* Slightly lift the link (1px up) */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08); /* Add a soft shadow for a raised effect */
 }
 /* Hover / keyboard focus feedback for create the under rectangle*/
 #nav-desktop ul li a:hover::after,
 #nav-desktop ul li a:focus-visible::after {
-    width: 60%;  /* Animate underline to expand to 60% width from the center */
+    width: 60%; /* Animate underline to expand to 60% width from the center */
 }
 
 /*===== Accessibility Respect users who prefer reduced motion =======*/
@@ -98,5 +99,26 @@ nav ul {
     #nav-desktop ul li a::after {
         transition: none;
         transform: none;
+    }
+}
+
+/*===== Image =======*/
+.responsive-img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Card container – global component container */
+.card-container {
+    display: flex;
+    flex-direction: column; /* mobile-first: stack cards vertically */
+    gap: 1rem;
+}
+
+@media (min-width: 768px) {
+    .card-container {
+        flex-direction: row; /* desktop: arrange cards horizontally */
+        flex-wrap: wrap; /* allow wrapping to next row */
     }
 }

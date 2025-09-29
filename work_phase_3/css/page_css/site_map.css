@@ -1,0 +1,24 @@
+:root{
+  --accent1-color: #2e7d32; /* color */
+}
+.accordion-header {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+/* Differentiate nested level with an accent color */
+.accordion.nested .accordion-header {
+    background: var(--accent1-color);
+    color: #fff;
+    border: 1px solid var(--accent1-color);
+}
+.accordion.nested .accordion-item.open .accordion-header {
+    filter: brightness(1.05);
+}
+
+/* Optional: panel border to frame nested content */
+.accordion.nested .accordion-content {
+    border: 1px solid color-mix(in oklab, var(--accent1-color), white 30%);
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+}

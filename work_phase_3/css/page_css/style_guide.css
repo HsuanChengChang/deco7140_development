@@ -1,0 +1,31 @@
+/* Page look & feel for Style Guide */
+:root {
+    --sg-card-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+}
+
+.wrap {
+    max-width: 980px;
+    margin: 24px auto;
+    padding: 0 16px;
+}
+
+.lead {
+    color: var(--text-muted, #5b6a70);
+}
+
+/* Three columns: on desktop each card is ~1/3 wide (leaves space for the gap) */
+.card {
+    box-shadow: var(--sg-card-shadow);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.card:hover {
+    transform: translateY(-2px);
+}
+
+@media (min-width: 768px) {
+    .card {
+        flex: 1 1 calc(33.333% - 1rem);
+        /* If you want a tighter layout, use 32% */
+    }
+}

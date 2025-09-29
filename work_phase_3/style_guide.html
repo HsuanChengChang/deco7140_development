@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- CSS Linking -->
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/base.css" />
+        <link rel="stylesheet" href="css/layout.css" />
+        <link rel="stylesheet" href="css/components.css" />
+
+        <!-- Skeletons -->
+        <link rel="stylesheet" href="css/component_skeletons/card.css" />
+
+        <!-- Page-specific -->
+        <link rel="stylesheet" href="css/page_css/style_guide.css" />
+
+        <!--favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+
+        <!--Google Fonts Embed - Sanchez -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Sanchez:ital@0;1&display=swap"
+            rel="stylesheet"
+        />
+
+        <title>Work Phrase 3</title>
+    </head>
+    <body>
+        <!-- START: PAGE STRUCTURE -->
+        <header>
+            <nav id="nav-mobile" aria-label="Main Navigation">
+                <ul>
+                    <li>
+                        <a href="index.html"><span class="icon">🏠</span></a>
+                    </li>
+                    <li>
+                        <a href="site_map.html"><span class="icon">🧭</span></a>
+                    </li>
+                    <li>
+                        <a href="style_guide.html" aria-current="page"
+                            ><span class="icon">🎨</span></a
+                        >
+                    </li>
+                    <li>
+                        <a href="ethical_response.html"
+                            ><span class="icon">⚖️</span></a
+                        >
+                    </li>
+                    <li>
+                        <a href="genai_mt_acknowledgement.html"
+                            ><span class="icon">🤖</span></a
+                        >
+                    </li>
+                </ul>
+            </nav>
+
+            <nav id="nav-desktop" aria-label="Main Navigation">
+                <ul>
+                    <li>
+                        <a href="index.html">WP3 Home</a>
+                    </li>
+                    <li>
+                        <a href="site_map.html"><span>Site Map</span></a>
+                    </li>
+                    <li>
+                        <a href="style_guide.html" aria-current="page"
+                            >Style Guide</a
+                        >
+                    </li>
+                    <li>
+                        <a href="ethical_response.html">Ethical Response</a>
+                    </li>
+                    <li>
+                        <a href="genai_mt_acknowledgement.html">GenAI</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main class="wrap">
+            <!-- Intro: brief purpose and context -->
+            <section class="intro">
+                <h1>Style Guide</h1>
+                <p class="lead">
+                    This page links to the three sections of the style guide and
+                    explains how the design supports the CCI brief. Explore the
+                    cards below.
+                </p>
+            </section>
+
+            <!-- Card list linking to the three style-guide subpages
+            Tip: keep copy short and scannable; link text is the call to action -->
+            <section class="card-container" aria-label="Style guide sections">
+                <!-- Card 1 -->
+                <article class="card">
+                    <img
+                        class="card-img"
+                        src="assets/sg-visceral.jpg"
+                        alt="Abstract, colourful shapes suggesting energy and first impressions"
+                    />
+                    <h3>Visceral</h3>
+                    <p>
+                        Brand colours, type scale, spacing variables,
+                        breakpoints, and accessibility notes.
+                    </p>
+                    <!-- TODO: update href to your actual tokens page -->
+                    <a class="card-link" href="visceral_design.html"
+                        >Learn more</a
+                    >
+                </article>
+
+                <!-- Card 2 -->
+                <article class="card">
+                    <img
+                        class="card-img"
+                        src="assets/sg-behavioural.jpg"
+                        alt="Abstract, colourful shapes suggesting energy and first impressions"
+                    />
+                    <h3>Behavioural</h3>
+                    <p>
+                        Buttons, links, form fields, accordions, tabs. Neutral
+                        skeletons plus usage guidelines and states.
+                    </p>
+                    <!-- TODO: update href to your actual components page -->
+                    <a class="card-link" href="behavioural_design.html"
+                        >Learn more</a
+                    >
+                </article>
+
+                <!-- Card 3 -->
+                <article class="card">
+                    <img
+                        class="card-img"
+                        src="assets/sg-reflective.jpg"
+                        alt="Abstract, colourful shapes suggesting energy and first impressions"
+                    />
+                    <h3>Reflective</h3>
+                    <p>
+                        Grid rules, spacing system, responsive behaviour,
+                        content containers, and card patterns.
+                    </p>
+                    <!-- TODO: update href to your actual patterns page -->
+                    <a class="card-link" href="reflective_design.html"
+                        >Learn more</a
+                    >
+                </article>
+            </section>
+        </main>
+
+        <!--JavaScript Linking -->
+        <script type="module" src="js/style_guide.js"></script>
+    </body>
+</html>

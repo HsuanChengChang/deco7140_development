@@ -1,0 +1,24 @@
+/* Neutral card skeleton – structure & base behaviour */
+.card {
+    display: block;
+    border: 1px solid transparent;
+    border-radius: 16px;
+    padding: 1rem;
+    background: #fff;
+    transition: transform 0.2s ease, box-shadow 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.card h3 {
+    margin: 0 0 0.5rem;
+}
+.card p {
+    margin: 0;
+}
+
+.card-link {
+    display: inline-block;
+    margin-top: 0.75rem;
+    font-weight: 600;
+    text-decoration: underline;
+}
