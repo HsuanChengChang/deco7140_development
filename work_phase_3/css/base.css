@@ -85,3 +85,40 @@ iframe {
     height: auto;
     display: block;
 }
+/*==== Breadcrumbs=====*/
+.breadcrumbs {
+  margin-top: 1.5rem; /* add extra spacing from the top */
+  margin-bottom: 1.5rem; /* add extra spacing from the bottom */
+}
+/* Remove default list style and arrange items horizontally */
+.breadcrumbs ol {
+    list-style: none;
+    display: flex;
+    gap: 0.5rem; /* spacing between items */
+    padding: 0;
+    margin: 0;
+}
+
+/* Add ">" separator after each breadcrumb item */
+.breadcrumbs li::after {
+    content: ">";
+    margin-left: 0.5rem;
+    color: #999;
+}
+
+/* Remove separator from the last item */
+.breadcrumbs li:last-child::after {
+    content: "";
+}
+
+/* Style breadcrumb links */
+.breadcrumbs a {
+    text-decoration: none;
+    color: var(--primary-color, #333);
+}
+
+/* Highlight the current page (non-clickable) */
+.breadcrumbs li[aria-current="page"] {
+    font-weight: bold;
+    color: #555;
+}

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- CSS Linking -->
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/base.css" />
+        <link rel="stylesheet" href="css/layout.css" />
+        <link rel="stylesheet" href="css/components.css" />
+
+        <!-- Page-specific -->
+        <link rel="stylesheet" href="css/page_css/behavioural_design.css" />
+
+        <!--favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+
+        <!--Google Fonts Embed - Sanchez -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Sanchez:ital@0;1&display=swap"
+            rel="stylesheet"
+        />
+
+        <title>Work Phase 3 — Visceral Design</title>
+    </head>
+    <body>
+        <!-- START: PAGE STRUCTURE -->
+        <header>
+            <nav id="nav-mobile" aria-label="Main Navigation">
+                <ul>
+                    <li>
+                        <a href="index.html"><span class="icon">🏠</span></a>
+                    </li>
+                    <li>
+                        <a href="site_map.html"><span class="icon">🧭</span></a>
+                    </li>
+                    <li>
+                        <a href="style_guide.html" aria-current="page"
+                            ><span class="icon">🎨</span></a
+                        >
+                    </li>
+                    <li>
+                        <a href="ethical_response.html"
+                            ><span class="icon">⚖️</span></a
+                        >
+                    </li>
+                    <li>
+                        <a href="genai_mt_acknowledgement.html"
+                            ><span class="icon">🤖</span></a
+                        >
+                    </li>
+                </ul>
+            </nav>
+
+            <nav id="nav-desktop" aria-label="Main Navigation">
+                <ul>
+                    <li>
+                        <a href="index.html">WP3 Home</a>
+                    </li>
+                    <li>
+                        <a href="site_map.html"><span>Site Map</span></a>
+                    </li>
+                    <li>
+                        <a href="style_guide.html" aria-current="page"
+                            >Style Guide</a
+                        >
+                    </li>
+                    <li>
+                        <a href="ethical_response.html">Ethical Response</a>
+                    </li>
+                    <li>
+                        <a href="genai_mt_acknowledgement.html">GenAI</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <div class="container">
+                <!-- Breadcrumbs -->
+                <nav class="breadcrumbs" aria-label="Breadcrumb">
+                    <ol>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="style_guide.html">Style Guide</a></li>
+                        <li aria-current="page">Behavioural Design</li>
+                    </ol>
+                </nav>
+                <h1>Behavioural Design</h1>
+                <p>
+                    The focus of this section of the Style Guide is ensuring the
+                    user needs for usability and function are supported.
+                </p>
+                <section>
+                    <h2>Buttons</h2>
+                    <div class="button-examples">
+                        <button class="primary">Primary Button</button>
+                        <button class="secondary">Secondary Button</button>
+                        <button class="tertiary">Tertiary Button</button>
+                        <button class="disabled" disabled>Disabled Button</button>
+                    </div>
+                </section>
+                <h2>Link Styles</h2>
+                <p>
+                    This is an example of a standard
+                    <a href="#">hyperlink</a> within a paragraph of text.
+                </p>
+                <h2>Menus and Navigation</h2>
+                <p>
+                    This is an example of a navigation menu:
+                </p>
+                <nav aria-label="Example Navigation">
+                    <ul class="example-menu">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+                <h2>Card Components</h2>
+                <div class="card-container">
+                    <div class="card">
+                        <h3>Card Title 1</h3>
+                        <p>
+                            This is a brief description of the content within
+                            this card.
+                        </p>
+                        <button class="primary">Learn More</button>
+                    </div>
+                    <div class="card">
+                        <h3>Card Title 2</h3>
+                        <p>
+                            This is a brief description of the content within
+                            this card.
+                        </p>
+                        <button class="primary">Learn More</button>
+                    </div>
+                    <div class="card">
+                        <h3>Card Title 3</h3>
+                        <p>
+                            This is a brief description of the content within
+                            this card.
+                        </p>
+                        <button class="primary">Learn More</button>
+                    </div>  
+            </div>
+        </main>
+        <script src="js/behavioural_design.js"></script>
+    </body>
+</html>
