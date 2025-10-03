@@ -1,0 +1,42 @@
+/* ========== Base Button Styles ========== */
+button {
+    font-family: Arial, sans-serif; /* Use clean, sans-serif font */
+    font-weight: bold; /* Make text bold */
+    border: none; /* Remove default border */
+    border-radius: 999px; /* Fully rounded corners (pill shape) */
+    padding: 12px 24px; /* Inner spacing for balance */
+    cursor: pointer; /* Show pointer on hover */
+    transition: all 0.3s ease; /* Smooth hover animation */
+}
+
+/* ========== Primary Button (Black background, White text) ========== */
+button.primary {
+    background-color: #222; /* Dark background */
+    color: #fff; /* White text */
+}
+
+/* ========== Secondary Button (Gray background, White text) ========== */
+button.secondary {
+    background-color: #666; /* Medium gray background */
+    color: #fff; /* White text */
+}
+
+/* ========== Disabled Button ========== */
+button.disabled {
+    background-color: #ccc; /* Light gray background */
+    color: #666; /* Darker gray text */
+    cursor: not-allowed; /* Show "disabled" cursor */
+}
+
+/* ========== Hover State (Reverse colors + underline) ========== */
+button.primary:hover,
+button.secondary:hover {
+    background-color: #fff; /* Switch to white background */
+    color: #000; /* Switch to black text */
+    border: 2px solid #000; /* Add black border */
+    text-decoration: underline; /* Underline text for clarity */
+}
+/* ========== Active State (shadow) ========== */
+button:active {
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
