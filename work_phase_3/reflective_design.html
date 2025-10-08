@@ -239,51 +239,6 @@
                                 engage with the community.
                             </p>
                         </article>
-
-                        <!-- Imagery Samples -->
-                        <article>
-                            <h3>Imagery Samples</h3>
-                            <figure>
-                                <img
-                                    src="assets/images/community_gathering.jpg"
-                                    alt="Diverse community gathering"
-                                />
-                                <figcaption>
-                                    Represents belonging and inclusivity.
-                                </figcaption>
-                            </figure>
-                            <figure>
-                                <img
-                                    src="assets/images/volunteers_help.jpg"
-                                    alt="Volunteers helping each other"
-                                />
-                                <figcaption>
-                                    Shows trust and collaboration within the
-                                    community.
-                                </figcaption>
-                            </figure>
-                            <figure>
-                                <img
-                                    src="assets/images/eco_friendly.jpg"
-                                    alt="Sustainable eco-friendly initiatives"
-                                />
-                                <figcaption>
-                                    Highlights sustainability values of the
-                                    organisation.
-                                </figcaption>
-                            </figure>
-                            <figure>
-                                <img
-                                    src="assets/images/welcome_banner.jpg"
-                                    alt="Welcome banner"
-                                />
-                                <figcaption>
-                                    Provides a warm and optimistic first
-                                    impression.
-                                </figcaption>
-                            </figure>
-                        </article>
-
                         <!-- Homepage Welcome Text -->
                         <article>
                             <h3>Homepage Welcome Text</h3>
@@ -430,34 +385,31 @@
                 </div>
 
                 <div class="accordion">
-                    <button>Seeing Ourselves</button>
+                    <button>Seeing Ourselves in the Interface</button>
                     <div class="content">
-                        <h2>Seeing Ourselves in the Interface</h2>
                         <p>
-                            This section demonstrates how dynamic content from
-                            the Community API is displayed directly within the
-                            site. By showing real contributions from community
-                            members, the site reflects
-                            <strong>identity</strong>,
-                            <strong>belonging</strong>, and
-                            <strong>shared values</strong>.
+                            This section shows community submissions fetched
+                            from the API. When members contribute, their names
+                            and messages appear here to reinforce identity and
+                            belonging.
                         </p>
 
-                        <!-- Dynamic Community Content -->
-                        <section id="community-list">
+                        <!-- Results only: dynamic list populated by js/reflective_design.js -->
+                        <section id="community-list" aria-live="polite">
                             <!-- Cards with member info (name, message, photo) will be injected here by JS -->
+                            <div class="empty-state">
+                                <p>Fetching community submissions…</p>
+                            </div>
                         </section>
 
-                        <!-- Annotation -->
+                        <!-- Optional: annotation stays as-is -->
                         <article class="annotations">
                             <h3>Annotation</h3>
                             <p>
-                                Displaying member names, messages, and photos
-                                builds a sense of
-                                <em>representation and trust</em>. When users
-                                see themselves and their peers on the site, it
-                                strengthens belonging and creates emotional
-                                connection with the community.
+                                Displaying member names and messages creates
+                                representation and trust. Seeing peers on the
+                                site strengthens belonging and emotional
+                                connection within the community.
                             </p>
                         </article>
                     </div>

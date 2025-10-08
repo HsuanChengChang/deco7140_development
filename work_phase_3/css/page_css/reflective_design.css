@@ -114,3 +114,45 @@ blockquote {
 #language-expression h3 {
     margin-top: 1rem;
 }
+
+/* Form styles */
+.community-card {
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    padding: 16px;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.community-card .top {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.community-card .avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #f0f0f0;
+    display: grid;
+    place-items: center;
+    font-weight: 700;
+}
+
+.community-card .info-block p {
+    margin: 4px 0;
+    line-height: 1.4;
+}
+
+.community-card .info-block strong {
+    color: var(--primary-color, #8b4513);
+    margin-right: 6px;
+}
+.community-card .message {
+    margin-top: 8px;
+    line-height: 1.6;
+    background: #f9f9f9;
+    padding: 8px 12px;
+}
