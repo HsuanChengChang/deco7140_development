@@ -23,7 +23,7 @@
             rel="stylesheet"
         />
 
-        <title>Work Phase 3 — Visceral Design</title>
+        <title>Work Phase 3 — Behavioural Design</title>
     </head>
     <body>
         <!-- START: PAGE STRUCTURE -->
@@ -93,21 +93,32 @@
                 </p>
                 <section>
                     <h2>Button Styles</h2>
-                        <div class="button-examples">
-                            <button class="primary" aria-label="Primary Button">Primary Button</button>
-                            <button class="secondary" aria-label="Secondary Button">Secondary Button</button>
-                            <button class="disabled" disabled>Disabled Button</button>
-                            <p class="explanation">
-                            These buttons are designed with a clean, rounded style for clarity and ease of use. 
-                            In the <strong>default state</strong>, the primary and secondary buttons use solid dark backgrounds 
-                            with bold white text for strong visibility.  
-                            On <strong>hover</strong>, they reverse colors, gain a black outline, and show an underline 
-                            to provide clear visual feedback.  
-                            When <strong>pressed (active state)</strong>, the button shows an inset shadow, giving the 
-                            impression of being physically pressed down.  
-                            Disabled buttons use a gray palette and remove interactivity to indicate inactivity.
+                    <div class="button-examples">
+                        <button class="primary" aria-label="Primary Button">
+                            Primary Button
+                        </button>
+                        <button class="secondary" aria-label="Secondary Button">
+                            Secondary Button
+                        </button>
+                        <button class="disabled" disabled>
+                            Disabled Button
+                        </button>
+                        <p class="explanation">
+                            These buttons are designed with a clean, rounded
+                            style for clarity and ease of use. In the
+                            <strong>default state</strong>, the primary and
+                            secondary buttons use solid dark backgrounds with
+                            bold white text for strong visibility. On
+                            <strong>hover</strong>, they reverse colors, gain a
+                            black outline, and show an underline to provide
+                            clear visual feedback. When
+                            <strong>pressed (active state)</strong>, the button
+                            shows an inset shadow, giving the impression of
+                            being physically pressed down. Disabled buttons use
+                            a gray palette and remove interactivity to indicate
+                            inactivity.
                         </p>
-                        </div>
+                    </div>
                 </section>
                 <h2>Link Styles</h2>
                 <p>
@@ -115,9 +126,7 @@
                     <a href="#">hyperlink</a> within a paragraph of text.
                 </p>
                 <h2>Menus and Navigation</h2>
-                <p>
-                    This is an example of a navigation menu:
-                </p>
+                <p>This is an example of a navigation menu:</p>
                 <nav aria-label="Example Navigation">
                     <ul class="example-menu">
                         <li><a href="#">Home</a></li>
@@ -151,7 +160,42 @@
                             this card.
                         </p>
                         <button class="primary">Learn More</button>
-                    </div>  
+                    </div>
+                </div>
+                <form id="community-form" enctype="multipart/form-data">
+                    <!-- Full Name (required) -->
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required />
+
+                    <!-- Email (required, must be valid format) -->
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required />
+
+                    <!-- Message (optional) -->
+                    <label for="message">Message</label>
+                    <textarea
+                        id="message"
+                        name="message"
+                        placeholder="Say something..."
+                    ></textarea>
+
+                    <!-- Photo (optional, file upload) -->
+                    <label for="photo">Profile Photo</label>
+                    <input
+                        type="file"
+                        id="photo"
+                        name="photo"
+                        accept="image/*"
+                    />
+
+                    <!-- Submit button -->
+                    <button type="submit" class="btn btn-primary">
+                        Join the Community
+                    </button>
+                </form>
+
+                <!-- Feedback message -->
+                <p id="form-feedback"></p>
             </div>
         </main>
         <script src="js/behavioural_design.js"></script>

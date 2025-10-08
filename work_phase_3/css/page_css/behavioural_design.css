@@ -40,3 +40,73 @@ button.secondary:hover {
 button:active {
     box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
 }
+
+/* === Form Container === */
+#community-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* elements gap */
+    max-width: 400px;
+    padding: 1.5rem;
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+/* === Label === */
+#community-form label {
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+    color: #333;
+}
+
+/* === Input & Textarea === */
+#community-form input[type="text"],
+#community-form input[type="email"],
+#community-form input[type="file"],
+#community-form textarea {
+    padding: 0.6rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: inherit;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Textarea 調整高度 */
+#community-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* === Button === */
+#community-form button {
+    background-color: #4caf50;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.2s;
+}
+
+#community-form button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}
+
+#community-form button:active {
+    background-color: #3e8e41;
+    transform: translateY(0);
+}
+
+/* === Feedback message === */
+#form-feedback {
+    margin-top: 1rem;
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: #333;
+}
