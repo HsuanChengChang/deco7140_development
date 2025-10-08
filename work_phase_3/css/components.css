@@ -123,32 +123,3 @@ nav ul {
     }
 }
 
-.color-palette {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-    margin-top: 12px;
-}
-
-.color-swatch {
-    flex: 1 1 120px;
-    min-width: 120px;
-    height: 80px;
-    background: var(--swatch-color);
-    border-radius: 8px;
-    position: relative;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-}
-
-.color-swatch .label {
-    background: rgba(255, 255, 255, 0.85);
-    font-size: 0.8rem;
-    font-weight: bold;
-    padding: 4px 6px;
-    border-radius: 4px;
-    margin: 6px;
-    text-align: center;
-}
