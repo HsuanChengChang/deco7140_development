@@ -1,0 +1,116 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 1rem;
+}
+h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+p {
+    margin-bottom: 1rem;
+}
+.accordion {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+}
+.accordion button {
+    width: 100%;
+    padding: 0.8rem;
+    text-align: left;
+    border: none;
+    background: #eee;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.accordion .content {
+    display: none;
+    padding: 0.8rem;
+    background: #fff;
+    border-top: 1px solid #ccc;
+}
+.accordion.active .content {
+    display: block;
+}
+
+.accordion.active button {
+    background: #f5c208; /* click color change */
+    color: #333; /* click color change font */
+    font-weight: bold; /* click font weight change */
+}
+/* Table styles */
+.values-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-size: 0.95rem;
+}
+
+.values-table th,
+.values-table td {
+    border: 1px solid #ccc;
+    padding: 0.6rem;
+    text-align: left;
+}
+
+.values-table th {
+    background: #f5c208; /* 黃色，呼應 accordion header */
+    color: #333;
+}
+
+.annotations {
+    margin-top: 1rem;
+    padding: 0.8rem;
+    background: #f9f9f9;
+    border-left: 4px solid #f5c208;
+}
+
+.annotations h3 {
+    margin-top: 0;
+}
+/* Image and figure styles */
+.content figure {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.content figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #555;
+    font-style: italic;
+}
+
+blockquote {
+    border-left: 4px solid #f5c208;
+    padding-left: 1rem;
+    margin: 1rem 0;
+    color: #333;
+    font-style: italic;
+}
+/* Specific styles for Language and Expression section */
+#language-expression blockquote {
+    border-left: 4px solid #f5c208;
+    padding-left: 1rem;
+    margin: 1rem 0;
+    background: #fffdf2;
+}
+
+#language-expression ul {
+    margin: 0.5rem 0 1rem;
+    padding-left: 1.25rem;
+}
+
+#language-expression h3 {
+    margin-top: 1rem;
+}
