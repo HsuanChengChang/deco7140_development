@@ -1,0 +1,136 @@
+/* ============== Recipes page (wireframe match) ============== */
+/* 盡量沿用你現有 tokens，並提供 fallback */
+:root {
+    --border: var(--border, #e5e7eb);
+    --radius: var(--radius, 12px);
+    --shadow: var(--shadow, 0 8px 30px rgba(0, 0, 0, 0.06));
+    --text: var(--text, #1e1e1e);
+    --muted: var(--muted, #6b7280);
+}
+
+/* 視覺隱藏（無障礙） */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* ---- Search 區塊 ---- */
+.search-form input[type="search"] {
+    width: 100%;
+    height: 44px;
+    padding: 0 14px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    outline: none;
+}
+.tag-list {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin: 14px 0 40px;
+}
+.tag {
+    display: inline-block;
+    padding: 6px 10px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ---- Section head ---- */
+.section-head {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+.section-head h2 {
+    margin: 0;
+    font-size: clamp(24px, 3.4vw, 34px);
+}
+
+/* ---- Recipe 列表 ---- */
+.recipe-list {
+    display: grid;
+    gap: 36px;
+}
+
+/* 單張卡片：手機直向堆疊；桌機左右版 */
+.recipe-card {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    align-items: start;
+}
+
+/* 縮圖容器（維持比例、陰影、圓角） */
+.recipe-thumb {
+    display: block;
+    aspect-ratio: 4/3;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    background: #f8f8f8;
+}
+.recipe-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 文字與按鈕 */
+.recipe-title {
+    font-size: clamp(22px, 3vw, 36px);
+    margin: 0 0 8px;
+}
+.recipe-title a {
+    color: inherit;
+    text-decoration: none;
+}
+.lead {
+    color: var(--muted);
+}
+.recipe-body .actions {
+    margin-top: 16px;
+}
+
+/* ---- RWD ---- */
+@media (min-width: 768px) {
+    .recipe-list {
+        gap: 40px;
+    }
+}
+@media (min-width: 992px) {
+    /* 左圖右文 */
+    .recipe-card {
+        grid-template-columns: minmax(280px, 360px) 1fr;
+    }
+}
+
+/* 控制 btn-outline 內圖示大小與對齊 */
+.btn-outline img {
+    width: 28px; /* ← 可依需求改成 24px、32px 等 */
+    height: 28px;
+    object-fit: contain; /* 確保圖片不被壓扁 */
+    vertical-align: middle;
+    display: block; /* 讓按鈕高度取決於圖片 */
+    margin: 0 auto; /* 圖片在按鈕中置中 */
+}
+
+/* 若希望按鈕本身尺寸也一致 */
+.btn-outline {
+    padding: 6px;
+    border-radius: var(--radius, 8px);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}

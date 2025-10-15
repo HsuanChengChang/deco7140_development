@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Recipes – Amma pizza</title>
+
+        <!-- existing CSS -->
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/base.css" />
+        <link rel="stylesheet" href="css/layout.css" />
+        <link rel="stylesheet" href="css/components.css" />
+
+        <!-- reipes single page -->
+        <link rel="stylesheet" href="css/page_css/recipes_single.css" />
+
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    </head>
+    <body>
+        <!-- Header / Global Nav -->
+        <header class="site-header">
+            <div class="container nav">
+                <a class="brand" href="index.html" aria-label="Home">
+                    <span class="badge">Your Logo</span>
+                </a>
+
+                <nav class="primary-nav" aria-label="Primary">
+                    <a href="index.html">Home</a>
+                    <a href="recipes.html">Recipes</a>
+                    <a href="events.html">Events</a>
+                    <a href="community.html">Community</a>
+                    <a href="profile.html">Profile</a>
+                </nav>
+
+                <a class="btn btn-outline" href="logout.html">Log out</a>
+            </div>
+        </header>
+
+        <main id="content">
+            <div class="container section">
+                <!-- Search -->
+                <section aria-labelledby="search-title">
+                    <h2 id="search-title" class="sr-only">Search events</h2>
+                    <form
+                        class="search-form"
+                        action="events.html"
+                        method="get"
+                        role="search"
+                    >
+                        <label for="q" class="sr-only">Search</label>
+                        <input
+                            id="q"
+                            name="q"
+                            type="search"
+                            placeholder="Search"
+                        />
+                    </form>
+
+                    <!-- Tags -->
+                    <ul class="tag-list" aria-label="Popular tags">
+                        <li>
+                            <a class="tag" href="?tag=Pizza">#Pizza</a>
+                        </li>
+                        <li><a class="tag" href="?tag=Cheese">#Cheese</a></li>
+                        <li><a class="tag" href="?tag=Confort">#Confort</a></li>
+                    </ul>
+                </section>
+                <!-- Breadcrumbs -->
+                <nav class="breadcrumbs" aria-label="Breadcrumb">
+                    <ol>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="recipes.html">Recipes</a></li>
+                        <li aria-current="page">Amma Pizza Recipes</li>
+                    </ol>
+                </nav>
+
+                <!-- Event Title -->
+                <header class="page-head">
+                    <h1>Amma Pizza Recipes</h1>
+                </header>
+                <!-- Recipes body -->
+                <article class="event-body">
+                    <h2 class="sr-only">Recipe details</h2>
+
+                    <!-- Cover -->
+                    <figure class="recipe-hero">
+                        <img
+                            src="assets/recipes/pizza_amma.jpg"
+                            alt="Amma Pizza topped with cheese and basil"
+                            class="recipe-img"
+                        />
+                        <figcaption class="sr-only">
+                            Finished dish presentation
+                        </figcaption>
+                    </figure>
+
+                    <!-- basic information -->
+                    <section class="recipe-summary">
+                        <h3>Amma Pizza</h3>
+                        <p><strong>Cheese, Basil, Pepper…..</strong></p>
+                        <p>Preparation time: <strong>30 min</strong></p>
+                        <p>
+                            A soft, cheesy homemade pizza inspired by Italian
+                            flavors. Crispy crust, fresh basil leaves, and a
+                            generous layer of mozzarella make this recipe
+                            perfect for a casual dinner or weekend treat.
+                        </p>
+                    </section>
+
+                    <!-- Ingredients -->
+                    <section class="recipe-ingredients">
+                        <h3>Ingredients</h3>
+                        <ul>
+                            <li>2 cups plain flour</li>
+                            <li>1 tsp dry yeast</li>
+                            <li>1 tbsp olive oil</li>
+                            <li>100g mozzarella cheese</li>
+                            <li>Fresh basil leaves</li>
+                            <li>1 medium tomato sauce base</li>
+                            <li>Salt & pepper to taste</li>
+                        </ul>
+                    </section>
+
+                    <!-- Instructions -->
+                    <section class="recipe-steps">
+                        <h3>Instructions</h3>
+                        <ol>
+                            <li>
+                                Mix flour, yeast, olive oil, and water to make a
+                                soft dough.
+                            </li>
+                            <li>
+                                Let the dough rest for 30 minutes until it
+                                doubles in size.
+                            </li>
+                            <li>Spread tomato sauce evenly over the base.</li>
+                            <li>
+                                Add cheese, basil, and toppings of your choice.
+                            </li>
+                            <li>Bake at 200°C (392°F) for 15 minutes.</li>
+                            <li>Serve hot and enjoy your Amma Pizza!</li>
+                        </ol>
+                    </section>
+
+                    <!-- tips -->
+                    <section class="recipe-notes">
+                        <h3>Tips</h3>
+                        <p>
+                            • You can substitute mozzarella with cheddar for a
+                            stronger flavor.<br />
+                            • Add chili flakes if you prefer a spicy version.<br />
+                            • Best served fresh with olive oil drizzle.
+                        </p>
+                    </section>
+
+                    <!-- Comment -->
+                    <section class="comments" aria-labelledby="comments-title">
+                        <h3 id="comments-title">Comments</h3>
+
+                        <!-- current comment -->
+                        <ul class="comment-list">
+                            <li class="comment-card">
+                                <header class="comment-meta">
+                                    <strong class="comment-author">Andy</strong>
+                                </header>
+                                <p class="comment-text">
+                                    I wanna know, can I use other cheese?
+                                </p>
+                            </li>
+                        </ul>
+
+                        <!-- add comments -->
+                        <form class="message-form" action="#" method="post">
+                            <label for="message" class="sr-only"
+                                >Your message</label
+                            >
+                            <textarea
+                                id="message"
+                                name="message"
+                                rows="3"
+                                placeholder="Your message"
+                                required
+                            ></textarea>
+                            <div class="actions">
+                                <button type="submit" class="btn">Send</button>
+                            </div>
+                        </form>
+                    </section>
+                </article>
+            </div>
+            <!-- Footer -->
+            <footer class="site-footer" role="contentinfo">
+                <div class="container">
+                    <p>[Footer]</p>
+                </div>
+            </footer>
+        </main>
+
+        <!-- 小工具：視覺隱藏與基本樣式（若已在全站 CSS 內可移除） -->
+        <style>
+            .sr-only {
+                position: absolute;
+                width: 1px;
+                height: 1px;
+                padding: 0;
+                margin: -1px;
+                overflow: hidden;
+                clip: rect(0, 0, 0, 0);
+                white-space: nowrap;
+                border: 0;
+            }
+            .search-form input[type="search"] {
+                width: 100%;
+                height: 44px;
+                padding: 0 14px;
+                border: 1px solid var(--border, #e5e7eb);
+                border-radius: 10px;
+            }
+            .tag-list {
+                display: flex;
+                gap: 12px;
+                flex-wrap: wrap;
+                margin: 14px 0 40px;
+            }
+            .tag {
+                display: inline-block;
+                padding: 6px 10px;
+                border: 1px solid var(--border, #e5e7eb);
+                border-radius: 10px;
+                text-decoration: none;
+                color: inherit;
+            }
+            .hero-img {
+                width: 100%;
+                max-width: 100%;
+                display: block;
+                border: 1px solid var(--border, #e5e7eb);
+                border-radius: 12px;
+                box-shadow: var(--shadow, 0 8px 30px rgba(0, 0, 0, 0.06));
+                aspect-ratio: 4/3;
+                object-fit: cover;
+            }
+            .comment-list {
+                list-style: none;
+                margin: 12px 0 20px;
+                padding: 0;
+                display: grid;
+                gap: 12px;
+            }
+            .comment-card {
+                border: 1px solid var(--border, #e5e7eb);
+                border-radius: 12px;
+                padding: 14px;
+            }
+            .message-form textarea {
+                width: 100%;
+                border: 1px solid var(--border, #e5e7eb);
+                border-radius: 10px;
+                padding: 10px;
+            }
+            .message-form .actions {
+                margin-top: 10px;
+            }
+        </style>
+    </body>
+</html>

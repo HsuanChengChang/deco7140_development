@@ -1,21 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-        <title>Work Phrase 4</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Food & Culinary Community</title>
+        <!-- CSS Linking -->
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/base.css" />
+        <link rel="stylesheet" href="css/layout.css" />
+        <link rel="stylesheet" href="css/components.css" />
+        <link rel="icon" type="image/x-icon" href="assets/favicon.icon" />
     </head>
     <body>
-        <header>
-            <h1>Contact</h1>
-            <nav>
-                <a href="../index.html">Home</a>
-            </nav>
+        <!-- ===== Header / Navigation ===== -->
+        <header class="site-header">
+            <div class="container nav">
+                <a class="brand" href="#" aria-label="Homepage">
+                    <span class="badge">Your Logo</span>
+                </a>
+
+                <nav class="primary-nav" aria-label="Primary">
+                    <a href="index.html">Home</a>
+                    <a href="recipes.html">Recipes</a>
+                    <a href="events.html">Events</a>
+                    <a href="community.html">Community</a>
+                    <a href="profile.html">Profile</a>
+                </nav>
+
+                <a class="btn btn-outline" href="#" aria-label="Log in"
+                    >Log in</a
+                >
+            </div>
         </header>
-        <section>
-            <h2>My contact</h2>
-            <p>Information here</p>
+
+        <!-- ===== Hero ===== -->
+        <section class="section hero">
+            <div class="container hero-grid">
+                <div class="hero-copy">
+                    <h1>
+                        Share your own<br />Recipes and meet a<br />new flavor
+                    </h1>
+                    <p class="lead">
+                        This website provide a friendly platform for people to
+                        share their own recipes
+                    </p>
+
+                    <div class="actions">
+                        <a href="recipes.html" class="btn">Let's go</a>
+                        <a href="recipes.html" class="text-link">Start your food journey</a>
+                    </div>
+                </div>
+
+                <figure class="hero-media">
+                    <!-- index_1.jpg-->
+                    <img
+                        src="assets/index_1.jpg"
+                        alt="plenty of food on the table."
+                    />
+                </figure>
+            </div>
         </section>
+
+        <!-- ===== 2 Feature Cards (Recipes / Events) ===== -->
+        <section class="section features">
+            <div class="container feature-grid">
+                <!-- Recipes -->
+                <article class="feature">
+                    <div class="circle">
+                        <img src="assets/recipes_icon.png" alt="Recipes icon" />
+                    </div>
+                    <a href="recipes.html"><h3>Check the recipes</h3></a>
+                    <p>Find out<br /> your favorite food recipes</p>
+                </article>
+
+                <!-- Events -->
+                <article class="feature">
+                    <div class="circle">
+                        <img src="assets/events_icon.png" alt="Events icon" />
+                    </div>
+                    <a href="events.html"><h3>Join the events</h3></a>
+                    <p>Look up<br />fun events</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- ===== Two-column CTA (image left, copy right) ===== -->
+        <section class="section cta">
+            <div class="container cta-grid">
+                <figure class="cta-media">
+                    <!--index_community -->
+                    <img
+                        src="assets/index_community.jpg"
+                        alt="people are cooking together."
+                    />
+                </figure>
+
+                <div class="cta-copy">
+                    <h2>Become a<br />member of us</h2>
+                    <p class="lead">create wonderful food and make new friends</p>
+                    <a href="community.html" class="btn">Join</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== Footer ===== -->
+        <footer class="site-footer">
+            <div class="container">
+                <p>[Footer]</p>
+            </div>
+        </footer>
     </body>
 </html>

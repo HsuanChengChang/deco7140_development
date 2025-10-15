@@ -1,0 +1,74 @@
+/* ===========================
+   Page layout & grids only
+   =========================== */
+
+/* Header layout */
+.site-header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: #fff;
+    border-bottom: 1px solid var(--border);
+}
+.nav {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 16px;
+    padding: 14px 0;
+}
+.primary-nav {
+    display: flex;
+    gap: clamp(12px, 3vw, 28px);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Hero layout */
+.hero {
+    background: var(--brand-ghost);
+}
+.hero-grid {
+    display: grid;
+    gap: clamp(20px, 4vw, 40px);
+    grid-template-columns: 1fr;
+    align-items: center;
+}
+
+/* Feature (2 columns on desktop) */
+.feature-grid {
+    display: grid;
+    gap: 40px 24px;
+    grid-template-columns: 1fr;
+    text-align: center;
+}
+
+/* CTA layout */
+.cta-grid {
+    display: grid;
+    gap: clamp(20px, 4vw, 48px);
+    grid-template-columns: 1fr;
+    align-items: center;
+}
+
+/* Footer layout */
+.site-footer {
+    border-top: 1px solid var(--border);
+    background: #f3f4f6;
+    text-align: center;
+    padding: 36px 0;
+    color: var(--muted);
+}
+
+/* ====== Breakpoints ====== */
+@media (min-width: 992px) {
+    .hero-grid {
+        grid-template-columns: 1.05fr 1fr;
+    }
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .cta-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}

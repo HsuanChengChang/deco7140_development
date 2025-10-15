@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Recipes – Hot Recipes</title>
+
+        <!-- your existing CSS -->
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/base.css" />
+        <link rel="stylesheet" href="css/layout.css" />
+        <link rel="stylesheet" href="css/components.css" />
+        <link rel="stylesheet" href="css/page_css/recipes.css" />
+        <link rel="icon" type="image/x-icon" href="assets/favicon.icon" />
+    </head>
+    <body>
+        <!-- Header / Global Nav -->
+        <header class="site-header">
+            <div class="container nav">
+                <a class="brand" href="index.html" aria-label="Home">
+                    <span class="badge">Your Logo</span>
+                </a>
+
+                <nav class="primary-nav" aria-label="Primary">
+                    <a href="index.html">Home</a>
+                    <a href="recipes.html">Recipes</a>
+                    <a href="events.html">Events</a>
+                    <a href="community.html">Community</a>
+                    <a href="profile.html">Profile</a>
+                </nav>
+
+                <a class="btn btn-outline" href="#">Log out</a>
+            </div>
+        </header>
+
+        <main id="content">
+            <div class="container section">
+                <!-- Search -->
+                <section aria-labelledby="search-title">
+                    <h2 id="search-title" class="sr-only">Search recipes</h2>
+
+                    <form
+                        class="search-form"
+                        action="recipes.html"
+                        method="get"
+                        role="search"
+                        style="margin-bottom: 16px"
+                    >
+                        <label for="q" class="sr-only">Search</label>
+                        <input
+                            id="q"
+                            name="q"
+                            type="search"
+                            placeholder="Search"
+                            style="
+                                width: 100%;
+                                height: 44px;
+                                padding: 0 14px;
+                                border: 1px solid var(--border);
+                                border-radius: 10px;
+                            "
+                        />
+                    </form>
+
+                    <ul
+                        class="tag-list"
+                        aria-label="Popular tags"
+                        style="
+                            display: flex;
+                            gap: 12px;
+                            flex-wrap: wrap;
+                            margin-bottom: 40px;
+                        "
+                    >
+                        <li><a class="tag" href="?tag=Pizza">#Pizza</a></li>
+                        <li><a class="tag" href="?tag=tag">#tag</a></li>
+                        <li><a class="tag" href="?tag=tag">#tag</a></li>
+                    </ul>
+                </section>
+
+                <!-- HOT Recipes -->
+                <section aria-labelledby="hot-heading">
+                    <div
+                        class="section-head"
+                        style="
+                            display: flex;
+                            align-items: center;
+                            gap: 16px;
+                            margin-bottom: 20px;
+                        "
+                    >
+                        <button type="button" class="btn btn-outline">
+                            <img src="assets/recipes/hot.png" alt="Hot icon" />
+                        </button>
+                        <h2
+                            id="hot-heading"
+                            style="
+                                font-size: clamp(24px, 3.4vw, 34px);
+                                margin: 0;
+                            "
+                        >
+                            HOT Recipes
+                        </h2>
+                    </div>
+
+                    <!-- list -->
+                    <div class="recipe-list" style="display: grid; gap: 36px">
+                        <!-- Card 1 Amma pizza -->
+                        <article
+                            class="recipe-card"
+                            style="
+                                display: grid;
+                                grid-template-columns: 1fr;
+                                gap: 16px;
+                                align-items: start;
+                            "
+                        >
+                            <a
+                                class="recipe-thumb"
+                                href="recipe-detail.html"
+                                aria-label="View Amma Pizza"
+                                style="
+                                    display: block;
+                                    aspect-ratio: 4/3;
+                                    border: 1px solid var(--border);
+                                    border-radius: var(--radius);
+                                    overflow: hidden;
+                                    box-shadow: var(--shadow);
+                                "
+                            >
+                                <img
+                                    src="assets/recipes/pizza_amma.jpg"
+                                    alt="Amma Pizza preview"
+                                    style="
+                                        width: 100%;
+                                        height: 100%;
+                                        object-fit: cover;
+                                    "
+                                />
+                            </a>
+
+                            <div class="recipe-body">
+                                <h3
+                                    class="recipe-title"
+                                    style="
+                                        font-size: clamp(22px, 3vw, 36px);
+                                        margin-bottom: 8px;
+                                    "
+                                >
+                                    <a
+                                        href="recipes_pizza.html"
+                                        class="text-link"
+                                        style="
+                                            text-decoration: none;
+                                            color: inherit;
+                                        "
+                                        >Amma Pizza</a
+                                    >
+                                </h3>
+
+                                <p class="lead">
+                                    Cheese, Basil, Pepper…<br />……30 min……<br />XXXXXXXX
+                                </p>
+
+                                <div class="actions" style="margin-top: 16px">
+                                    <a class="btn" href="recipes_pizza.html"
+                                        >See more</a
+                                    >
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Card Ramwn Rob -->
+                        <article
+                            class="recipe-card"
+                            style="
+                                display: grid;
+                                grid-template-columns: 1fr;
+                                gap: 16px;
+                                align-items: start;
+                            "
+                        >
+                            <a
+                                class="recipe-thumb"
+                                href="recipe-detail.html"
+                                aria-label="View Amma Pizza"
+                                style="
+                                    display: block;
+                                    aspect-ratio: 4/3;
+                                    border: 1px solid var(--border);
+                                    border-radius: var(--radius);
+                                    overflow: hidden;
+                                    box-shadow: var(--shadow);
+                                "
+                            >
+                                <img
+                                    src="assets/recipes/ramen_rob.jpg"
+                                    alt="Amma Pizza preview"
+                                    style="
+                                        width: 100%;
+                                        height: 100%;
+                                        object-fit: cover;
+                                    "
+                                />
+                            </a>
+
+                            <div class="recipe-body">
+                                <h3
+                                    class="recipe-title"
+                                    style="
+                                        font-size: clamp(22px, 3vw, 36px);
+                                        margin-bottom: 8px;
+                                    "
+                                >
+                                    <a
+                                        href="recipe-detail.html"
+                                        class="text-link"
+                                        style="
+                                            text-decoration: none;
+                                            color: inherit;
+                                        "
+                                        >Rob Ramen</a
+                                    >
+                                </h3>
+
+                                <p class="lead">
+                                    Cheese, Basil, Pepper…<br />……30 min……<br />XXXXXXXX
+                                </p>
+
+                                <div class="actions" style="margin-top: 16px">
+                                    <a class="btn" href="recipe-detail.html"
+                                        >Button</a
+                                    >
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Card Steak Jerry-->
+                        <article
+                            class="recipe-card"
+                            style="
+                                display: grid;
+                                grid-template-columns: 1fr;
+                                gap: 16px;
+                                align-items: start;
+                            "
+                        >
+                            <a
+                                class="recipe-thumb"
+                                href="recipe-detail.html"
+                                aria-label="View Amma Pizza"
+                                style="
+                                    display: block;
+                                    aspect-ratio: 4/3;
+                                    border: 1px solid var(--border);
+                                    border-radius: var(--radius);
+                                    overflow: hidden;
+                                    box-shadow: var(--shadow);
+                                "
+                            >
+                                <img
+                                    src="assets/recipes/steak_jerry.jpg"
+                                    alt="Amma Pizza preview"
+                                    style="
+                                        width: 100%;
+                                        height: 100%;
+                                        object-fit: cover;
+                                    "
+                                />
+                            </a>
+
+                            <div class="recipe-body">
+                                <h3
+                                    class="recipe-title"
+                                    style="
+                                        font-size: clamp(22px, 3vw, 36px);
+                                        margin-bottom: 8px;
+                                    "
+                                >
+                                    <a
+                                        href="recipe-detail.html"
+                                        class="text-link"
+                                        style="
+                                            text-decoration: none;
+                                            color: inherit;
+                                        "
+                                        >Jerry Steak</a
+                                    >
+                                </h3>
+
+                                <p class="lead">
+                                    Cheese, Basil, Pepper…<br />……30 min……<br />XXXXXXXX
+                                </p>
+
+                                <div class="actions" style="margin-top: 16px">
+                                    <a class="btn" href="recipe-detail.html"
+                                        >Button</a
+                                    >
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Footer -->
+            <footer class="site-footer" role="contentinfo">
+                <div class="container">
+                    <p>[Footer]</p>
+                </div>
+            </footer>
+        </main>
+    </body>
+</html>

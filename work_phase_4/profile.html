@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Profile – Dashboard</title>
+
+        <!-- existing CSS -->
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/base.css" />
+        <link rel="stylesheet" href="css/layout.css" />
+        <link rel="stylesheet" href="css/components.css" />
+
+        <!-- profile css  -->
+        <link rel="stylesheet" href="css/page_css/profile.css" />
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    </head>
+    <body>
+        <!-- Header -->
+        <header class="site-header">
+            <div class="container nav">
+                <a class="brand" href="index.html" aria-label="Home">
+                    <img src="assets/logo.svg" alt="" width="96" height="32" />
+                    <span class="sr-only">Fooodie</span>
+                </a>
+
+                <nav class="primary-nav" aria-label="Primary">
+                    <a href="index.html">Home</a>
+                    <a href="recipes.html">Recipes</a>
+                    <a href="events.html">Events</a>
+                    <a href="community.html">Community</a>
+                    <a href="profile.html" aria-current="page">Profile</a>
+                </nav>
+
+                <div class="nav-ctas">
+                    <a
+                        class="btn btn-ghost"
+                        href="notifications.html"
+                        aria-label="Notifications"
+                    >
+                        🔔 <span class="sr-only">Notifications</span>
+                    </a>
+                    <a class="btn btn-outline" href="logout.html">Log out</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main -->
+        <main id="content">
+            <div class="container section">
+                <!-- Page head -->
+                <header class="page-head">
+                    <h1>Welcome back, Sarah!</h1>
+                    <p class="muted">Today is Monday, June 10</p>
+                </header>
+
+                <!-- Desktop 兩欄：左主內容、右側欄 -->
+                <div class="grid grid-desktop-2">
+                    <!-- 左側主內容 -->
+                    <div class="col main-col">
+                        <!-- Quick actions -->
+                        <section
+                            aria-labelledby="quick-actions-title"
+                            class="card-grid trio"
+                        >
+                            <h2 id="quick-actions-title" class="sr-only">
+                                Quick actions
+                            </h2>
+
+                            <a
+                                class="card action"
+                                href="recipes-favorites.html"
+                                aria-label="Favourite recipes"
+                            >
+                                <div class="icon-top">
+                                    <img
+                                        src="assets/profile/favorite.png"
+                                        alt="favorite icon"
+                                    />
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="card-title">Fav recipes</h3>
+                                    <p class="card-text muted">
+                                        Your saved dishes
+                                    </p>
+                                </div>
+                            </a>
+
+                            <a
+                                class="card action"
+                                href="resources.html"
+                                aria-label="Resources"
+                            >
+                                <div class="icon-top">
+                                    <img
+                                        src="assets/profile/resources.png"
+                                        alt="resources icon"
+                                    />
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="card-title">Resources</h3>
+                                    <p class="card-text muted">Guides & tips</p>
+                                </div>
+                            </a>
+
+                            <a
+                                class="card action"
+                                href="settings.html"
+                                aria-label="Settings"
+                            >
+                                <div class="icon-top">
+                                    <img
+                                        src="assets/profile/setting.jpg"
+                                        alt="setting icon"
+                                    />
+                                </div>
+                                <div class="card-body">
+                                    <h3 class="card-title">Setting</h3>
+                                    <p class="card-text muted">
+                                        Profile & privacy
+                                    </p>
+                                </div>
+                            </a>
+                        </section>
+
+                        <!-- History Post -->
+                        <section aria-labelledby="history-title" class="stack">
+                            <div class="section-head">
+                                <h2 id="history-title">History Post</h2>
+                                <a class="text-link" href="profile-history.html"
+                                    >View all</a
+                                >
+                            </div>
+
+                            <article class="card post hero">
+                                <header class="post-meta">
+                                    <time datetime="2025-06-09">June 9</time>
+                                </header>
+                                <figure class="post-media">
+                                    <img
+                                        src="assets/profile/hamburger.jpg"
+                                        alt="Preview: how I make hamburger"
+                                    />
+                                </figure>
+                                <div class="card-body">
+                                    <h3 class="post-title">
+                                        how I make hamburger
+                                    </h3>
+                                </div>
+                            </article>
+                        </section>
+
+                        <!-- Recent Activity -->
+                        <section aria-labelledby="activity-title" class="stack">
+                            <div class="section-head">
+                                <h2 id="activity-title">Recent Activity</h2>
+                                <a
+                                    class="text-link"
+                                    href="profile-activity.html"
+                                    >See all</a
+                                >
+                            </div>
+
+                            <ol class="activity-list">
+                                <li class="activity-item card">
+                                    <div class="avatar">
+                                        <img
+                                            src="assets/profile/Amy.jpg"
+                                            alt="Amy's profile photo"
+                                        />
+                                    </div>
+                                    <div class="activity-body">
+                                        <h4 class="activity-title">
+                                            Amy like your recipes
+                                        </h4>
+                                        <time
+                                            class="muted"
+                                            datetime="2025-06-10T09:45"
+                                            >Today, 9:45 AM</time
+                                        >
+                                    </div>
+                                </li>
+
+                                <li class="activity-item card">
+                                    <div class="avatar">
+                                        <img
+                                            src="assets/profile/Sean.jpg"
+                                            alt="Amy's profile photo"
+                                        />
+                                    </div>
+                                    <div class="activity-body">
+                                        <h4 class="activity-title">
+                                            Sean comment your recipes
+                                        </h4>
+                                        <time
+                                            class="muted"
+                                            datetime="2025-06-09T16:30"
+                                            >Yesterday, 4:30 PM</time
+                                        >
+                                    </div>
+                                </li>
+
+                                <li class="activity-item card">
+                                    <div class="avatar">
+                                        <img
+                                            src="assets/profile/event.jpg"
+                                            alt="Amy's profile photo"
+                                        />
+                                    </div>
+                                    <div class="activity-body">
+                                        <h4 class="activity-title">
+                                            Event invitation
+                                        </h4>
+                                        <time
+                                            class="muted"
+                                            datetime="2025-06-09T14:15"
+                                            >Yesterday, 2:15 PM</time
+                                        >
+                                    </div>
+                                </li>
+
+                                <li class="activity-item card">
+                                    <div class="avatar">
+                                        <img
+                                            src="assets/profile/Sarah.jpg"
+                                            alt="Amy's profile photo"
+                                        />
+                                    </div>
+                                    <div class="activity-body">
+                                        <h4 class="activity-title">
+                                            Updated your profile
+                                        </h4>
+                                        <time
+                                            class="muted"
+                                            datetime="2025-06-09T11:20"
+                                            >Jun 9, 11:20 AM</time
+                                        >
+                                    </div>
+                                </li>
+                            </ol>
+                        </section>
+                    </div>
+
+                    <!-- 右側欄（桌面顯示） -->
+                    <aside class="col side-col" aria-label="Profile overview">
+                        <article class="card profile-summary">
+                            <header class="card-body">
+                                <div class="avatar avatar-xl">
+                                    <img src="assets/profile/Sarah.jpg"
+                                    alt="Sarah Chen's profile photo" / >
+                                </div>
+                                <h2 class="card-title">Sarah Chen</h2>
+                                <p class="muted">@sarah_fooodie</p>
+                            </header>
+                            <ul class="stat-list">
+                                <li>
+                                    <strong>124</strong
+                                    ><span class="muted">Recipes</span>
+                                </li>
+                                <li>
+                                    <strong>58</strong
+                                    ><span class="muted">Saved</span>
+                                </li>
+                                <li>
+                                    <strong>312</strong
+                                    ><span class="muted">Followers</span>
+                                </li>
+                            </ul>
+                            <div class="card-body">
+                                <a
+                                    class="btn btn-primary"
+                                    href="edit-profile.html"
+                                    >Edit profile</a
+                                >
+                            </div>
+                        </article>
+
+                        <nav class="card quick-links" aria-label="Quick links">
+                            <div class="card-body">
+                                <ul class="link-list">
+                                    <li>
+                                        <a href="recipes-favorites.html"
+                                            >♥ Favourite recipes</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="notifications.html"
+                                            >🔔 Notifications</a
+                                        >
+                                    </li>
+                                    <li>
+                                        <a href="settings.html">⚙ Settings</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </aside>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="site-footer" role="contentinfo">
+            <div class="container">
+                <nav class="footer-nav" aria-label="Footer">
+                    <a href="index.html">Home</a>
+                    <a href="recipes.html">Recipes</a>
+                    <a href="events.html">Events</a>
+                    <a href="community.html">Community</a>
+                    <a href="profile.html" aria-current="page">Profile</a>
+                </nav>
+                <p class="muted">© 2025 Fooodie</p>
+            </div>
+        </footer>
+    </body>
+</html>
