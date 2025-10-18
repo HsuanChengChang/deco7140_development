@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Community</title>
+
+        <!-- Global CSS -->
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/base.css" />
+        <link rel="stylesheet" href="css/layout.css" />
+        <link rel="stylesheet" href="css/components.css" />
+        <!-- Page CSS -->
+        <link rel="stylesheet" href="css/page_css/community.css" />
+
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    </head>
+    <body>
+        <!-- Header / Global Nav -->
+        <header class="site-header">
+            <div class="container nav">
+                <a class="brand" href="index.html" aria-label="Home">
+                    <span class="badge">Your Logo</span>
+                </a>
+
+                <nav class="primary-nav" aria-label="Primary">
+                    <a href="index.html">Home</a>
+                    <a href="recipes.html">Recipes</a>
+                    <a href="events.html">Events</a>
+                    <a href="community.html" aria-current="page">Community</a>
+                    <a href="profile.html">Profile</a>
+                </nav>
+
+                <a class="btn btn-outline" href="logout.html">Log out</a>
+            </div>
+        </header>
+
+        <main id="content">
+            <div class="container section">
+                <!-- Page head -->
+                <header class="page-head">
+                    <h1>Community</h1>
+                    <p class="muted">
+                        Share tips, ask questions, and meet other food lovers.
+                    </p>
+                </header>
+
+                <!-- Search + tags + quick filters -->
+                <section
+                    class="community-search"
+                    aria-labelledby="community-search-title"
+                >
+                    <h2 id="community-search-title" class="sr-only">
+                        Search community
+                    </h2>
+
+                    <form
+                        class="search-form"
+                        action="community.html"
+                        method="get"
+                        role="search"
+                    >
+                        <label for="q" class="sr-only">Search</label>
+                        <input
+                            id="q"
+                            name="q"
+                            type="search"
+                            class="search-input"
+                            placeholder="Search posts, people, or tags"
+                            autocomplete="off"
+                        />
+                    </form>
+
+                    <div class="filters">
+                        <ul class="tag-list" aria-label="Popular tags">
+                            <li><a class="tag" href="?tag=Pizza">#Pizza</a></li>
+                            <li><a class="tag" href="?tag=Vegan">#Vegan</a></li>
+                            <li>
+                                <a class="tag" href="?tag=MealPrep"
+                                    >#MealPrep</a
+                                >
+                            </li>
+                            <li><a class="tag" href="?tag=Gear">#Gear</a></li>
+                        </ul>
+
+                        <div
+                            class="segmented"
+                            role="tablist"
+                            aria-label="Feed filter"
+                        >
+                            <button
+                                role="tab"
+                                aria-selected="true"
+                                class="seg-btn"
+                            >
+                                Top
+                            </button>
+                            <button
+                                role="tab"
+                                aria-selected="false"
+                                class="seg-btn"
+                            >
+                                New
+                            </button>
+                            <button
+                                role="tab"
+                                aria-selected="false"
+                                class="seg-btn"
+                            >
+                                Questions
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Composer -->
+                <section class="composer" aria-labelledby="composer-title">
+                    <h2 id="composer-title" class="sr-only">Create a post</h2>
+
+                    <form class="composer-form" action="#" method="post">
+                        <div class="composer-row">
+                            <img
+                                class="avatar"
+                                src="assets/avatars/default.png"
+                                alt=""
+                                aria-hidden="true"
+                            />
+                            <textarea
+                                id="post"
+                                name="post"
+                                rows="3"
+                                placeholder="Share a tip, ask a question, or post a photo…"
+                                required
+                            ></textarea>
+                        </div>
+
+                        <div class="composer-actions">
+                            <label class="file-btn">
+                                <input
+                                    type="file"
+                                    name="image"
+                                    accept="image/*"
+                                    hidden
+                                />
+                                <span>Upload image</span>
+                            </label>
+                            <div class="grow"></div>
+                            <button type="submit" class="btn">Post</button>
+                        </div>
+                    </form>
+                </section>
+
+                <!-- Content grid -->
+                <div class="community-grid">
+                    <!-- Feed (left) -->
+                    <section class="feed" aria-labelledby="feed-title">
+                        <h2 id="feed-title" class="sr-only">Community feed</h2>
+
+                        <!-- Post card -->
+                        <article class="post-card">
+                            <header class="post-head">
+                                <img
+                                    class="avatar"
+                                    src="assets/avatars/ava_01.jpg"
+                                    alt=""
+                                    aria-hidden="true"
+                                />
+                                <div>
+                                    <a href="profile.html" class="post-author"
+                                        >Maya</a
+                                    >
+                                    <div class="post-meta">
+                                        <time datetime="2025-10-18T10:24"
+                                            >2h</time
+                                        >
+                                        ·
+                                        <a href="?tag=Pizza" class="post-tag"
+                                            >#Pizza</a
+                                        >
+                                    </div>
+                                </div>
+                            </header>
+
+                            <div class="post-body">
+                                <p>
+                                    My 90-minute dough finally worked! Any
+                                    tricks to avoid soggy centers when using
+                                    fresh mozzarella?
+                                </p>
+                                <img
+                                    class="post-media"
+                                    src="assets/community/pizza_homemade.jpg"
+                                    alt="Homemade margherita pizza with blistered crust"
+                                />
+                            </div>
+
+                            <footer
+                                class="post-actions"
+                                aria-label="Post actions"
+                            >
+                                <button class="btn btn-outline" type="button">
+                                    Like
+                                </button>
+                                <button class="btn btn-outline" type="button">
+                                    Comment
+                                </button>
+                                <button class="btn btn-outline" type="button">
+                                    Save
+                                </button>
+                            </footer>
+
+                            <!-- A simple reply -->
+                            <div class="post-thread">
+                                <article class="reply">
+                                    <img
+                                        class="avatar sm"
+                                        src="assets/avatars/ava_02.jpg"
+                                        alt=""
+                                        aria-hidden="true"
+                                    />
+                                    <div>
+                                        <strong>Ken</strong>
+                                        <p>
+                                            Preheat a steel for 45 min and drain
+                                            mozz—pat dry. Also try a light
+                                            passata.
+                                        </p>
+                                    </div>
+                                </article>
+                            </div>
+                        </article>
+
+                        <!-- Post card 2 -->
+                        <article class="post-card">
+                            <header class="post-head">
+                                <img
+                                    class="avatar"
+                                    src="assets/avatars/ava_03.jpg"
+                                    alt=""
+                                    aria-hidden="true"
+                                />
+                                <div>
+                                    <a href="profile.html" class="post-author"
+                                        >Yuki</a
+                                    >
+                                    <div class="post-meta">
+                                        <time datetime="2025-10-17T21:00"
+                                            >Last night</time
+                                        >
+                                        ·
+                                        <a href="?tag=Vegan" class="post-tag"
+                                            >#Vegan</a
+                                        >
+                                    </div>
+                                </div>
+                            </header>
+
+                            <div class="post-body">
+                                <p>
+                                    Five-ingredient miso glaze for roasted
+                                    veg—works on eggplant, pumpkin, and tofu.
+                                </p>
+                                <pre class="snippet">
+2 tbsp miso
+1 tbsp maple
+1 tbsp rice vinegar
+1 tbsp sesame oil
+1 tsp grated ginger</pre
+                                >
+                            </div>
+
+                            <footer
+                                class="post-actions"
+                                aria-label="Post actions"
+                            >
+                                <button class="btn btn-outline" type="button">
+                                    Like
+                                </button>
+                                <button class="btn btn-outline" type="button">
+                                    Comment
+                                </button>
+                                <button class="btn btn-outline" type="button">
+                                    Save
+                                </button>
+                            </footer>
+                        </article>
+                    </section>
+
+                    <!-- Sidebar (right) -->
+                    <aside class="sidebar" aria-label="Sidebar">
+                        <!-- Trending -->
+                        <section class="panel" aria-labelledby="trending-title">
+                            <h2 id="trending-title" class="panel-title">
+                                Trending tags
+                            </h2>
+                            <ul class="chip-list">
+                                <li>
+                                    <a class="chip" href="?tag=Sourdough"
+                                        >#Sourdough</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="chip" href="?tag=AirFryer"
+                                        >#AirFryer</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="chip" href="?tag=OnePot"
+                                        >#OnePot</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="chip" href="?tag=LowSugar"
+                                        >#LowSugar</a
+                                    >
+                                </li>
+                                <li>
+                                    <a class="chip" href="?tag=BBQ">#BBQ</a>
+                                </li>
+                            </ul>
+                        </section>
+
+                        <!-- Upcoming events callout -->
+                        <section class="panel" aria-labelledby="events-title">
+                            <h2 id="events-title" class="panel-title">
+                                Upcoming events
+                            </h2>
+                            <ul class="mini-cards">
+                                <li>
+                                    <a
+                                        class="mini-card"
+                                        href="events_cooking.html"
+                                    >
+                                        <img
+                                            src="assets/events/cooking.jpg"
+                                            alt=""
+                                            aria-hidden="true"
+                                        />
+                                        <div>
+                                            <p class="mini-title">
+                                                Cooking lesson
+                                            </p>
+                                            <p class="mini-sub">
+                                                <time
+                                                    datetime="2025-10-26T18:30"
+                                                    >Sun, 26 Oct · 6:30 pm</time
+                                                >
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a
+                                        class="mini-card"
+                                        href="event-detail.html"
+                                    >
+                                        <img
+                                            src="assets/recipes/ramen_rob.jpg"
+                                            alt=""
+                                            aria-hidden="true"
+                                        />
+                                        <div>
+                                            <p class="mini-title">
+                                                Ramen Social Night
+                                            </p>
+                                            <p class="mini-sub">
+                                                Wed, 29 Oct · 7:00 pm
+                                            </p>
+                                        </div>
+                                    </a>
+                                </li>
+                            </ul>
+                            <div class="panel-actions">
+                                <a class="btn btn-outline" href="events.html"
+                                    >See all events</a
+                                >
+                            </div>
+                        </section>
+
+                        <!-- Top members -->
+                        <section class="panel" aria-labelledby="members-title">
+                            <h2 id="members-title" class="panel-title">
+                                Top members
+                            </h2>
+                            <ul class="people">
+                                <li class="person">
+                                    <img
+                                        class="avatar"
+                                        src="assets/avatars/ava_04.jpg"
+                                        alt=""
+                                        aria-hidden="true"
+                                    />
+                                    <div>
+                                        <p class="name">Dina</p>
+                                        <p class="muted">42 helpful answers</p>
+                                    </div>
+                                    <a
+                                        class="btn btn-outline sm"
+                                        href="profile.html"
+                                        >View</a
+                                    >
+                                </li>
+                                <li class="person">
+                                    <img
+                                        class="avatar"
+                                        src="assets/avatars/ava_05.jpg"
+                                        alt=""
+                                        aria-hidden="true"
+                                    />
+                                    <div>
+                                        <p class="name">Leo</p>
+                                        <p class="muted">36 recipes shared</p>
+                                    </div>
+                                    <a
+                                        class="btn btn-outline sm"
+                                        href="profile.html"
+                                        >View</a
+                                    >
+                                </li>
+                            </ul>
+                        </section>
+                    </aside>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="site-footer" role="contentinfo">
+                <div class="container"><p>[Footer]</p></div>
+            </footer>
+        </main>
+    </body>
+</html>

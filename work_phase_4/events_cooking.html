@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Pizza Cooking Lesson – Event</title>
+
+        <!-- Global CSS -->
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/base.css" />
+        <link rel="stylesheet" href="css/layout.css" />
+        <link rel="stylesheet" href="css/components.css" />
+
+        <!-- Page CSS (new) -->
+        <link rel="stylesheet" href="css/page_css/events_cooking.css" />
+
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    </head>
+    <body>
+        <!-- Header / Global Nav -->
+        <header class="site-header">
+            <div class="container nav">
+                <a class="brand" href="index.html" aria-label="Home"
+                    ><span class="badge">Your Logo</span></a
+                >
+                <nav class="primary-nav" aria-label="Primary">
+                    <a href="index.html">Home</a>
+                    <a href="recipes.html">Recipes</a>
+                    <a href="events.html" aria-current="page">Events</a>
+                    <a href="community.html">Community</a>
+                    <a href="profile.html">Profile</a>
+                </nav>
+                <a class="btn btn-outline" href="logout.html">Log out</a>
+            </div>
+        </header>
+
+        <main id="content">
+            <div class="container">
+                <!-- Tags / Search（可保留；已做極簡間距） -->
+                <section class="detail-search" aria-labelledby="search-title">
+                    <h2 id="search-title" class="sr-only">Search events</h2>
+                    <form
+                        class="search-form"
+                        action="events.html"
+                        method="get"
+                        role="search"
+                    >
+                        <label for="q" class="sr-only">Search</label>
+                        <input
+                            id="q"
+                            name="q"
+                            type="search"
+                            class="search-input"
+                            placeholder="Search events"
+                        />
+                    </form>
+                    <ul class="tag-list" aria-label="Popular tags">
+                        <li><a class="tag" href="?tag=Pizza">#Pizza</a></li>
+                        <li><a class="tag" href="?tag=Cheese">#Cheese</a></li>
+                        <li><a class="tag" href="?tag=Comfort">#Comfort</a></li>
+                    </ul>
+                </section>
+
+                <!-- Breadcrumbs（縮小外距） -->
+                <nav class="breadcrumbs" aria-label="Breadcrumb">
+                    <ol>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="events.html">Events</a></li>
+                        <li aria-current="page">Cooking Lesson – Pizza</li>
+                    </ol>
+                </nav>
+
+                <!-- Title -->
+                <header class="page-head">
+                    <h1 class="event-title">Cooking Lesson – Pizza</h1>
+                    <p class="event-subtitle">
+                        Hands-on workshop: from dough to dinner in 90 minutes
+                    </p>
+                </header>
+
+                <!-- Hero -->
+                <section class="event-hero" aria-labelledby="hero-title">
+                    <h2 id="hero-title" class="sr-only">Event overview</h2>
+
+                    <figure class="event-image">
+                        <img
+                            src="assets/events/cooking.jpg"
+                            alt="A chef shaping pizza dough with fresh basil, tomatoes, and cheese on a wooden table"
+                        />
+                        <figcaption class="sr-only">
+                            Hands-on pizza making with fresh ingredients
+                        </figcaption>
+                    </figure>
+
+                    <aside class="event-meta" aria-label="Event details">
+                        <ul class="meta-list">
+                            <li>
+                                <span class="meta-label">Date & Time</span
+                                ><time datetime="2025-10-26T18:30"
+                                    >Sun, 26 Oct 2025 · 6:30–8:00 pm</time
+                                >
+                            </li>
+                            <li>
+                                <span class="meta-label">Location</span
+                                ><span>UQ Kitchen Lab, St Lucia</span>
+                            </li>
+                            <li>
+                                <span class="meta-label">Host</span
+                                ><span
+                                    >Chef Andrea (Neapolitan specialist)</span
+                                >
+                            </li>
+                            <li>
+                                <span class="meta-label">Capacity</span
+                                ><span>20 spots · Small group</span>
+                            </li>
+                            <li>
+                                <span class="meta-label">Price</span
+                                ><span>AUD $39 (ingredients included)</span>
+                            </li>
+                        </ul>
+                        <div class="event-cta">
+                            <a class="btn" href="#signup">Reserve your spot</a>
+                            <button class="btn btn-outline" type="button">
+                                Add to calendar
+                            </button>
+                        </div>
+                        <div class="event-share" aria-label="Share">
+                            <span class="share-label">Share:</span>
+                            <a class="share-link" href="#">Facebook</a>
+                            <a class="share-link" href="#">X</a>
+                            <a class="share-link" href="#">Email</a>
+                        </div>
+                    </aside>
+                </section>
+
+                <!-- Content + Sidebar -->
+                <div class="event-grid">
+                    <article class="event-detail" aria-labelledby="about-title">
+                        <h2 id="about-title">About this workshop</h2>
+                        <p>
+                            Learn to craft classic Neapolitan-style pizza at
+                            home. We’ll cover a quick, reliable dough, how to
+                            proof it, stretch without tearing, layer flavours,
+                            and bake for a crisp, airy crust—no fancy oven
+                            required.
+                        </p>
+
+                        <h3>What you’ll learn</h3>
+                        <ul class="checklist">
+                            <li>90-minute dough method (same-day option)</li>
+                            <li>Hand-stretching and shaping techniques</li>
+                            <li>Balancing tomato, cheese, and herbs</li>
+                            <li>
+                                Pan, stone, or steel—heat strategies at home
+                            </li>
+                            <li>
+                                Finishing: basil, olive oil, and simple sides
+                            </li>
+                        </ul>
+
+                        <h3>Who it’s for</h3>
+                        <p>
+                            Beginners welcome—no prior experience needed.
+                            Vegetarian-friendly.
+                        </p>
+
+                        <h3>Schedule</h3>
+                        <ol class="schedule">
+                            <li>
+                                <strong>6:30 pm</strong> · Welcome & mise en
+                                place
+                            </li>
+                            <li>
+                                <strong>6:40 pm</strong> · Dough demo (mixing &
+                                proofing)
+                            </li>
+                            <li>
+                                <strong>7:00 pm</strong> · Hand-stretching &
+                                topping
+                            </li>
+                            <li><strong>7:20 pm</strong> · Bake & taste</li>
+                            <li>
+                                <strong>7:45 pm</strong> · Q&A, tips, cleanup
+                            </li>
+                        </ol>
+
+                        <h3>What’s included</h3>
+                        <ul class="bullets">
+                            <li>
+                                All ingredients (00 flour, yeast, San Marzano
+                                tomatoes, mozzarella, basil)
+                            </li>
+                            <li>Apron and utensils during class</li>
+                            <li>PDF cheat-sheet and dough formula</li>
+                        </ul>
+
+                        <h3>What to bring</h3>
+                        <ul class="bullets">
+                            <li>Closed-toe shoes</li>
+                            <li>
+                                Reusable container (if you want to take
+                                leftovers)
+                            </li>
+                        </ul>
+
+                        <section class="faqs" aria-labelledby="faq-title">
+                            <h3 id="faq-title">FAQs</h3>
+                            <details>
+                                <summary>Can I use other cheese?</summary>
+                                <p>
+                                    Yes—mozzarella is ideal, but you can sub
+                                    with provolone, scamorza, or even cheddar
+                                    blends. We’ll discuss melt and moisture
+                                    control.
+                                </p>
+                            </details>
+                            <details>
+                                <summary>Is it suitable for vegans?</summary>
+                                <p>
+                                    Base and sauce are vegan; bring your
+                                    preferred vegan cheese or toppings if you
+                                    like.
+                                </p>
+                            </details>
+                            <details>
+                                <summary>Allergens</summary>
+                                <p>
+                                    Contains gluten and dairy. We’ll have flour
+                                    in the air; not suitable for severe gluten
+                                    allergies.
+                                </p>
+                            </details>
+                        </section>
+
+                        <section
+                            class="comments"
+                            aria-labelledby="comments-title"
+                        >
+                            <h2 id="comments-title">Comments</h2>
+                            <ul class="comment-list">
+                                <li class="comment-card">
+                                    <header class="comment-meta">
+                                        <strong class="comment-author"
+                                            >Andy</strong
+                                        >
+                                        <time
+                                            class="comment-time"
+                                            datetime="2025-10-10T12:05"
+                                            >Oct 10</time
+                                        >
+                                    </header>
+                                    <p class="comment-text">
+                                        Is there any dress code?
+                                    </p>
+                                </li>
+                            </ul>
+                            <form class="message-form" action="#" method="post">
+                                <label for="message" class="sr-only"
+                                    >Your message</label
+                                >
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    rows="3"
+                                    placeholder="Your message"
+                                    required
+                                ></textarea>
+                                <div class="actions">
+                                    <button type="submit" class="btn">
+                                        Send
+                                    </button>
+                                </div>
+                            </form>
+                        </section>
+                    </article>
+
+                    <aside class="event-aside" aria-label="Organizer and venue">
+                        <section class="organizer">
+                            <h2>Organizer</h2>
+                            <div class="organizer-card">
+                                <img
+                                    src="assets/events/chef_andrea.jpg"
+                                    alt="Chef Andrea smiling in a white chef coat"
+                                />
+                                <div>
+                                    <p class="org-name">Chef Andrea</p>
+                                    <p class="org-role">
+                                        Neapolitan Pizza Specialist
+                                    </p>
+                                    <p class="org-desc">
+                                        Born in Naples, Andrea has taught 400+
+                                        students how to make blistered, airy
+                                        crusts at home.
+                                    </p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="venue">
+                            <h2>Venue</h2>
+                            <p>UQ Kitchen Lab, Staff House Rd, St Lucia QLD</p>
+                            <div class="map-embed" aria-label="Map placeholder">
+                                <div class="map-placeholder">Map preview</div>
+                            </div>
+                        </section>
+
+                        <section id="signup" class="signup">
+                            <h2>Reserve your spot</h2>
+                            <form action="#" method="post" class="signup-form">
+                                <label for="tickets">Tickets</label>
+                                <select id="tickets" name="tickets" required>
+                                    <option value="" selected disabled>
+                                        Select quantity
+                                    </option>
+                                    <option value="1">1 ticket – $39</option>
+                                    <option value="2">2 tickets – $78</option>
+                                    <option value="3">3 tickets – $117</option>
+                                </select>
+                                <label for="email">Email</label>
+                                <input
+                                    id="email"
+                                    name="email"
+                                    type="email"
+                                    placeholder="you@example.com"
+                                    required
+                                />
+                                <button type="submit" class="btn">
+                                    Checkout
+                                </button>
+                            </form>
+                        </section>
+                    </aside>
+                </div>
+
+                <!-- Related -->
+                <section class="related" aria-labelledby="related-title">
+                    <h2 id="related-title">Related events</h2>
+                    <ul class="related-list">
+                        <li>
+                            <a href="event-detail.html" class="text-link"
+                                >Ramen Social Night · Oct 29</a
+                            >
+                        </li>
+                        <li>
+                            <a href="event-detail.html" class="text-link"
+                                >Steak &amp; Stories · Nov 2</a
+                            >
+                        </li>
+                    </ul>
+                </section>
+            </div>
+
+            <footer class="site-footer" role="contentinfo">
+                <div class="container"><p>[Footer]</p></div>
+            </footer>
+        </main>
+    </body>
+</html>

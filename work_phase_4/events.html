@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Events</title>
+
+        <!-- Global CSS -->
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/base.css" />
+        <link rel="stylesheet" href="css/layout.css" />
+        <link rel="stylesheet" href="css/components.css" />
+        <!-- Page-specific CSS -->
+        <link rel="stylesheet" href="css/page_css/events.css" />
+        <!-- Favicon (fixed .ico) -->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    </head>
+    <body>
+        <!-- Header / Global Nav -->
+        <header class="site-header">
+            <div class="container nav">
+                <a class="brand" href="index.html" aria-label="Home">
+                    <span class="badge">Your Logo</span>
+                </a>
+
+                <nav class="primary-nav" aria-label="Primary">
+                    <a href="index.html">Home</a>
+                    <a href="recipes.html">Recipes</a>
+                    <a href="events.html" aria-current="page">Events</a>
+                    <a href="community.html">Community</a>
+                    <a href="profile.html">Profile</a>
+                </nav>
+
+                <a class="btn btn-outline" href="#">Log out</a>
+            </div>
+        </header>
+
+        <main id="content">
+            <div class="container section">
+                <!-- Search & Tags -->
+                <section
+                    class="events-search"
+                    aria-labelledby="events-search-title"
+                >
+                    <form
+                        class="search-form"
+                        action="events.html"
+                        method="get"
+                        role="search"
+                    >
+                        <label for="q" class="sr-only">Search events</label>
+                        <input
+                            id="q"
+                            name="q"
+                            type="search"
+                            class="search-input"
+                            placeholder="Search events"
+                            autocomplete="off"
+                        />
+                    </form>
+
+                    <ul class="tag-list" aria-label="Popular tags">
+                        <li><a class="tag" href="?tag=cooking">#cooking</a></li>
+                        <li><a class="tag" href="?tag=social">#social</a></li>
+                        <li><a class="tag" href="?tag=dining">#dining</a></li>
+                    </ul>
+                </section>
+
+                <!-- Calendar (placed under search & tags, above event list) -->
+                <section
+                    class="events-calendar"
+                    aria-labelledby="events-calendar-title"
+                >
+                    <h2 id="events-calendar-title" class="section-title">
+                        Calendar
+                    </h2>
+
+                    <!-- Accessible mini calendar (static markup; optional JS can enhance) -->
+                    <div
+                        class="calendar"
+                        role="group"
+                        aria-label="Events calendar"
+                    >
+                        <div class="calendar-header">
+                            <button
+                                class="calendar-nav prev"
+                                type="button"
+                                aria-label="Previous month"
+                                data-cal-action="prev"
+                            >
+                                &#10094;
+                            </button>
+                            <!-- Tip: you can update this dynamically; seeded to current month as example -->
+                            <div
+                                class="calendar-month"
+                                aria-live="polite"
+                                aria-atomic="true"
+                            >
+                                October 2025
+                            </div>
+                            <button
+                                class="calendar-nav next"
+                                type="button"
+                                aria-label="Next month"
+                                data-cal-action="next"
+                            >
+                                &#10095;
+                            </button>
+                        </div>
+
+                        <div
+                            class="calendar-grid"
+                            role="grid"
+                            aria-readonly="true"
+                        >
+                            <div
+                                class="calendar-row calendar-weekdays"
+                                role="row"
+                            >
+                                <span
+                                    class="calendar-cell weekday"
+                                    role="columnheader"
+                                    aria-label="Sunday"
+                                    >Sun</span
+                                >
+                                <span
+                                    class="calendar-cell weekday"
+                                    role="columnheader"
+                                    aria-label="Monday"
+                                    >Mon</span
+                                >
+                                <span
+                                    class="calendar-cell weekday"
+                                    role="columnheader"
+                                    aria-label="Tuesday"
+                                    >Tue</span
+                                >
+                                <span
+                                    class="calendar-cell weekday"
+                                    role="columnheader"
+                                    aria-label="Wednesday"
+                                    >Wed</span
+                                >
+                                <span
+                                    class="calendar-cell weekday"
+                                    role="columnheader"
+                                    aria-label="Thursday"
+                                    >Thu</span
+                                >
+                                <span
+                                    class="calendar-cell weekday"
+                                    role="columnheader"
+                                    aria-label="Friday"
+                                    >Fri</span
+                                >
+                                <span
+                                    class="calendar-cell weekday"
+                                    role="columnheader"
+                                    aria-label="Saturday"
+                                    >Sat</span
+                                >
+                            </div>
+
+                            <!-- Week rows (example layout for October 2025; adjust or render via JS as needed) -->
+                            <div class="calendar-row" role="row">
+                                <button
+                                    class="calendar-cell day is-outside"
+                                    role="gridcell"
+                                    aria-disabled="true"
+                                    tabindex="-1"
+                                >
+                                    28
+                                </button>
+                                <button
+                                    class="calendar-cell day is-outside"
+                                    role="gridcell"
+                                    aria-disabled="true"
+                                    tabindex="-1"
+                                >
+                                    29
+                                </button>
+                                <button
+                                    class="calendar-cell day is-outside"
+                                    role="gridcell"
+                                    aria-disabled="true"
+                                    tabindex="-1"
+                                >
+                                    30
+                                </button>
+                                <button
+                                    class="calendar-cell day"
+                                    role="gridcell"
+                                >
+                                    1
+                                </button>
+                                <button
+                                    class="calendar-cell day"
+                                    role="gridcell"
+                                >
+                                    2
+                                </button>
+                                <button
+                                    class="calendar-cell day"
+                                    role="gridcell"
+                                >
+                                    3
+                                </button>
+                                <button
+                                    class="calendar-cell day"
+                                    role="gridcell"
+                                >
+                                    4
+                                </button>
+                            </div>
+                            <div class="calendar-row" role="row">
+                                <button
+                                    class="calendar-cell day"
+                                    role="gridcell"
+                                >
+                                    5
+                                </button>
+                                <button
+                                    class="calendar-cell day"
+                                    role="gridcell"
+                                >
+                                    6
+                                </button>
+                                <button
+                                    class="calendar-cell day"
+                                    role="gridcell"
+                                >
+                                    7
+                                </button>
+                                <button
+                                    class="calendar-cell day"
+                                    role="gridcell"
+                                >
+                                    8
+                                </button>
+                                <button
+                                    class="calendar-cell day"
+                                    role="gridcell"
+                                >
+                                    9
+                                </button>
+                                <button
+                                    class="calendar-cell day"
+                                    role="gridcell"
+                                >
+                                    10
+                                </button>
+                                <button
+                                    class="calendar-cell day"
+                                    role="gridcell"
+                                >
+                                    11
+                                </button>
+                            </div>
+                            <div class="calendar-row" role="row">
+                                <button
+                                    class="calendar-cell day"
+                                    role="gridcell"
+                                >
+                                    12
+                                </button>
+                                <button
+                                    class="calendar-cell day"
+                                    role="gridcell"
+                                >
+                                    13
+                                </button>
+                                <button
+                                    class="calendar-cell day"
+                                    role="gridcell"
+                                >
+                                    14
+                                </button>
+                                <button
+                                    class="calendar-cell day"
+                                    role="gridcell"
+                                >
+                                    15
+                                </button>
+                                <button
+                                    class="calendar-cell day"
+                                    role="gridcell"
+                                >
+                                    16
+                                </button>
+                                <button
+                                    class="calendar-cell day"
+                                    role="gridcell"
+                                >
+                                    17
+                                </button>
+                                <button
+                                    class="calendar-cell day"
+                                    role="gridcell"
+                                    aria-current="date"
+                                >
+                                    18
+                                </button>
+                            </div>
+                            <div class="calendar-row" role="row">
+                                <button
+                                    class="calendar-cell day"
+                                    role="gridcell"
+                                >
+                                    19
+                                </button>
+                                <button
+                                    class="calendar-cell day"
+                                    role="gridcell"
+                                >
+                                    20
+                                </button>
+                                <button
+                                    class="calendar-cell day"
+                                    role="gridcell"
+                                >
+                                    21
+                                </button>
+                                <button
+                                    class="calendar-cell day"
+                                    role="gridcell"
+                                >
+                                    22
+                                </button>
+                                <button
+                                    class="calendar-cell day"
+                                    role="gridcell"
+                                >
+                                    23
+                                </button>
+                                <button
+                                    class="calendar-cell day"
+                                    role="gridcell"
+                                >
+                                    24
+                                </button>
+                                <button
+                                    class="calendar-cell day"
+                                    role="gridcell"
+                                >
+                                    25
+                                </button>
+                            </div>
+                            <div class="calendar-row" role="row">
+                                <button
+                                    class="calendar-cell day"
+                                    role="gridcell"
+                                >
+                                    26
+                                </button>
+                                <button
+                                    class="calendar-cell day"
+                                    role="gridcell"
+                                >
+                                    27
+                                </button>
+                                <button
+                                    class="calendar-cell day"
+                                    role="gridcell"
+                                >
+                                    28
+                                </button>
+                                <button
+                                    class="calendar-cell day"
+                                    role="gridcell"
+                                >
+                                    29
+                                </button>
+                                <button
+                                    class="calendar-cell day"
+                                    role="gridcell"
+                                >
+                                    30
+                                </button>
+                                <button
+                                    class="calendar-cell day is-outside"
+                                    role="gridcell"
+                                    aria-disabled="true"
+                                    tabindex="-1"
+                                >
+                                    1
+                                </button>
+                                <button
+                                    class="calendar-cell day is-outside"
+                                    role="gridcell"
+                                    aria-disabled="true"
+                                    tabindex="-1"
+                                >
+                                    2
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Optional legend for event dots/badges -->
+                        <div class="calendar-legend">
+                            <span class="legend-dot"></span> Upcoming event
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Upcoming Events -->
+                <section
+                    class="events-section"
+                    aria-labelledby="events-section-title"
+                >
+                    <div class="section-head">
+                        <button
+                            type="button"
+                            class="btn btn-outline"
+                            aria-label="Upcoming events">
+                    <img src="assets/events/events_icon.png" alt="calendar icon" /></button>
+                        <h2 id="events-section-title" class="section-title">
+                            Upcoming events
+                        </h2>
+                    </div>
+
+                    <div class="events-list">
+                        <!-- Event 1: Cooking Lesson -->
+                        <article class="event-card">
+                            <a
+                                class="event-thumb"
+                                href="events_cooking.html"
+                                aria-label="View Cooking lesson"
+                            >
+                                <img
+                                    src="assets/events/cooking.jpg"
+                                    alt="Hands-on cooking class with ingredients on table"
+                                />
+                            </a>
+
+                            <div class="event-body">
+                                <h3 class="event-title">
+                                    <a
+                                        href="events_cooking.html"
+                                        class="text-link"
+                                        >Cooking lesson</a
+                                    >
+                                </h3>
+                                <p class="event-meta">
+                                    <span class="event-chip">Workshop</span>
+                                    <span class="event-dot">•</span>
+                                    <time datetime="2025-10-26T18:30"
+                                        >Sun, 26 Oct · 6:30 pm</time
+                                    >
+                                    <span class="event-dot">•</span>
+                                    <span class="event-location"
+                                        >UQ Kitchen Lab</span
+                                    >
+                                </p>
+                                <p class="event-summary">
+                                    Cheese, basil, pepper… learn knife skills
+                                    and a 30-minute pasta you’ll actually repeat
+                                    at home.
+                                </p>
+                                <div class="event-actions">
+                                    <a class="btn" href="events_cooking.html"
+                                        >See details</a
+                                    >
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Event 2: Dining Social (Ramen Night) -->
+                        <article class="event-card">
+                            <a
+                                class="event-thumb"
+                                href="event-detail.html"
+                                aria-label="View Ramen Social Night"
+                            >
+                                <img
+                                    src="assets/recipes/ramen_rob.jpg"
+                                    alt="Steaming bowl of ramen at a cozy venue"
+                                />
+                            </a>
+
+                            <div class="event-body">
+                                <h3 class="event-title">
+                                    <a
+                                        href="event-detail.html"
+                                        class="text-link"
+                                        >Ramen Social Night</a
+                                    >
+                                </h3>
+                                <p class="event-meta">
+                                    <span class="event-chip">Social</span>
+                                    <span class="event-dot">•</span>
+                                    <time datetime="2025-10-29T19:00"
+                                        >Wed, 29 Oct · 7:00 pm</time
+                                    >
+                                    <span class="event-dot">•</span>
+                                    <span class="event-location"
+                                        >Rob’s Ramen, CBD</span
+                                    >
+                                </p>
+                                <p class="event-summary">
+                                    Meet new foodie friends over signature
+                                    bowls—veg options available.
+                                </p>
+                                <div class="event-actions">
+                                    <a class="btn" href="event-detail.html"
+                                        >See details</a
+                                    >
+                                </div>
+                            </div>
+                        </article>
+
+                        <!-- Event 3: Steak & Stories -->
+                        <article class="event-card">
+                            <a
+                                class="event-thumb"
+                                href="event-detail.html"
+                                aria-label="View Steak & Stories"
+                            >
+                                <img
+                                    src="assets/recipes/steak_jerry.jpg"
+                                    alt="Medium-rare steak served family style"
+                                />
+                            </a>
+
+                            <div class="event-body">
+                                <h3 class="event-title">
+                                    <a
+                                        href="event-detail.html"
+                                        class="text-link"
+                                        >Steak & Stories</a
+                                    >
+                                </h3>
+                                <p class="event-meta">
+                                    <span class="event-chip">Meetup</span>
+                                    <span class="event-dot">•</span>
+                                    <time datetime="2025-11-02T18:00"
+                                        >Sun, 2 Nov · 6:00 pm</time
+                                    >
+                                    <span class="event-dot">•</span>
+                                    <span class="event-location"
+                                        >Jerry’s Grill, West End</span
+                                    >
+                                </p>
+                                <p class="event-summary">
+                                    A relaxed dining meetup with short lightning
+                                    talks from local chefs and home cooks.
+                                </p>
+                                <div class="event-actions">
+                                    <a class="btn" href="event-detail.html"
+                                        >See details</a
+                                    >
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Footer -->
+            <footer class="site-footer" role="contentinfo">
+                <div class="container">
+                    <p>[Footer]</p>
+                </div>
+            </footer>
+        </main>
+    </body>
+</html>

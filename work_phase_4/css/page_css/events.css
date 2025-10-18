@@ -1,0 +1,367 @@
+/* ===========================
+   Events Page (events.css)
+   Contains only page-specific styles.
+   Depends on tokens from base.css, such as:
+   --radius, --border, --shadow, --container, --text, --muted, --brand, etc.
+   =========================== */
+
+/* ---- Section Spacing ---- */
+.section {
+    padding-block: clamp(16px, 4vw, 32px);
+}
+
+/* ---- Search & Tags ---- */
+.events-search {
+    display: grid;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.search-form {
+    margin: 0;
+}
+
+.search-input {
+    width: 100%;
+    height: 44px;
+    padding: 0 14px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    background: var(--bg, #fff);
+    color: var(--text, #1e1e1e);
+    outline: none;
+}
+
+.search-input:focus-visible {
+    border-color: var(--brand, #8b4513);
+    box-shadow: 0 0 0 3px
+        color-mix(in oklab, var(--brand, #8b4513) 24%, transparent);
+}
+
+.tag-list {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 10px;
+    border: 1px solid var(--border);
+    border-radius: calc(var(--radius) - 6px);
+    text-decoration: none;
+    color: var(--text);
+    background: var(--bg, #fff);
+    font-size: 0.95rem;
+    line-height: 1;
+}
+
+.tag:hover,
+.tag:focus-visible {
+    border-color: var(--brand, #8b4513);
+    box-shadow: 0 0 0 2px
+        color-mix(in oklab, var(--brand, #8b4513) 18%, transparent);
+}
+
+/* ---- Section Head / Title ---- */
+.section-head {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-size: clamp(24px, 3.4vw, 34px);
+    margin: 0;
+}
+
+/* ===========================
+   Calendar
+   =========================== */
+.events-calendar {
+    margin-bottom: clamp(20px, 4vw, 28px);
+}
+
+.calendar {
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    background: var(--bg, #fff);
+    overflow: clip;
+}
+
+.calendar-header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+    gap: 8px;
+}
+
+.calendar-month {
+    text-align: center;
+    font-weight: 600;
+}
+
+.calendar-nav {
+    display: inline-grid;
+    place-items: center;
+    width: 34px;
+    height: 34px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: var(--bg, #fff);
+    cursor: pointer;
+}
+
+.calendar-nav:hover,
+.calendar-nav:focus-visible {
+    border-color: var(--brand, #8b4513);
+    box-shadow: 0 0 0 2px
+        color-mix(in oklab, var(--brand, #8b4513) 18%, transparent);
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-rows: auto;
+    gap: 0;
+}
+
+.calendar-weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    border-bottom: 1px solid var(--border);
+    background: var(--brand-ghost, #f7efe9);
+}
+
+.calendar-cell.weekday {
+    padding: 10px 6px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--muted, #6b7280);
+}
+
+.calendar-row {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.calendar-cell.day {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: clamp(38px, 7.5vw, 56px);
+    padding: 6px;
+    border: 0;
+    border-right: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    background: transparent;
+    cursor: pointer;
+}
+
+.calendar-row .calendar-cell.day:nth-child(7) {
+    border-right: 0;
+}
+
+.calendar-row:last-child .calendar-cell.day {
+    border-bottom: 0;
+}
+
+.calendar-cell.day:hover,
+.calendar-cell.day:focus-visible {
+    outline: none;
+    box-shadow: inset 0 0 0 2px
+        color-mix(in oklab, var(--brand, #8b4513) 22%, transparent);
+    border-color: transparent;
+    border-right-color: var(--border);
+    border-bottom-color: var(--border);
+}
+
+.calendar-cell.day[aria-current="date"] {
+    background: color-mix(in oklab, var(--brand, #8b4513) 10%, transparent);
+    font-weight: 600;
+    border-color: color-mix(in oklab, var(--brand, #8b4513) 35%, var(--border));
+}
+
+.calendar-cell.day.is-outside {
+    color: color-mix(in oklab, var(--muted, #6b7280) 70%, white);
+    background: color-mix(in oklab, var(--bg, #fff) 90%, black);
+    cursor: default;
+}
+
+.calendar-legend {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 12px;
+    font-size: 0.9rem;
+    color: var(--muted, #6b7280);
+}
+
+.legend-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    background: var(--brand, #8b4513);
+}
+
+/* Optional: event marker for specific days */
+.calendar-cell.day.has-event::after {
+    content: "";
+    position: absolute;
+    bottom: 6px;
+    width: 6px;
+    height: 6px;
+    border-radius: 999px;
+    background: var(--brand, #8b4513);
+}
+
+/* ===========================
+   Events List / Cards
+   =========================== */
+
+.events-section {
+    margin-top: clamp(12px, 2vw, 16px);
+}
+
+.events-list {
+    display: grid;
+    gap: 28px;
+}
+
+/* Responsive layout: 2 columns on tablet, 3 on desktop */
+@media (min-width: 640px) {
+    .events-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 32px;
+    }
+}
+@media (min-width: 1024px) {
+    .events-list {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 36px;
+    }
+}
+
+.event-card {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 12px;
+    align-items: start;
+}
+
+.event-thumb {
+    display: block;
+    aspect-ratio: 4 / 3;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    background: #f7f7f7;
+}
+
+.event-thumb > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.event-body {
+    display: grid;
+    gap: 8px;
+}
+
+.event-title {
+    font-size: clamp(20px, 2.4vw, 26px);
+    margin: 0;
+}
+
+.text-link {
+    color: inherit;
+    text-decoration: none;
+}
+
+.text-link:hover,
+.text-link:focus-visible {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.event-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    color: var(--muted, #6b7280);
+    font-size: 0.95rem;
+}
+
+.event-chip {
+    display: inline-flex;
+    align-items: center;
+    padding: 2px 8px;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    color: var(--text, #1e1e1e);
+    background: var(--brand-ghost, #f7efe9);
+}
+
+.event-dot {
+    opacity: 0.6;
+}
+
+.event-location {
+    white-space: nowrap;
+}
+
+.event-summary {
+    margin: 0;
+    color: var(--text, #1e1e1e);
+}
+
+.event-actions {
+    margin-top: 6px;
+}
+
+/* 控制 btn-outline 內圖示大小與對齊 */
+.btn-outline img {
+    width: 28px; /* ← 可依需求改成 24px、32px 等 */
+    height: 28px;
+    object-fit: contain; /* 確保圖片不被壓扁 */
+    vertical-align: middle;
+    display: block; /* 讓按鈕高度取決於圖片 */
+    margin: 0 auto; /* 圖片在按鈕中置中 */
+}
+
+/* 若希望按鈕本身尺寸也一致 */
+.btn-outline {
+    padding: 6px;
+    border-radius: var(--radius, 8px);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+/* ---- Accessibility: Reduced motion ---- */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+}
