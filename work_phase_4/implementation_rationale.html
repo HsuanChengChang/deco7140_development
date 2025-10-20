@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Implementation Rationale – Work Phase 4</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/base.css" />
+        <link rel="stylesheet" href="css/layout.css" />
+        <link rel="stylesheet" href="css/components.css" />
+        <link rel="stylesheet" href="css/page_css/rationale_genai.css" />
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    </head>
+    <body>
+        <!-- ===== Header / Navigation ===== -->
+        <header class="site-header">
+            <div class="container nav">
+                <a class="brand" href="index.html" aria-label="Homepage">
+                    <span class="badge">Foodie</span>
+                </a>
+
+                <nav class="primary-nav" aria-label="Primary">
+                    <a href="index.html">Home</a>
+                    <a href="recipes.html">Recipes</a>
+                    <a href="events.html">Events</a>
+                    <a href="community.html">Community</a>
+                    <a href="profile.html">Profile</a>
+                </nav>
+
+                <a class="btn btn-outline" href="profile.html" aria-label="Log in">Log in</a>
+            </div>
+        </header>
+
+        <!-- ===== Page Content ===== -->
+        <main class="section">
+            <div class="container">
+                <h1>Implementation Rationale</h1>
+                <p class="lead">
+                    This page explains the rationale and design decisions for implementing the Food & Culinary Community website in Work Phase 4.
+                </p>
+
+                <section>
+                    <h2>1. Project Overview</h2>
+                    <p>
+                        The website transforms the A3 Design Proposal into a functional, accessible, and ethical platform that aligns with the Connect Communities Initiative’s (CCI) mission to foster community connection through food.
+                    </p>
+                </section>
+
+                <section>
+                    <h2>2. Client & User Alignment</h2>
+                    <ul>
+                        <li><strong>Client Goals:</strong> Build an inclusive digital community hub celebrating cultural diversity through cuisine.</li>
+                        <li><strong>User Needs:</strong> Discover events, share recipes, and interact with local cooks easily via mobile-first design.</li>
+                        <li><strong>Outcome:</strong> The final site features responsive layout, reusable components, and an interactive events calendar.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>3. Design & Development</h2>
+                    <ul>
+                        <li>Applied <strong>mobile-first responsive design</strong> using CSS Grid and Clamp-based typography.</li>
+                        <li>Implemented a consistent visual language through style tokens (color, spacing, radius, shadow).</li>
+                        <li>Added dynamic features such as the <strong>interactive events calendar</strong> with keyboard navigation and .ics export.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>4. Accessibility (WCAG 2.2 AA)</h2>
+                    <ul>
+                        <li>Semantic HTML structure with <code>header</code>, <code>main</code>, <code>nav</code>, <code>footer</code>.</li>
+                        <li>Keyboard operability and ARIA roles on interactive components.</li>
+                        <li>Color contrast verified with IBM Equal Access Checker.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>5. Ethical Considerations</h2>
+                    <ul>
+                        <li>Inclusive imagery and culturally respectful content.</li>
+                        <li>Clear data consent and transparent subscription wording.</li>
+                        <li>Avoidance of dark patterns or misleading UI behavior.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>6. Variations from A3 Proposal</h2>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Area</th>
+                                <th>Original Plan</th>
+                                <th>Implemented</th>
+                                <th>Justification</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Events Calendar</td>
+                                <td>Third-party embed</td>
+                                <td>Custom ARIA grid with .ics export</td>
+                                <td>Provides better accessibility and control.</td>
+                            </tr>
+                            <tr>
+                                <td>Hero Section</td>
+                                <td>Video background</td>
+                                <td>Static image with subtle fade</td>
+                                <td>Improves performance and reduces motion sensitivity.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <section>
+                    <h2>7. Challenges & Solutions</h2>
+                    <ul>
+                        <li><strong>Challenge:</strong> Balancing visuals and page speed.<br>
+                            <strong>Solution:</strong> Optimized images, lazy loading, and compressed assets.</li>
+                        <li><strong>Challenge:</strong> Keyboard accessibility for the calendar.<br>
+                            <strong>Solution:</strong> Implemented arrow key and tab navigation per ARIA grid pattern.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>8. Testing & Deployment</h2>
+                    <ul>
+                        <li>Tested on Chrome, Safari, Firefox, and Edge across devices.</li>
+                        <li>IBM Equal Access Checker screenshot and report attached below.</li>
+                        <li>Deployed on UQCloud:
+                            <code>https://deco7140-xxxxxxx.uqcloud.net/work_phase_4/</code>
+                        </li>
+                        <li>Source code hosted on GitHub with regular commits.</li>
+                    </ul>
+                    <figure>
+                        <img src="assets/a11y-audit-screenshot.png" alt="Accessibility audit screenshot" />
+                        <figcaption>IBM Equal Access Checker results</figcaption>
+                    </figure>
+                </section>
+
+                <section>
+                    <h2>9. Future Improvements</h2>
+                    <ul>
+                        <li>Integrate live event API.</li>
+                        <li>Add multilingual support (EN / ZH).</li>
+                        <li>Develop recipe submission workflow with validation.</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>10. References</h2>
+                    <ul>
+                        <li>WCAG 2.2 – How to Meet Quick Reference</li>
+                        <li>IBM Equal Access Accessibility Checker</li>
+                        <li>ACS Code of Professional Ethics and Conduct</li>
+                        <li>ARIA Authoring Practices Guide (APG)</li>
+                    </ul>
+                </section>
+            </div>
+        </main>
+
+        <!-- ===== Footer ===== -->
+        <footer class="site-footer">
+            <div class="container">
+                <p>&copy; 2025 Food & Culinary Community | All rights reserved.</p>
+            </div>
+        </footer>
+    </body>
+</html>
+

@@ -157,33 +157,35 @@
                     <section class="comments" aria-labelledby="comments-title">
                         <h3 id="comments-title">Comments</h3>
 
-                        <!-- current comment -->
-                        <ul class="comment-list">
-                            <li class="comment-card">
-                                <header class="comment-meta">
-                                    <strong class="comment-author">Andy</strong>
-                                </header>
-                                <p class="comment-text">
-                                    I wanna know, can I use other cheese?
-                                </p>
-                            </li>
-                        </ul>
+                        <!-- single comment list only -->
+                        <ul class="comment-list"></ul>
 
-                        <!-- add comments -->
-                        <form class="message-form" action="#" method="post">
-                            <label for="message" class="sr-only"
-                                >Your message</label
-                            >
+                        <form class="message-form">
+                            <input
+                                type="text"
+                                name="author"
+                                placeholder="Your name (optional)"
+                            />
                             <textarea
                                 id="message"
-                                name="message"
+                                name="text"
                                 rows="3"
-                                placeholder="Your message"
                                 required
+                                placeholder="Leave a comment…"
                             ></textarea>
-                            <div class="actions">
-                                <button type="submit" class="btn">Send</button>
-                            </div>
+                            <input
+                                type="hidden"
+                                name="slug"
+                                value="amma-pizza"
+                            />
+                            <button type="submit" class="btn btn-primary">
+                                Post
+                            </button>
+                            <p
+                                id="comment-feedback"
+                                class="muted"
+                                aria-live="polite"
+                            ></p>
                         </form>
                     </section>
                 </article>
@@ -195,72 +197,13 @@
                 </div>
             </footer>
         </main>
-
-        <!-- 小工具：視覺隱藏與基本樣式（若已在全站 CSS 內可移除） -->
-        <style>
-            .sr-only {
-                position: absolute;
-                width: 1px;
-                height: 1px;
-                padding: 0;
-                margin: -1px;
-                overflow: hidden;
-                clip: rect(0, 0, 0, 0);
-                white-space: nowrap;
-                border: 0;
-            }
-            .search-form input[type="search"] {
-                width: 100%;
-                height: 44px;
-                padding: 0 14px;
-                border: 1px solid var(--border, #e5e7eb);
-                border-radius: 10px;
-            }
-            .tag-list {
-                display: flex;
-                gap: 12px;
-                flex-wrap: wrap;
-                margin: 14px 0 40px;
-            }
-            .tag {
-                display: inline-block;
-                padding: 6px 10px;
-                border: 1px solid var(--border, #e5e7eb);
-                border-radius: 10px;
-                text-decoration: none;
-                color: inherit;
-            }
-            .hero-img {
-                width: 100%;
-                max-width: 100%;
-                display: block;
-                border: 1px solid var(--border, #e5e7eb);
-                border-radius: 12px;
-                box-shadow: var(--shadow, 0 8px 30px rgba(0, 0, 0, 0.06));
-                aspect-ratio: 4/3;
-                object-fit: cover;
-            }
-            .comment-list {
-                list-style: none;
-                margin: 12px 0 20px;
-                padding: 0;
-                display: grid;
-                gap: 12px;
-            }
-            .comment-card {
-                border: 1px solid var(--border, #e5e7eb);
-                border-radius: 12px;
-                padding: 14px;
-            }
-            .message-form textarea {
-                width: 100%;
-                border: 1px solid var(--border, #e5e7eb);
-                border-radius: 10px;
-                padding: 10px;
-            }
-            .message-form .actions {
-                margin-top: 10px;
-            }
-        </style>
+        <script type="module">
+            import { initComments } from "./js/commentsClient.js";
+            initComments({
+                // 如果你有自己的 API，這裡直接指定；沒有就先用預設
+                // getUrl: "https://<你的域名>/decoapi/comments/",
+                // postUrl: "https://<你的域名>/decoapi/comments/",
+            });
+        </script>
     </body>
 </html>

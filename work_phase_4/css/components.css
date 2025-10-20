@@ -43,16 +43,17 @@
     transform: translateY(0);
     box-shadow: var(--shadow);
 }
-
+/* Log in botton Hero visuals */
 .btn-outline {
     border-color: var(--border);
-    background: #fff;
+    background: var(--brand);
     box-shadow: none;
     padding: 10px 16px;
     border-radius: 10px;
 }
 .btn-outline:hover {
-    background: #f9fafb;
+    transform: translateY(-1px);
+    box-shadow: 0 10px 34px rgba(0, 0, 0, 0.12);
 }
 
 /* Hero visuals */
@@ -160,4 +161,51 @@ Breadcrumbs
     color: var(--text, #1e1e1e);
     font-weight: 600;
     cursor: default;
+}
+
+
+/* ===========================search bar ========================== */
+/* ---- Search 區塊 ---- */
+.search-form input[type="search"] {
+    width: 100%;
+    height: 44px;
+    padding: 0 14px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    outline: none;
+}
+.tag-list {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin: 14px 0 40px;
+}
+.tag {
+    display: inline-block;
+    padding: 6px 10px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* search bar boarder */
+.search-form input[type="search"] {
+    -webkit-appearance: none;
+    appearance: none;
+    background: var(--bg, #fff);
+    border: 1px solid var(--border, #e5e7eb) !important; /* 防止被 reset 覆蓋 */
+    border-radius: 10px;
+    height: 44px;
+    padding: 0 14px;
+    box-shadow: none;
+}
+
+/* when focus change the search bar boarder */
+.search-form input[type="search"]:focus {
+    outline: none;
+    border-color: var(--brand, #8b4513);
+    box-shadow: 0 0 0 3px
+        color-mix(in srgb, var(--brand, #8b4513) 20%, transparent);
 }

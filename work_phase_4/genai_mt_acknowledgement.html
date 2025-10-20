@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>GenAI/MT Acknowledgement – Work Phase 4</title>
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="css/base.css" />
+        <link rel="stylesheet" href="css/layout.css" />
+        <link rel="stylesheet" href="css/components.css" />
+        <link
+            rel="stylesheet"
+            href="css/page_css/rationale_genai.css">
+
+    </head>
+    <body>
+        <!-- ===== Header / Navigation (matches site) ===== -->
+        <header class="site-header">
+            <div class="container nav">
+                <a class="brand" href="index.html" aria-label="Homepage">
+                    <span class="badge">Foodie</span>
+                </a>
+                <nav class="primary-nav" aria-label="Primary">
+                    <a href="index.html">Home</a>
+                    <a href="recipes.html">Recipes</a>
+                    <a href="events.html">Events</a>
+                    <a href="community.html">Community</a>
+                    <a href="profile.html">Profile</a>
+                </nav>
+                <a
+                    class="btn btn-outline"
+                    href="profile.html"
+                    aria-label="Log in"
+                    >Log in</a
+                >
+            </div>
+        </header>
+
+        <!-- ===== Page Content ===== -->
+        <main class="section" id="top">
+            <div class="container">
+                <h1>GenAI/MT Acknowledgement</h1>
+                <p class="lead">
+                    This page documents my responsible use of Generative AI and
+                    Machine Translation (GenAI/MT) tools for Work Phase 4,
+                    including transparency, checklist completion, reflection,
+                    and an integrity statement.
+                </p>
+
+                <section>
+                    <h2>1. Acknowledgement of GenAI/MT Use</h2>
+                    <div class="card">
+                        <p>
+                            <strong>Tools used:</strong> ChatGPT (coding
+                            assistance, accessibility guidance, copy editing),
+                            Google Translate/DeepL (spot-checking phrasing), VS
+                            Code extensions (linting hints). No AI was used to
+                            generate final deliverables end-to-end; all outputs
+                            were reviewed, edited, and verified by me.
+                        </p>
+                        <ul>
+                            <li>
+                                <strong>Design & Front‑end support:</strong>
+                                code scaffolding, ARIA patterns, keyboard
+                                interaction logic, CSS layout suggestions.
+                            </li>
+                            <li>
+                                <strong>Documentation support:</strong>
+                                outlining sections, grammar checks, concision
+                                edits.
+                            </li>
+                            <li>
+                                <strong>Accessibility support:</strong>
+                                reminders to add labels, roles, focus states;
+                                test heuristics prior to IBM checker.
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>2. GenAI/MT Usage Checklist</h2>
+                    <table class="table" aria-label="GenAI/MT usage checklist">
+                        <thead>
+                            <tr>
+                                <th>Item</th>
+                                <th>Status</th>
+                                <th>Evidence</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Transparency (what, why, when)</td>
+                                <td>Completed</td>
+                                <td>
+                                    Documented on this page; commit messages
+                                    reference AI-assisted changes.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Purposeful application aligned to task goals
+                                </td>
+                                <td>Completed</td>
+                                <td>
+                                    Used for ideation, code reviews, and
+                                    accessibility guidance; not for final
+                                    answers without verification.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Critical engagement (evaluate/modify
+                                    outputs)
+                                </td>
+                                <td>Completed</td>
+                                <td>
+                                    Rewrote prompts; compared variants; tested
+                                    code locally and on UQCloud.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Personal voice & authorship</td>
+                                <td>Completed</td>
+                                <td>
+                                    Final copy edited by me for tone and
+                                    accuracy; design decisions justified in
+                                    rationale.
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Reflection on learning</td>
+                                <td>Completed</td>
+                                <td>See Section 4 & 5.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <section>
+                    <h2>3. How GenAI/MT Supported This Project</h2>
+                    <div class="grid grid-2">
+                        <div class="card">
+                            <h3>3.1 Productivity & Quality</h3>
+                            <ul>
+                                <li>
+                                    Faster prototyping of calendar interactions
+                                    (arrow‑key nav, ARIA roles).
+                                </li>
+                                <li>
+                                    Rapid code review suggestions (naming,
+                                    modularisation, token consistency).
+                                </li>
+                                <li>
+                                    Concise wording for UI microcopy (labels,
+                                    hints, alt text).
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="card">
+                            <h3>3.2 Accessibility</h3>
+                            <ul>
+                                <li>
+                                    Pre‑flight checks before running IBM Equal
+                                    Access Checker.
+                                </li>
+                                <li>
+                                    Contrast and focus visibility reminders;
+                                    screen reader text patterns.
+                                </li>
+                                <li>
+                                    Keyboard-only paths verified (no traps,
+                                    logical tab order).
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>4. Challenges & How They Were Addressed</h2>
+                    <div class="card">
+                        <ul>
+                            <li>
+                                <strong>Over‑reliance risk:</strong> Some AI
+                                code suggestions were verbose.
+                                <em>Action:</em> simplified and refactored; kept
+                                only necessary parts.
+                            </li>
+                            <li>
+                                <strong>Hallucination risk:</strong> Occasional
+                                incorrect ARIA advice.
+                                <em>Action:</em> cross‑checked with APG and ran
+                                manual tests.
+                            </li>
+                            <li>
+                                <strong>Style drift:</strong> Copy tone inconsis
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </body>
+</html>

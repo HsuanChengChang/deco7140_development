@@ -1,0 +1,179 @@
+/* ==========================================================
+   Implementation Rationale — Page Styling
+   Author: Bevis Chang
+   For: Work Phase 4 (Food & Culinary Community)
+   ========================================================== */
+
+/* ---------- Base Layout ---------- */
+main {
+    padding-block: clamp(32px, 6vw, 64px);
+    background: var(--bg, #ffffff);
+}
+
+.container {
+    max-width: 960px;
+    margin-inline: auto;
+    padding-inline: clamp(16px, 5vw, 32px);
+}
+
+/* ---------- Typography ---------- */
+h1 {
+    font-size: clamp(32px, 5vw, 44px);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+    color: var(--text, #1e1e1e);
+}
+
+h2 {
+    font-size: clamp(22px, 3vw, 30px);
+    margin-top: 3rem;
+    margin-bottom: 0.8rem;
+    color: var(--text, #1e1e1e);
+    border-bottom: 2px solid var(--border, #e5e7eb);
+    padding-bottom: 6px;
+}
+
+h3 {
+    font-size: clamp(18px, 2.6vw, 22px);
+    margin: 1.4rem 0 0.4rem;
+    color: var(--text, #1e1e1e);
+}
+
+p,
+li {
+    color: var(--text, #1e1e1e);
+    line-height: 1.7;
+    font-size: 1rem;
+}
+
+.lead {
+    font-size: 1.1rem;
+    color: var(--muted, #6b7280);
+    margin-bottom: 1.2rem;
+}
+
+/* ---------- Section Layout ---------- */
+section {
+    margin-top: clamp(24px, 5vw, 48px);
+}
+
+section:first-of-type {
+    margin-top: 0;
+}
+
+/* ---------- List Styling ---------- */
+ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+    margin-block: 0.5rem 1rem;
+}
+
+ul li + li {
+    margin-top: 0.4rem;
+}
+
+ul.no-bullets {
+    list-style: none;
+    padding-left: 0;
+}
+
+/* ---------- Card Blocks ---------- */
+.card {
+    background: var(--bg, #fff);
+    border: 1px solid var(--border, #e5e7eb);
+    border-radius: var(--radius, 14px);
+    padding: clamp(16px, 2.5vw, 28px);
+    box-shadow: var(--shadow, 0 6px 20px rgba(0, 0, 0, 0.06));
+    margin-top: 1rem;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* ---------- Tables ---------- */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    border-radius: var(--radius, 14px);
+    overflow: hidden;
+    box-shadow: var(--shadow, 0 4px 20px rgba(0, 0, 0, 0.05));
+}
+
+.table th,
+.table td {
+    padding: 14px 16px;
+    border-top: 1px solid var(--border, #e5e7eb);
+    text-align: left;
+    vertical-align: top;
+    font-size: 0.98rem;
+}
+
+.table thead th {
+    background: var(--brand-ghost, #f7efe9);
+    font-weight: 700;
+    border-top: none;
+}
+
+.table tbody tr:nth-child(even) {
+    background: #fafafa;
+}
+
+.table tbody tr:hover {
+    background: color-mix(
+        in srgb,
+        var(--brand-ghost, #f7efe9) 35%,
+        transparent
+    );
+}
+
+/* ---------- Figures ---------- */
+figure {
+    margin: 1.5rem 0;
+    text-align: center;
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius, 14px);
+    box-shadow: var(--shadow, 0 6px 24px rgba(0, 0, 0, 0.08));
+    border: 1px solid var(--border, #e5e7eb);
+}
+
+figure figcaption {
+    font-size: 0.9rem;
+    color: var(--muted, #6b7280);
+    margin-top: 0.5rem;
+}
+
+/* ---------- Links ---------- */
+main a {
+    color: var(--brand, #8b4513);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+main a:hover {
+    color: var(--brand-ink, #5e2c08);
+    text-decoration: underline;
+}
+
+/* ---------- Responsive Adjustments ---------- */
+@media (max-width: 640px) {
+    h1 {
+        text-align: center;
+    }
+    .table th,
+    .table td {
+        padding: 10px 12px;
+    }
+    .card {
+        padding: 16px;
+    }
+}

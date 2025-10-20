@@ -38,6 +38,7 @@
         color-mix(in oklab, var(--brand, #8b4513) 24%, transparent);
 }
 
+
 .tag-list {
     display: flex;
     gap: 12px;
