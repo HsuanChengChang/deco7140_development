@@ -1,20 +1,18 @@
-// GET wrapper for JSON endpoints
-export async function fetchGetData(url, headers = {}) {
-    try {
-        const response = await fetch(url, {
-            method: "GET",
-            headers: {
-                Accept: "application/json",
-                ...headers,
-            },
-        });
+const fetchGetData = (url, headers = {}) => {
+    return fetch(url, {
+        method: 'GET',
+        headers: headers,
+    })
+    .then(response => {
         if (!response.ok) {
-            console.error("GET failed:", response.status);
-            return null;
+            throw new Error('Server returned an error.');
         }
-        return await response.json();
-    } catch (err) {
-        console.error("GET error:", err);
+        return response.json();
+    })
+    .catch(error => {
+        console.error('Error fetching data:', error);
         return null;
-    }
-}
+    });
+};
+
+export { fetchGetData };

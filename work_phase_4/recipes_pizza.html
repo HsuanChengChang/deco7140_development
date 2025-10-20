@@ -47,7 +47,6 @@
                         method="get"
                         role="search"
                     >
-                        <label for="q" class="sr-only">Search</label>
                         <input
                             id="q"
                             name="q"
@@ -152,38 +151,87 @@
                             • Best served fresh with olive oil drizzle.
                         </p>
                     </section>
+                    <!-- Comments -->
+                    <!-- Comments -->
+                    <section
+                        id="comments"
+                        class="recipe-comments section"
+                        aria-labelledby="comments-title"
+                    >
+                        <h2 id="comments-title">Comments</h2>
 
-                    <!-- Comment -->
-                    <section class="comments" aria-labelledby="comments-title">
-                        <h3 id="comments-title">Comments</h3>
+                        <!-- 顯示留言列表 -->
+                        <ul
+                            id="comment-list"
+                            class="comment-list"
+                            aria-live="polite"
+                            aria-busy="false"
+                        ></ul>
 
-                        <!-- single comment list only -->
-                        <ul class="comment-list"></ul>
+                        <!-- 🔹 舊有留言（範例） -->
+                        <li class="comment-card">
+                            <div class="comment-top">
+                                <img
+                                    class="avatar"
+                                    src="assets/profile/Sean.jpg"
+                                    alt="User avatar"
+                                />
+                                <div class="comment-info">
+                                    <strong class="comment-name">Sean</strong>
+                                    <span class="comment-time"
+                                        >Posted earlier</span
+                                    >
+                                </div>
+                            </div>
+                            <p class="comment-text">hi I am Sean, I would like to ask...</p>
+                        </li>
 
-                        <form class="message-form">
-                            <input
-                                type="text"
-                                name="author"
-                                placeholder="Your name (optional)"
-                            />
-                            <textarea
-                                id="message"
-                                name="text"
-                                rows="3"
-                                required
-                                placeholder="Leave a comment…"
-                            ></textarea>
-                            <input
-                                type="hidden"
-                                name="slug"
-                                value="amma-pizza"
-                            />
+                        <!-- 新增留言表單 -->
+                        <form
+                            id="comment-form"
+                            class="comment-form"
+                            enctype="multipart/form-data"
+                            novalidate
+                        >
+                            <div class="comment-card comment-compose">
+                                <div class="comment-top">
+                                    <img
+                                        src="assets/profile/Sarah.jpg"
+                                        alt="Sarah profile photo"
+                                        class="avatar"
+                                    />
+                                    <div class="comment-info">
+                                        <strong class="comment-name"
+                                            >Sarah</strong
+                                        >
+                                        <span class="comment-time">You</span>
+                                    </div>
+                                </div>
+
+                                <div class="compose-body">
+                                    <textarea
+                                        id="c-message"
+                                        name="message"
+                                        required
+                                        maxlength="500"
+                                        rows="3"
+                                        placeholder="Write your comment here..."
+                                    ></textarea>
+                                    <input
+                                        type="hidden"
+                                        name="name"
+                                        value="Sarah"
+                                    />
+                                </div>
+                            </div>
+
                             <button type="submit" class="btn btn-primary">
-                                Post
+                                Post comment
                             </button>
                             <p
-                                id="comment-feedback"
-                                class="muted"
+                                id="form-feedback"
+                                class="form-feedback"
+                                role="status"
                                 aria-live="polite"
                             ></p>
                         </form>
@@ -197,13 +245,7 @@
                 </div>
             </footer>
         </main>
-        <script type="module">
-            import { initComments } from "./js/commentsClient.js";
-            initComments({
-                // 如果你有自己的 API，這裡直接指定；沒有就先用預設
-                // getUrl: "https://<你的域名>/decoapi/comments/",
-                // postUrl: "https://<你的域名>/decoapi/comments/",
-            });
-        </script>
+        <script type="module" src="js/comments_display.js"></script>
+        <script type="module" src="js/comments_post.js"></script>
     </body>
 </html>

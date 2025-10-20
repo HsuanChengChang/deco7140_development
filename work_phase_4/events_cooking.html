@@ -232,49 +232,98 @@
                                 </p>
                             </details>
                         </section>
-
+                        <!--Comment-->
                         <section
-                            class="comments"
+                            id="comments"
+                            class="recipe-comments section"
                             aria-labelledby="comments-title"
                         >
                             <h2 id="comments-title">Comments</h2>
-                            <ul class="comment-list">
-                                <li class="comment-card">
-                                    <header class="comment-meta">
-                                        <strong class="comment-author"
-                                            >Andy</strong
+
+                            <!-- 留言列表 -->
+                            <ul
+                                id="comment-list"
+                                class="comment-list"
+                                aria-live="polite"
+                                aria-busy="false"
+                            ></ul>
+
+                            <!-- 舊有留言（範例，可保留/修改） -->
+                            <li class="comment-card">
+                                <div class="comment-top">
+                                    <img
+                                        class="avatar"
+                                        src="assets/profile/Sean.jpg"
+                                        alt="User avatar"
+                                    />
+                                    <div class="comment-info">
+                                        <strong class="comment-name"
+                                            >Sean</strong
                                         >
-                                        <time
-                                            class="comment-time"
-                                            datetime="2025-10-10T12:05"
-                                            >Oct 10</time
+                                        <span class="comment-time"
+                                            >Posted earlier</span
                                         >
-                                    </header>
-                                    <p class="comment-text">
-                                        Is there any dress code?
-                                    </p>
-                                </li>
-                            </ul>
-                            <form class="message-form" action="#" method="post">
-                                <label for="message" class="sr-only"
-                                    >Your message</label
-                                >
-                                <textarea
-                                    id="message"
-                                    name="message"
-                                    rows="3"
-                                    placeholder="Your message"
-                                    required
-                                ></textarea>
-                                <div class="actions">
-                                    <button type="submit" class="btn">
-                                        Send
-                                    </button>
+                                    </div>
                                 </div>
+                                <p class="comment-text">
+                                    hi I am Sean, I would like to ask...
+                                </p>
+                            </li>
+
+                            <!-- 新增留言（Sarah 固定登入者） -->
+                            <form
+                                id="comment-form"
+                                class="comment-form"
+                                enctype="multipart/form-data"
+                                novalidate
+                            >
+                                <div class="comment-card comment-compose">
+                                    <div class="comment-top">
+                                        <img
+                                            src="assets/profile/Sarah.jpg"
+                                            alt="Sarah profile photo"
+                                            class="avatar"
+                                        />
+                                        <div class="comment-info">
+                                            <strong class="comment-name"
+                                                >Sarah</strong
+                                            >
+                                            <span class="comment-time"
+                                                >You</span
+                                            >
+                                        </div>
+                                    </div>
+
+                                    <div class="compose-body">
+                                        <textarea
+                                            id="c-message"
+                                            name="message"
+                                            required
+                                            maxlength="500"
+                                            rows="3"
+                                            placeholder="Write your comment here..."
+                                        ></textarea>
+                                        <input
+                                            type="hidden"
+                                            name="name"
+                                            value="Sarah"
+                                        />
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="btn btn-primary">
+                                    Post comment
+                                </button>
+                                <p
+                                    id="form-feedback"
+                                    class="form-feedback"
+                                    role="status"
+                                    aria-live="polite"
+                                ></p>
                             </form>
                         </section>
                     </article>
-
+                    <!-- Sidebar -->
                     <aside class="event-aside" aria-label="Organizer and venue">
                         <section class="organizer">
                             <h2>Organizer</h2>
@@ -355,5 +404,8 @@
                 <div class="container"><p>[Footer]</p></div>
             </footer>
         </main>
+        <!-- 掛載活動頁專用的 JS（先 display 再 post） -->
+        <script type="module" src="js/comments_display_events.js"></script>
+        <script type="module" src="js/comments_post_events.js"></script>
     </body>
 </html>
