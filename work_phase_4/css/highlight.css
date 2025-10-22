@@ -1,0 +1,123 @@
+/* ===========================
+   Highlight utilities
+   Save as: css/util/highlight.css
+   =========================== */
+
+/* Color variables (can be linked to your design tokens) */
+:root {
+    --hl-yellow: #fff59d; /* Neon yellow */
+    --hl-pink: #ffccdf; /* Neon pink */
+    --hl-blue: #b3e5fc; /* Neon blue */
+    --hl-ink: #222; /* Text color (for light backgrounds) */
+    --hl-ring: rgba(0, 0, 0, 0.12); /* Outline ring for focus */
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --hl-yellow: #6b5f00;
+        --hl-pink: #6a314a;
+        --hl-blue: #184b63;
+        --hl-ink: #f5f5f5;
+        --hl-ring: rgba(255, 255, 255, 0.25);
+    }
+}
+
+/* 1) Highlight marker style: looks like highlighter pen strokes */
+.hl {
+    --_bg: var(--hl-yellow);
+    --_pad-y: 0.08em; /* Simulate brush thickness visually */
+    --_pad-x: 0.15em;
+
+    background: linear-gradient(transparent 60%, var(--_bg) 0) no-repeat;
+    padding: 0 var(--_pad-x);
+    box-decoration-break: clone; /* Ensure background continues across wrapped lines */
+}
+
+/* Color variants */
+.hl--yellow {
+    --_bg: var(--hl-yellow);
+}
+.hl--pink {
+    --_bg: var(--hl-pink);
+}
+.hl--blue {
+    --_bg: var(--hl-blue);
+}
+
+/* 2) Underline highlight: places a “glowing band” under text */
+.hl-underline {
+    --_bg: var(--hl-pink);
+    background: linear-gradient(to top, var(--_bg), var(--_bg)) no-repeat 0 100% /
+        100% 0.45em;
+    padding-bottom: 0.05em;
+    box-decoration-break: clone;
+}
+
+/* 3) Tag-style highlights (inline or short paragraph blocks) */
+.hl-tag {
+    --_bg: var(--hl-blue);
+    --_ink: var(--hl-ink);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5ch;
+    padding: 0.15em 0.5em;
+    border-radius: 10px;
+    background: var(--_bg);
+    color: var(--_ink);
+    line-height: 1.5;
+    box-shadow: 0 0 0 1px var(--hl-ring) inset, 0 1px 2px var(--hl-ring);
+}
+
+/* Optional: auto-label using data-label attribute */
+.hl-tag[data-label]::before {
+    content: attr(data-label);
+    font-size: 0.85em;
+    font-weight: 600;
+    opacity: 0.9;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+}
+
+/* Keyboard focus accessibility */
+.hl,
+.hl-underline,
+.hl-tag {
+    outline: none;
+}
+.hl:focus-visible,
+.hl-underline:focus-visible,
+.hl-tag:focus-visible {
+    box-shadow: 0 0 0 3px var(--hl-ring);
+    border-radius: 6px;
+}
+
+/* Consistent look for <mark> tag */
+mark {
+    background: var(--hl-yellow);
+    color: var(--hl-ink);
+    padding: 0 0.15em;
+    border-radius: 4px;
+}
+
+/* Optional: tooltip on hover/focus using data-tip attribute */
+[data-tip] {
+    position: relative;
+    cursor: help;
+}
+[data-tip]:hover::after,
+[data-tip]:focus-visible::after {
+    content: attr(data-tip);
+    position: absolute;
+    left: 0;
+    top: 100%;
+    transform: translateY(0.35rem);
+    white-space: nowrap;
+    font-size: 0.85em;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 0.25em 0.5em;
+    border-radius: 6px;
+    pointer-events: none;
+    z-index: 10;
+}

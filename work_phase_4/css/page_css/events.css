@@ -336,23 +336,15 @@
     margin-top: 6px;
 }
 
-/* 控制 btn-outline 內圖示大小與對齊 */
-.btn-outline img {
-    width: 28px; /* ← 可依需求改成 24px、32px 等 */
-    height: 28px;
-    object-fit: contain; /* 確保圖片不被壓扁 */
-    vertical-align: middle;
-    display: block; /* 讓按鈕高度取決於圖片 */
-    margin: 0 auto; /* 圖片在按鈕中置中 */
-}
 
-/* 若希望按鈕本身尺寸也一致 */
-.btn-outline {
-    padding: 6px;
-    border-radius: var(--radius, 8px);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+/* calender icon image */
+.events-icon-btn img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    vertical-align: middle;
+    display: block;
+    margin: 0 auto;
 }
 
 

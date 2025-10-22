@@ -55,6 +55,33 @@
     transform: translateY(-1px);
     box-shadow: 0 10px 34px rgba(0, 0, 0, 0.12);
 }
+/* ===========================
+   Mobile version: smaller "Log in" button aligned to top-right
+   =========================== */
+@media (max-width: 768px) {
+    /* Keep the login button visible and aligned right in header */
+    .site-header .btn-outline {
+        position: absolute; /* allows manual placement */
+        top: 10px; /* distance from the top edge */
+        right: 14px; /* distance from the right edge */
+        height: 32px; /* smaller height */
+        padding: 4px 10px; /* compact padding */
+        font-size: 0.85rem; /* smaller font size */
+        border-radius: 8px; /* subtle rounded corners */
+        line-height: 1; /* tighter text alignment */
+    }
+
+    /* Reduce brand badge size to match compact header */
+    .site-header .brand .badge {
+        padding: 6px 10px;
+        font-size: 0.9rem;
+    }
+
+    /* Optional: shrink header height slightly for better proportion */
+    .site-header .nav {
+        padding: 10px 0;
+    }
+}
 
 /* Hero visuals */
 .hero-copy h1 {
@@ -163,7 +190,6 @@ Breadcrumbs
     cursor: default;
 }
 
-
 /* ===========================search bar ========================== */
 /* ---- Search 區塊 ---- */
 .search-form input[type="search"] {
@@ -188,7 +214,6 @@ Breadcrumbs
     text-decoration: none;
     color: inherit;
 }
-
 
 /* search bar boarder */
 .search-form input[type="search"] {

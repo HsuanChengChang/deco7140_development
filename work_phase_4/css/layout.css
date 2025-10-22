@@ -72,3 +72,137 @@
         grid-template-columns: 1fr 1fr;
     }
 }
+
+/* Hide mobile bottom nav by default (desktop & tablets) */
+.mobile-bottom-nav {
+    display: none;
+}
+
+/* Ensure desktop primary nav shows by default */
+.primary-nav {
+    display: flex; /* or whatever your desktop layout uses */
+}
+
+/* ===== Mobile layout: show bottom nav, hide desktop nav ===== */
+@media (max-width: 768px) {
+    /* Hide the desktop navigation on small screens */
+    .primary-nav {
+        display: none !important;
+    }
+
+    /* Fix mobile nav to the bottom of the viewport,
+     even if it's placed inside <header> in the DOM. */
+    .mobile-bottom-nav {
+        display: grid;
+        grid-auto-flow: column;
+        grid-auto-columns: 1fr; /* equal-width items */
+        align-items: center;
+        gap: 4px;
+
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0; /* stick to bottom */
+        z-index: 100;
+
+        height: 56px;
+        padding: 6px 8px calc(6px + env(safe-area-inset-bottom));
+        background: #fff;
+        border-top: 1px solid var(--border, #e5e7eb);
+        box-shadow: 0 -6px 20px rgba(0, 0, 0, 0.06);
+    }
+
+    /* Prevent content from being hidden under the fixed bottom bar */
+    body {
+        padding-bottom: calc(62px + env(safe-area-inset-bottom));
+    }
+
+    /* Nav item styles */
+    .mobile-bottom-nav a {
+        min-width: 0;
+        text-decoration: none;
+        display: grid;
+        justify-items: center;
+        align-content: center;
+        gap: 2px;
+        font-size: 11.5px;
+        color: var(--muted, #6b7280);
+    }
+
+    .mobile-bottom-nav .icon {
+        width: 22px;
+        height: 22px; /* smaller icons for compact mobile UI */
+        object-fit: contain;
+        display: block;
+    }
+
+    /* Active state (aria-current set via JS) */
+    .mobile-bottom-nav a[aria-current="page"] {
+        color: var(--brand, #8b4513);
+        font-weight: 600;
+    }
+}
+
+/* Optional: Dark mode polish */
+@media (prefers-color-scheme: dark) and (max-width: 768px) {
+    .mobile-bottom-nav {
+        background: #111214;
+        border-top-color: rgba(255, 255, 255, 0.15);
+        box-shadow: 0 -6px 20px rgba(0, 0, 0, 0.35);
+    }
+    .mobile-bottom-nav a {
+        color: rgba(255, 255, 255, 0.7);
+    }
+    .mobile-bottom-nav a[aria-current="page"] {
+        color: #fff;
+    }
+}
+/* ===========================
+   Fixed NavBar Size (Desktop & Mobile)
+   =========================== */
+
+.site-header {
+    height: 72px; /* fixed total height */
+    min-height: 72px; /* prevents shrink */
+    flex-shrink: 0;
+}
+
+.site-header .nav {
+    height: 72px; /* same as header for consistent layout */
+    align-items: center; /* vertically center items */
+    padding: 0 24px; /* consistent side spacing */
+    box-sizing: border-box;
+}
+
+/* Keep brand and login button aligned visually */
+.site-header .brand img {
+    height: 32px; /* fix logo size */
+    width: auto;
+}
+
+/* Keep login button height consistent */
+.btn-outline {
+    height: 40px; /* uniform height across pages */
+    line-height: 40px;
+    padding: 0 16px;
+    border-radius: 10px;
+    font-size: 0.95rem;
+}
+
+/* For smaller mobile screens */
+@media (max-width: 768px) {
+    .site-header {
+        height: 60px; /* slightly smaller on mobile */
+    }
+
+    .site-header .nav {
+        height: 60px;
+        padding: 0 16px;
+    }
+
+    .btn-outline {
+        height: 32px;
+        padding: 4px 10px;
+        font-size: 0.85rem;
+    }
+}
