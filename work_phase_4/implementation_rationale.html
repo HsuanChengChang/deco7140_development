@@ -162,18 +162,23 @@
                     <h2>5. Key Changes from Proposal</h2>
                     <ul>
                         <li>
-                            <strong>Events Calendar:</strong> Replaced
-                            third-party embed with
-                            <span class="hl hl--yellow">custom ARIA grid</span>
-                            for accessibility.
+                            <strong>Events Calendar:</strong>
+                            Added a fully interactive calendar feature to
+                            replace the previous static version. The new
+                            calendar uses a
+                            <span class="hl hl--yellow"
+                                >custom ARIA-compliant grid</span
+                            >
+                            for improved accessibility and allows users to
+                            browse and select event dates.
                         </li>
                         <li>
-                            <strong>Hero Section:</strong> Switched from video
-                            to static image for
+                            <strong>Other Sections:</strong>
+                            Apart from the calendar addition, most layouts,
+                            styles, and interactions remain
                             <span class="hl hl--yellow"
-                                >better performance</span
-                            >
-                            and reduced motion sensitivity.
+                                >consistent with the original proposal</span
+                            >.
                         </li>
                     </ul>
                 </section>
@@ -182,17 +187,27 @@
                     <h2>6. Challenges &amp; Solutions</h2>
                     <ul>
                         <li>
-                            <strong>Performance:</strong> Balanced visuals and
-                            speed via
-                            <span class="hl hl--yellow">lazy loading</span> and
-                            image optimization.
+                            <strong>Comment Functionality:</strong>
+                            The main challenge was implementing an interactive
+                            <span class="hl hl--yellow">comment system</span>
+                            directly within the same event page rather than on a
+                            separate one. To solve this, I applied JavaScript
+                            techniques learned during the
+                            <span class="hl hl--yellow">Work Phase3</span>,
+                            using form submission and dynamic DOM updates to
+                            <span class="hl hl--yellow"
+                                >post and display comments</span
+                            >
+                            without reloading the page.
                         </li>
                         <li>
-                            <strong>Accessibility:</strong> Implemented
+                            <strong>Integration &amp; Testing:</strong>
+                            Additional effort was required to ensure that
+                            <span class="hl hl--yellow">API requests</span> and
                             <span class="hl hl--yellow"
-                                >ARIA grid navigation</span
+                                >event-specific comment sections</span
                             >
-                            using arrow and tab keys.
+                            worked consistently across different pages.
                         </li>
                     </ul>
                 </section>
@@ -212,22 +227,26 @@
                     <h2>8. Future Improvements</h2>
                     <ul>
                         <li>
-                            Integrate
-                            <span class="hl hl--yellow">live event API</span>
-                            for dynamic updates.
+                            <strong>Community Feature:</strong>
+                            Currently only a structural
+                            <span class="hl hl--yellow">framework</span>
+                            has been created; interactive functions are planned
+                            for future development.
                         </li>
                         <li>
-                            Add
+                            <strong>Calendar Integration:</strong>
+                            The calendar can now
                             <span class="hl hl--yellow"
-                                >multilingual support (EN/ZH)</span
-                            >.
+                                >link directly to event detail pages</span
+                            >, and will later support automatic synchronization
+                            with new activities.
                         </li>
                         <li>
-                            Enable
+                            <strong>Complete the all the page:</strong>
+                            including the
                             <span class="hl hl--yellow"
-                                >recipe submission workflow</span
+                                >logo and some small details.</span
                             >
-                            with validation.
                         </li>
                     </ul>
                 </section>

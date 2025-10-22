@@ -38,7 +38,6 @@
         color-mix(in oklab, var(--brand, #8b4513) 24%, transparent);
 }
 
-
 .tag-list {
     display: flex;
     gap: 12px;
@@ -336,7 +335,6 @@
     margin-top: 6px;
 }
 
-
 /* calender icon image */
 .events-icon-btn img {
     width: 28px;
@@ -347,9 +345,6 @@
     margin: 0 auto;
 }
 
-
-
-
 /* ---- Accessibility: Reduced motion ---- */
 @media (prefers-reduced-motion: reduce) {
     * {
@@ -357,4 +352,17 @@
         transition: none !important;
         scroll-behavior: auto !important;
     }
+}
+/* Today */
+.calendar-cell.day.is-today {
+    background: color-mix(in oklab, var(--brand, #8b4513) 12%, white);
+    font-weight: 700;
+    color: var(--brand, #8b4513);
+    position: relative;
+}
+.calendar-cell.day.is-today::after {
+    position: absolute;
+    bottom: 4px;
+    font-size: 0.65rem;
+    color: var(--brand, #8b4513);
 }
