@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Recipes – Amma pizza</title>
+        <title>Recipes – Rob Ramen</title>
 
         <!-- existing CSS -->
         <link rel="stylesheet" href="css/reset.css" />
@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="css/layout.css" />
         <link rel="stylesheet" href="css/components.css" />
 
-        <!-- reipes single page -->
+        <!-- recipes single page -->
         <link rel="stylesheet" href="css/page_css/recipes_single.css" />
 
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
@@ -26,7 +26,7 @@
 
                 <nav class="primary-nav" aria-label="Primary">
                     <a href="index.html">Home</a>
-                    <a href="recipes.html">Recipes</a>
+                    <a href="recipes.html" aria-current="page">Recipes</a>
                     <a href="events.html">Events</a>
                     <a href="community.html">Community</a>
                     <a href="profile.html">Profile</a>
@@ -63,10 +63,10 @@
             <div class="container section">
                 <!-- Search -->
                 <section aria-labelledby="search-title">
-                    <h2 id="search-title" class="sr-only">Search events</h2>
+                    <h2 id="search-title" class="sr-only">Search recipes</h2>
                     <form
                         class="search-form"
-                        action="events.html"
+                        action="recipes.html"
                         method="get"
                         role="search"
                     >
@@ -80,46 +80,45 @@
 
                     <!-- Tags -->
                     <ul class="tag-list" aria-label="Popular tags">
-                        <li>
-                            <a class="tag" href="?tag=Pizza">#Pizza</a>
-                        </li>
-                        <li><a class="tag" href="?tag=Cheese">#Cheese</a></li>
-                        <li><a class="tag" href="?tag=Confort">#Confort</a></li>
+                        <li><a class="tag" href="?tag=Ramen">#Ramen</a></li>
+                        <li><a class="tag" href="?tag=Noodles">#Noodles</a></li>
+                        <li><a class="tag" href="?tag=ComfortFood">#ComfortFood</a></li>
                     </ul>
                 </section>
+
                 <!-- Breadcrumbs -->
                 <nav class="breadcrumbs" aria-label="Breadcrumb">
                     <ol>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="recipes.html">Recipes</a></li>
-                        <li aria-current="page">Amma Pizza Recipes</li>
+                        <li aria-current="page">Rob Ramen Recipe</li>
                     </ol>
                 </nav>
+
                 <!-- Recipes body -->
                 <article class="event-body">
 
                     <!-- Cover -->
                     <figure class="recipe-hero">
                         <img
-                            src="assets/recipes/pizza_amma.jpg"
-                            alt="Amma Pizza topped with cheese and basil"
+                            src="assets/recipes/ramen_rob.jpg"
+                            alt="Steaming bowl of ramen with egg, pork, and spring onions"
                             class="recipe-img"
                         />
                         <figcaption class="sr-only">
-                            Finished dish presentation
+                            Finished ramen dish presentation
                         </figcaption>
                     </figure>
 
-                    <!-- basic information -->
+                    <!-- Basic information -->
                     <section class="recipe-summary">
-                        <h3>Amma Pizza</h3>
-                        <p><strong>Cheese, Basil, Pepper…..</strong></p>
-                        <p>Preparation time: <strong>30 min</strong></p>
+                        <h3>Ramen Delight</h3>
+                        <p><strong>Rich broth, soft noodles, and tender pork slices…</strong></p>
+                        <p>Preparation time: <strong>45 min</strong></p>
                         <p>
-                            A soft, cheesy homemade pizza inspired by Italian
-                            flavors. Crispy crust, fresh basil leaves, and a
-                            generous layer of mozzarella make this recipe
-                            perfect for a casual dinner or weekend treat.
+                            A comforting homemade ramen inspired by Japanese flavors.
+                            The savory broth, seasoned egg, and spring onions come together
+                            to create a warm, satisfying bowl perfect for cozy evenings.
                         </p>
                     </section>
 
@@ -127,13 +126,14 @@
                     <section class="recipe-ingredients">
                         <h3>Ingredients</h3>
                         <ul>
-                            <li>2 cups plain flour</li>
-                            <li>1 tsp dry yeast</li>
-                            <li>1 tbsp olive oil</li>
-                            <li>100g mozzarella cheese</li>
-                            <li>Fresh basil leaves</li>
-                            <li>1 medium tomato sauce base</li>
-                            <li>Salt & pepper to taste</li>
+                            <li>200g fresh ramen noodles</li>
+                            <li>1L chicken or pork broth</li>
+                            <li>2 tbsp soy sauce</li>
+                            <li>1 tbsp miso paste</li>
+                            <li>1 boiled egg, halved</li>
+                            <li>50g sliced pork or chicken</li>
+                            <li>1 sheet nori (seaweed)</li>
+                            <li>Chopped spring onions for garnish</li>
                         </ul>
                     </section>
 
@@ -141,34 +141,24 @@
                     <section class="recipe-steps">
                         <h3>Instructions</h3>
                         <ol>
-                            <li>
-                                Mix flour, yeast, olive oil, and water to make a
-                                soft dough.
-                            </li>
-                            <li>
-                                Let the dough rest for 30 minutes until it
-                                doubles in size.
-                            </li>
-                            <li>Spread tomato sauce evenly over the base.</li>
-                            <li>
-                                Add cheese, basil, and toppings of your choice.
-                            </li>
-                            <li>Bake at 200°C (392°F) for 15 minutes.</li>
-                            <li>Serve hot and enjoy your Amma Pizza!</li>
+                            <li>Boil broth in a pot and add soy sauce and miso paste.</li>
+                            <li>Cook ramen noodles separately according to package instructions.</li>
+                            <li>Place noodles in a bowl, pour hot broth over them.</li>
+                            <li>Add pork slices, boiled egg, and garnish with nori and spring onions.</li>
+                            <li>Serve hot and enjoy your homemade ramen!</li>
                         </ol>
                     </section>
 
-                    <!-- tips -->
+                    <!-- Tips -->
                     <section class="recipe-notes">
                         <h3>Tips</h3>
                         <p>
-                            • You can substitute mozzarella with cheddar for a
-                            stronger flavor.<br />
-                            • Add chili flakes if you prefer a spicy version.<br />
-                            • Best served fresh with olive oil drizzle.
+                            • You can adjust the broth flavor by adding more soy sauce or miso.<br />
+                            • For a vegetarian version, use vegetable stock and tofu slices.<br />
+                            • Add chili oil for extra heat and depth.
                         </p>
                     </section>
-                    <!-- Comments -->
+
                     <!-- Comments -->
                     <section
                         id="comments"
@@ -177,7 +167,7 @@
                     >
                         <h2 id="comments-title">Comments</h2>
 
-                        <!-- 顯示留言列表 -->
+                        <!-- Comment list -->
                         <ul
                             id="comment-list"
                             class="comment-list"
@@ -185,7 +175,7 @@
                             aria-busy="false"
                         ></ul>
 
-                        <!-- 🔹 舊有留言（範例） -->
+                        <!-- Example comment -->
                         <li class="comment-card">
                             <div class="comment-top">
                                 <img
@@ -195,17 +185,15 @@
                                 />
                                 <div class="comment-info">
                                     <strong class="comment-name">Sean</strong>
-                                    <span class="comment-time"
-                                        >Posted earlier</span
-                                    >
+                                    <span class="comment-time">Posted earlier</span>
                                 </div>
                             </div>
                             <p class="comment-text">
-                                hi I am Sean, I would like to ask...
+                                This looks amazing! Can I replace pork with tofu?
                             </p>
                         </li>
 
-                        <!-- 新增留言表單 -->
+                        <!-- Comment form -->
                         <form
                             id="comment-form"
                             class="comment-form"
@@ -220,9 +208,7 @@
                                         class="avatar"
                                     />
                                     <div class="comment-info">
-                                        <strong class="comment-name"
-                                            >Sarah</strong
-                                        >
+                                        <strong class="comment-name">Sarah</strong>
                                         <span class="comment-time">You</span>
                                     </div>
                                 </div>
@@ -236,17 +222,11 @@
                                         rows="3"
                                         placeholder="Write your comment here..."
                                     ></textarea>
-                                    <input
-                                        type="hidden"
-                                        name="name"
-                                        value="Sarah"
-                                    />
+                                    <input type="hidden" name="name" value="Sarah" />
                                 </div>
                             </div>
 
-                            <button type="submit" class="btn btn-primary">
-                                Post comment
-                            </button>
+                            <button type="submit" class="btn btn-primary">Post comment</button>
                             <p
                                 id="form-feedback"
                                 class="form-feedback"
@@ -257,6 +237,7 @@
                     </section>
                 </article>
             </div>
+
             <!-- Footer -->
             <footer class="site-footer" role="contentinfo">
                 <div class="container">
@@ -264,6 +245,8 @@
                 </div>
             </footer>
         </main>
+
+        <!-- JS Modules -->
         <script type="module" src="js/comments_display.js"></script>
         <script type="module" src="js/comments_post.js"></script>
     </body>

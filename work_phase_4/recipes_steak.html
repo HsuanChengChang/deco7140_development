@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Recipes – Amma pizza</title>
+        <title>Recipes – Jerry’s Steak</title>
 
         <!-- existing CSS -->
         <link rel="stylesheet" href="css/reset.css" />
@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="css/layout.css" />
         <link rel="stylesheet" href="css/components.css" />
 
-        <!-- reipes single page -->
+        <!-- recipes single page -->
         <link rel="stylesheet" href="css/page_css/recipes_single.css" />
 
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
@@ -26,7 +26,7 @@
 
                 <nav class="primary-nav" aria-label="Primary">
                     <a href="index.html">Home</a>
-                    <a href="recipes.html">Recipes</a>
+                    <a href="recipes.html" aria-current="page">Recipes</a>
                     <a href="events.html">Events</a>
                     <a href="community.html">Community</a>
                     <a href="profile.html">Profile</a>
@@ -59,14 +59,15 @@
             </nav>
         </header>
 
+        <!-- ===== Page Content ===== -->
         <main id="content">
             <div class="container section">
                 <!-- Search -->
                 <section aria-labelledby="search-title">
-                    <h2 id="search-title" class="sr-only">Search events</h2>
+                    <h2 id="search-title" class="sr-only">Search recipes</h2>
                     <form
                         class="search-form"
-                        action="events.html"
+                        action="recipes.html"
                         method="get"
                         role="search"
                     >
@@ -80,46 +81,60 @@
 
                     <!-- Tags -->
                     <ul class="tag-list" aria-label="Popular tags">
+                        <li><a class="tag" href="?tag=Steak">#Steak</a></li>
+                        <li><a class="tag" href="?tag=Grill">#Grill</a></li>
                         <li>
-                            <a class="tag" href="?tag=Pizza">#Pizza</a>
+                            <a class="tag" href="?tag=ComfortFood"
+                                >#ComfortFood</a
+                            >
                         </li>
-                        <li><a class="tag" href="?tag=Cheese">#Cheese</a></li>
-                        <li><a class="tag" href="?tag=Confort">#Confort</a></li>
                     </ul>
                 </section>
+
                 <!-- Breadcrumbs -->
                 <nav class="breadcrumbs" aria-label="Breadcrumb">
                     <ol>
                         <li><a href="index.html">Home</a></li>
                         <li><a href="recipes.html">Recipes</a></li>
-                        <li aria-current="page">Amma Pizza Recipes</li>
+                        <li aria-current="page">Jerry’s Steak Recipe</li>
                     </ol>
                 </nav>
-                <!-- Recipes body -->
+
+                <!-- Recipe Title -->
+                <header class="page-head">
+                    <h1>Jerry’s Steak Recipe</h1>
+                </header>
+
+                <!-- Recipe body -->
                 <article class="event-body">
+                    <h2 class="sr-only">Recipe details</h2>
 
                     <!-- Cover -->
                     <figure class="recipe-hero">
                         <img
-                            src="assets/recipes/pizza_amma.jpg"
-                            alt="Amma Pizza topped with cheese and basil"
+                            src="assets/recipes/steak_jerry.jpg"
+                            alt="Medium-rare steak sliced and served with herbs"
                             class="recipe-img"
                         />
                         <figcaption class="sr-only">
-                            Finished dish presentation
+                            Finished steak presentation on a board
                         </figcaption>
                     </figure>
 
-                    <!-- basic information -->
+                    <!-- Summary -->
                     <section class="recipe-summary">
-                        <h3>Amma Pizza</h3>
-                        <p><strong>Cheese, Basil, Pepper…..</strong></p>
-                        <p>Preparation time: <strong>30 min</strong></p>
+                        <h3>Jerry’s Steak</h3>
+                        <p><strong>Juicy, well-seared, and tender.</strong></p>
                         <p>
-                            A soft, cheesy homemade pizza inspired by Italian
-                            flavors. Crispy crust, fresh basil leaves, and a
-                            generous layer of mozzarella make this recipe
-                            perfect for a casual dinner or weekend treat.
+                            Preparation time: <strong>25–30 min</strong> (plus
+                            resting)
+                        </p>
+                        <p>
+                            A simple, restaurant-style steak that focuses on
+                            three things:
+                            <em>seasoning</em>, a hot <em>sear</em>, and proper
+                            <em>resting</em>. Finish with butter, garlic, and
+                            herbs for an aromatic crust.
                         </p>
                     </section>
 
@@ -127,13 +142,15 @@
                     <section class="recipe-ingredients">
                         <h3>Ingredients</h3>
                         <ul>
-                            <li>2 cups plain flour</li>
-                            <li>1 tsp dry yeast</li>
-                            <li>1 tbsp olive oil</li>
-                            <li>100g mozzarella cheese</li>
-                            <li>Fresh basil leaves</li>
-                            <li>1 medium tomato sauce base</li>
-                            <li>Salt & pepper to taste</li>
+                            <li>
+                                1 ribeye or sirloin steak (300–400g, ~2–3cm
+                                thick)
+                            </li>
+                            <li>1 tbsp neutral oil (canola or grapeseed)</li>
+                            <li>Salt & freshly ground black pepper</li>
+                            <li>1 tbsp unsalted butter</li>
+                            <li>2 cloves garlic, lightly crushed</li>
+                            <li>Fresh thyme or rosemary (optional)</li>
                         </ul>
                     </section>
 
@@ -142,33 +159,46 @@
                         <h3>Instructions</h3>
                         <ol>
                             <li>
-                                Mix flour, yeast, olive oil, and water to make a
-                                soft dough.
+                                Pat the steak dry. Season generously with salt
+                                and pepper on both sides.
                             </li>
                             <li>
-                                Let the dough rest for 30 minutes until it
-                                doubles in size.
+                                Preheat a heavy pan (cast iron preferred) on
+                                medium-high until very hot.
                             </li>
-                            <li>Spread tomato sauce evenly over the base.</li>
                             <li>
-                                Add cheese, basil, and toppings of your choice.
+                                Add oil. Lay the steak away from you and sear
+                                2–3 minutes per side, undisturbed.
                             </li>
-                            <li>Bake at 200°C (392°F) for 15 minutes.</li>
-                            <li>Serve hot and enjoy your Amma Pizza!</li>
+                            <li>
+                                Reduce heat to medium. Add butter, garlic, and
+                                herbs; baste the steak with the melted butter
+                                for 1–2 minutes to build flavor.
+                            </li>
+                            <li>
+                                Check doneness (target 54–57°C / 130–135°F for
+                                medium-rare). Adjust time as needed.
+                            </li>
+                            <li>
+                                Transfer to a board and rest 5–7 minutes. Slice
+                                against the grain and serve.
+                            </li>
                         </ol>
                     </section>
 
-                    <!-- tips -->
+                    <!-- Tips -->
                     <section class="recipe-notes">
                         <h3>Tips</h3>
                         <p>
-                            • You can substitute mozzarella with cheddar for a
-                            stronger flavor.<br />
-                            • Add chili flakes if you prefer a spicy version.<br />
-                            • Best served fresh with olive oil drizzle.
+                            • Bring steak to room temperature for more even
+                            cooking.<br />
+                            • If the pan smokes too much, lower the heat
+                            slightly and continue basting.<br />
+                            • Pair with a simple salad or mashed potatoes;
+                            finish with flaky salt.
                         </p>
                     </section>
-                    <!-- Comments -->
+
                     <!-- Comments -->
                     <section
                         id="comments"
@@ -177,7 +207,7 @@
                     >
                         <h2 id="comments-title">Comments</h2>
 
-                        <!-- 顯示留言列表 -->
+                        <!-- Live comment list -->
                         <ul
                             id="comment-list"
                             class="comment-list"
@@ -185,7 +215,7 @@
                             aria-busy="false"
                         ></ul>
 
-                        <!-- 🔹 舊有留言（範例） -->
+                        <!-- Example existing comment -->
                         <li class="comment-card">
                             <div class="comment-top">
                                 <img
@@ -201,11 +231,12 @@
                                 </div>
                             </div>
                             <p class="comment-text">
-                                hi I am Sean, I would like to ask...
+                                Perfect doneness guide—54°C hit the spot. Any
+                                tips for thicker cuts?
                             </p>
                         </li>
 
-                        <!-- 新增留言表單 -->
+                        <!-- Comment form -->
                         <form
                             id="comment-form"
                             class="comment-form"
@@ -257,13 +288,19 @@
                     </section>
                 </article>
             </div>
+
             <!-- Footer -->
             <footer class="site-footer" role="contentinfo">
                 <div class="container">
-                    <p>&copy; 2025 Food & Culinary Community | All rights reserved.</p>
+                    <p>
+                        &copy; 2025 Food & Culinary Community | All rights
+                        reserved.
+                    </p>
                 </div>
             </footer>
         </main>
+
+        <!-- JS Modules -->
         <script type="module" src="js/comments_display.js"></script>
         <script type="module" src="js/comments_post.js"></script>
     </body>
