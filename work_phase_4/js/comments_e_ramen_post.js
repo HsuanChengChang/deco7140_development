@@ -1,8 +1,7 @@
-// 本檔：處理送出留言（完全本地，不呼叫後端）
-import { saveComment } from "./comments_display.js";
+import { saveComment } from "./comments_e_ramen_display.js";
 
-const SARA_NAME = "Sarah"; // 固定登入者
-const SARA_AVATAR = "assets/.jpg"; // 你的頭像路徑（顯示用，會在 display.js 使用）
+const SARA_NAME = "Sarah";
+const SARA_AVATAR = "assets/profile/Sarah.jpg";
 
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("comment-form");
@@ -21,22 +20,18 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         if (feedback) feedback.textContent = "Posting…";
 
-        // 建立本地留言物件
         const newComment = {
             name: SARA_NAME,
             message,
             created_at: new Date().toISOString(),
-            avatar: SARA_AVATAR, // 目前未用到，但保留欄位
+            avatar: SARA_AVATAR,
         };
 
-        // 存到 localStorage
+        // 寫入本地並即時顯示
         saveComment(newComment);
-
-        // 重置表單
         form.reset();
         if (feedback) feedback.textContent = "Comment posted!";
 
-        // 立刻在畫面追加一筆（不等重渲染）
         if (list) {
             const li = document.createElement("li");
             li.className = "comment-card";
@@ -54,7 +49,6 @@ document.addEventListener("DOMContentLoaded", () => {
             li.scrollIntoView({ behavior: "smooth", block: "end" });
         }
 
-        // 通知顯示端重新渲染（保險機制）
         document.dispatchEvent(new CustomEvent("comment:updated"));
     });
 });

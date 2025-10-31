@@ -24,7 +24,7 @@
 /*====== make both Mobile and Desktop menu horizontal ======*/
 nav ul {
     display: flex; /* Use flexbox for layout */
-    flex-direction: row; /* Arrange items in a row */
+    flex-direction: row; /* Arrange items in a row *
     justify-content: space-around; /* Even spacing around items */
     list-style: none; /* Remove bullet points */
     padding: 0; /* Remove default padding */

@@ -12,7 +12,7 @@
         <link rel="stylesheet" href="css/components.css" />
         <link rel="stylesheet" href="css/page_css/rationale_genai.css" />
         <link rel="stylesheet" href="css/highlight.css" />
-        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <link rel="icon" type="image/x-icon" href="assets/favicon.icon.ico" />
     </head>
     <body>
         <!-- ===== Header / Navigation ===== -->
@@ -74,49 +74,121 @@
                     >
                     website in Work Phase 4.
                 </p>
-
                 <section>
                     <h2>1. Project Overview</h2>
+                    <img
+                        class="rationale-image"
+                        src="assets/site_structure.jpg"
+                        alt="Site Structure Diagram"
+                    />
                     <p>
-                        The project transforms the A3 Design Proposal into a
+                        The project aimed to create a community-driven website
+                        for sharing recipes, exploring food-related events, and
+                        connecting with local cooks.
                         <span class="hl hl--yellow"
-                            >functional, accessible, and ethical website</span
-                        >
-                        aligned with the Connect Communities Initiative’s
-                        mission to connect people through food.
+                            >The focus was on building a friendly and inclusive
+                            platform.
+                        </span>
                     </p>
-                </section>
-
-                <section>
-                    <h2>2. Client &amp; User Alignment</h2>
                     <ul>
                         <li>
-                            <strong>Client Goal:</strong> Build an inclusive
-                            digital hub celebrating cultural diversity through
-                            cuisine.
+                            Home Page: Showing the appliction of UI components,
+                            including hover effects on cards and buttons. And
+                            navigation to other pages.
                         </li>
                         <li>
-                            <strong>User Need:</strong> Share recipes, explore
-                            events, and engage with local cooks.
+                            Recipes: Displays a grid of recipe cards with
+                            images, titles, and brief descriptions.
                         </li>
                         <li>
-                            <strong>Result:</strong>
-                            <span class="hl hl--yellow">Responsive layout</span
-                            >, reusable components, and an
+                            Events: Features an interactive calendar
+                            highlighting event dates.
+                        </li>
+                        <li>
+                            Community: Provides a forum-like structure for user
+                            interaction.
+                        </li>
+                        <li>
+                            Profile: Allows users to view their personal
+                            information.
+                        </li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>2. Completed and In-Progress Pages</h2>
+                    <ul>
+                        <li>
+                            <strong>Home Page:</strong>
+                            All links and UI elements have been fully completed.
+                        </li>
+                        <li>
+                            <strong>Recipes:</strong>
+                            Most elements and links are completed, except for
+                            the
+                            <span class="hl hl--yellow">search function</span>,
+                            which will be developed in future updates.
+                        </li>
+                        <li>
+                            <strong>Events:</strong>
+                            The main event page and calendar functions are
+                            completed. The
                             <span class="hl hl--yellow"
-                                >interactive events calendar</span
-                            >.
+                                >event detail pages</span
+                            >
+                            currently include static content and a basic comment
+                            feature using
+                            <span class="hl hl--yellow">local storage</span>.
+                            Related links and advanced interactive features will
+                            be added later.
+                        </li>
+                        <li>
+                            <strong>Community:</strong>
+                            A structural
+                            <span class="hl hl--yellow">framework</span> has
+                            been created. Interactive components such as
+                            posting, replying, and reacting are planned for
+                            future development.
+                        </li>
+                        <li>
+                            <strong>Profile Page:</strong>
+                            The current version only supports the
+                            <span class="hl hl--yellow">View</span> function.
+                            Additional links and interactive options will be
+                            implemented in future iterations.
                         </li>
                     </ul>
                 </section>
 
                 <section>
-                    <h2>3. Design &amp; Development</h2>
+                    <h2>3. Client &amp; User Alignment</h2>
+                    <ul>
+                        <li>
+                            <span class="hl hl--yellow">Client Goal:</span>
+                            Build an inclusive digital hub celebrating cultural
+                            diversity through cuisine.
+                        </li>
+                        <li>
+                            <span class="hl hl--yellow">User Needs:</span> Share
+                            recipes, explore events, and engage with local
+                            cooks.
+                        </li>
+                        <li>
+                            <strong>Result:</strong>
+                            Responsive layout,comment features, reusable
+                            components, and an interactive events calendar.
+                        </li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2>4. Design &amp; Development</h2>
                     <ul>
                         <li>
                             Applied
-                            <strong>mobile-first responsive design</strong>
-                            using CSS Grid and clamp-based typography.
+                            <span class="hl hl--yellow"
+                                >mobile-first responsive design</span
+                            >
+                            using CSS Grid.
                         </li>
                         <li>
                             Created consistent visuals with
@@ -128,59 +200,45 @@
                             <span class="hl hl--yellow"
                                 >interactive events calendar</span
                             >
-                            supporting keyboard navigation and .ics export.
+                            showing currents date and the events date by marks.
                         </li>
                         <li>
                             Implemented a
-                            <span class="hl hl--yellow"
-                                >comment feature powered by API</span
-                            >, enabling users to post and view feedback
-                            dynamically across pages.
+                            <span class="hl hl--yellow">comment features</span>,
+                            enabling users to leave comments in recipes and
+                            events pages.
                         </li>
                     </ul>
                 </section>
 
                 <section>
-                    <h2>4. Accessibility &amp; Ethics</h2>
+                    <h2>5. Accessibility &amp; Ethics</h2>
                     <p>
-                        Implemented semantic HTML structure
-                        (<code>header</code>, <code>main</code>,
-                        <code>nav</code>, <code>footer</code>), ensured
-                        <span class="hl hl--yellow">keyboard operability</span>,
-                        and verified color contrast with IBM Equal Access
-                        Checker.
+                        The website follows fundamental accessibility principles
+                        by using
+                        <span class="hl hl--yellow">semantic HTML elements</span
+                        >, descriptive
+                        <span class="hl hl--yellow">ARIA labels</span>, and
+                        clear keyboard navigation paths. Text and background
+                        colors were carefully chosen to ensure
+                        <span class="hl hl--yellow">sufficient contrast</span>
+                        for readability. Basic accessibility checks were
+                        conducted through manual inspection and the
+                        <span class="hl hl--yellow">Lighthouse tool</span>.
                     </p>
                     <p>
-                        Ethical standards were maintained with
-                        <span class="hl hl--yellow">inclusive imagery</span>,
-                        transparent data consent, and avoidance of dark
-                        patterns.
+                        In terms of ethics, all images were sourced from
+                        <span class="hl hl--yellow"
+                            >royalty-free platforms</span
+                        >
+                        and properly credited when required. The project does
+                        not collect or store personal user data; instead,
+                        temporary information such as comments is stored locally
+                        using <span class="hl hl--yellow">local storage</span>
+                        rather than through an online database or API, to
+                        maintain user privacy and align with ethical data
+                        practices.
                     </p>
-                </section>
-
-                <section>
-                    <h2>5. Key Changes from Proposal</h2>
-                    <ul>
-                        <li>
-                            <strong>Events Calendar:</strong>
-                            Added a fully interactive calendar feature to
-                            replace the previous static version. The new
-                            calendar uses a
-                            <span class="hl hl--yellow"
-                                >custom ARIA-compliant grid</span
-                            >
-                            for improved accessibility and allows users to
-                            browse and select event dates.
-                        </li>
-                        <li>
-                            <strong>Other Sections:</strong>
-                            Apart from the calendar addition, most layouts,
-                            styles, and interactions remain
-                            <span class="hl hl--yellow"
-                                >consistent with the original proposal</span
-                            >.
-                        </li>
-                    </ul>
                 </section>
 
                 <section>
@@ -202,12 +260,12 @@
                         </li>
                         <li>
                             <strong>Integration &amp; Testing:</strong>
-                            Additional effort was required to ensure that
-                            <span class="hl hl--yellow">API requests</span> and
-                            <span class="hl hl--yellow"
-                                >event-specific comment sections</span
-                            >
-                            worked consistently across different pages.
+                            Since I have not yet learned how to build APIs, I
+                            replaced API requests with
+                            <span class="hl hl--yellow">local storage</span>
+                            to ensure that
+                            <span class="hl hl--yellow"> comment sections</span>
+                            work consistently across different pages.
                         </li>
                     </ul>
                 </section>
@@ -221,60 +279,6 @@
                         <code>UQCloud</code> and source hosted on GitHub with
                         consistent commits.
                     </p>
-                </section>
-
-                <section>
-                    <h2>8. Future Improvements</h2>
-                    <ul>
-                        <li>
-                            <strong>Community Feature:</strong>
-                            Currently only a structural
-                            <span class="hl hl--yellow">framework</span>
-                            has been created; interactive functions are planned
-                            for future development.
-                        </li>
-                        <li>
-                            <strong>Calendar Integration:</strong>
-                            The calendar can now
-                            <span class="hl hl--yellow"
-                                >link directly to event detail pages</span
-                            >, and will later support automatic synchronization
-                            with new activities.
-                        </li>
-                        <li>
-                            <strong>Complete the all the page:</strong>
-                            including the
-                            <span class="hl hl--yellow"
-                                >logo and some small details.</span
-                            >
-                        </li>
-                    </ul>
-                </section>
-
-                <section>
-                    <h2>9. Core References</h2>
-                    <ul>
-                        <li>
-                            <span class="hl hl--yellow"
-                                >WCAG 2.2 – Accessibility Guidelines</span
-                            >
-                        </li>
-                        <li>
-                            <span class="hl hl--yellow"
-                                >IBM Equal Access Checker</span
-                            >
-                        </li>
-                        <li>
-                            <span class="hl hl--yellow"
-                                >ACS Code of Professional Conduct</span
-                            >
-                        </li>
-                        <li>
-                            <span class="hl hl--yellow"
-                                >ARIA Authoring Practices Guide</span
-                            >
-                        </li>
-                    </ul>
                 </section>
             </div>
         </main>

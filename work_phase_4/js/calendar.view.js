@@ -10,8 +10,8 @@ const seedEvents = [
         title: "Cooking lesson",
         link: "events_cooking.html",
     },
-    { date: "2025-10-29", title: "Ramen Night", link: "event-detail.html" },
-    { date: "2025-11-02", title: "Steak & Stories", link: "event-detail.html" },
+    { date: "2025-10-29", title: "Ramen Night", link: "events_ramen.html" },
+    { date: "2025-11-02", title: "Steak & Stories", link: "events_steak.html" },
 ];
 
 document.addEventListener("DOMContentLoaded", () => {

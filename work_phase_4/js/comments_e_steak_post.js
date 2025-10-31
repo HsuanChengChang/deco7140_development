@@ -1,4 +1,4 @@
-import { saveComment } from "./comments_display_events.js";
+import { saveComment } from "./comments_e_steak_display.js";
 
 const SARA_NAME = "Sarah";
 const SARA_AVATAR = "assets/profile/Sarah.jpg";

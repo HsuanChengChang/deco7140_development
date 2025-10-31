@@ -234,3 +234,9 @@ Breadcrumbs
     box-shadow: 0 0 0 3px
         color-mix(in srgb, var(--brand, #8b4513) 20%, transparent);
 }
+
+.rationale-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}

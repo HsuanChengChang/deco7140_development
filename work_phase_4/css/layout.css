@@ -206,3 +206,18 @@
         font-size: 0.85rem;
     }
 }
+
+
+/* ====== Nav Hover Effect ====== */
+.primary-nav a {
+    text-decoration: none;
+    color: var(--text, #1f2937);
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.primary-nav a:hover {
+    background-color: var(--brand-ghost, rgba(242, 184, 198, 0.15)); /* 可改為你主題色 */
+    color: var(--brand, #8b4513);
+}

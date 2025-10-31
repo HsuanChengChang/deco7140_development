@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="css/layout.css" />
         <link rel="stylesheet" href="css/components.css" />
         <link rel="stylesheet" href="css/page_css/recipes.css" />
-        <link rel="icon" type="image/x-icon" href="assets/favicon.icon" />
+        <link rel="icon" type="image/x-icon" href="assets/favicon.icon.ico" />
     </head>
     <body>
         <!-- Header / Global Nav -->
@@ -103,15 +103,7 @@
 
                 <!-- HOT Recipes -->
                 <section aria-labelledby="hot-heading">
-                    <div
-                        class="section-head"
-                        style="
-                            display: flex;
-                            align-items: center;
-                            gap: 16px;
-                            margin-bottom: 20px;
-                        "
-                    >
+                    <div class="section-head">
                         <button
                             type="button"
                             class="hot"
@@ -119,209 +111,119 @@
                         >
                             <img src="assets/recipes/hot.png" alt="Hot icon" />
                         </button>
-                        <h2
-                            id="hot-heading"
-                            style="
-                                font-size: clamp(24px, 3.4vw, 34px);
-                                margin: 0;
-                            "
-                        >
-                            HOT Recipes
-                        </h2>
+                        <h2 id="hot-heading">HOT Recipes</h2>
                     </div>
 
-                    <!-- list -->
-                    <div class="recipe-list" style="display: grid; gap: 36px">
-                        <!-- Card 1 Amma pizza -->
-                        <article
-                            class="recipe-card"
-                            style="
-                                display: grid;
-                                grid-template-columns: 1fr;
-                                gap: 16px;
-                                align-items: start;
-                            "
-                        >
+                    <!-- >>> 這裡改成跟 Events 一樣的卡片網格 <<< -->
+                    <div class="card-grid">
+                        <!-- Card 1 -->
+                        <article class="card-lg">
                             <a
-                                class="recipe-thumb"
+                                class="card-media"
                                 href="recipes_pizza.html"
                                 aria-label="View Amma Pizza"
-                                style="
-                                    display: block;
-                                    aspect-ratio: 4/3;
-                                    border: 1px solid var(--border);
-                                    border-radius: var(--radius);
-                                    overflow: hidden;
-                                    box-shadow: var(--shadow);
-                                "
                             >
                                 <img
                                     src="assets/recipes/pizza_amma.jpg"
                                     alt="Amma Pizza preview"
-                                    style="
-                                        width: 100%;
-                                        height: 100%;
-                                        object-fit: cover;
-                                    "
                                 />
                             </a>
-
-                            <div class="recipe-body">
-                                <h3
-                                    class="recipe-title"
-                                    style="
-                                        font-size: clamp(22px, 3vw, 36px);
-                                        margin-bottom: 8px;
-                                    "
-                                >
-                                    <a
-                                        href="recipes_pizza.html"
-                                        class="text-link"
-                                        style="
-                                            text-decoration: none;
-                                            color: inherit;
-                                        "
-                                        >Amma Pizza</a
-                                    >
+                            <div class="card-body">
+                                <h3 class="card-title">
+                                    <a href="recipes_pizza.html">Amma Pizza</a>
                                 </h3>
-
-                                <p class="lead">
-                                    Cheese, Basil, Pepper…<br />……30 min……<br />XXXXXXXX
+                                <div class="card-meta">
+                                    <span class="badge-soft">Italian</span>
+                                    <span class="dot"
+                                        >26 Oct 2025</span
+                                    >
+                                    <span class="dot">Recipes</span>
+                                </div>
+                                <p class="card-desc">
+                                    Cheese, basil, pepper… learn knife skills
+                                    and a 30-minute pasta you’ll actually repeat
+                                    at home.
                                 </p>
-
-                                <div class="actions" style="margin-top: 16px">
+                                <div class="card-actions">
                                     <a class="btn" href="recipes_pizza.html"
-                                        >See more</a
+                                        >See details</a
                                     >
                                 </div>
                             </div>
                         </article>
 
-                        <!-- Card Ramen Rob -->
-                        <article
-                            class="recipe-card"
-                            style="
-                                display: grid;
-                                grid-template-columns: 1fr;
-                                gap: 16px;
-                                align-items: start;
-                            "
-                        >
+                        <!-- Card 2 -->
+                        <article class="card-lg">
                             <a
-                                class="recipe-thumb"
+                                class="card-media"
                                 href="recipes_ramen.html"
                                 aria-label="View Rob Ramen"
-                                style="
-                                    display: block;
-                                    aspect-ratio: 4/3;
-                                    border: 1px solid var(--border);
-                                    border-radius: var(--radius);
-                                    overflow: hidden;
-                                    box-shadow: var(--shadow);
-                                "
                             >
                                 <img
                                     src="assets/recipes/ramen_rob.jpg"
                                     alt="Rob ramen preview"
-                                    style="
-                                        width: 100%;
-                                        height: 100%;
-                                        object-fit: cover;
-                                    "
                                 />
                             </a>
-
-                            <div class="recipe-body">
-                                <h3
-                                    class="recipe-title"
-                                    style="
-                                        font-size: clamp(22px, 3vw, 36px);
-                                        margin-bottom: 8px;
-                                    "
-                                >
-                                    <a
-                                        href="recipes_ramen.html"
-                                        class="text-link"
-                                        style="
-                                            text-decoration: none;
-                                            color: inherit;
-                                        "
-                                        >Rob Ramen</a
+                            <div class="card-body">
+                                <h3 class="card-title">
+                                    <a href="recipes_ramen.html"
+                                        >Rob's Ramen</a
                                     >
                                 </h3>
-
-                                <p class="lead">
-                                    Ramen a delicious noodles<br />……30 min……<br />XXXXXXXX
+                                <div class="card-meta">
+                                    <span class="badge-soft">Japanese</span>
+                                    <span class="dot"
+                                        >10 Oct 2025</span
+                                    >
+                                    <span class="dot">Recipes</span>
+                                </div>
+                                <p class="card-desc">
+                                    Authentic ramen made easy with
+                                    step-by-step instructions and tips from a
+                                    pro.
                                 </p>
-
-                                <div class="actions" style="margin-top: 16px">
+                                <div class="card-actions">
                                     <a class="btn" href="recipes_ramen.html"
-                                        >Button</a
+                                        >See details</a
                                     >
                                 </div>
                             </div>
                         </article>
 
-                        <!-- Card Steak Jerry-->
-                        <article
-                            class="recipe-card"
-                            style="
-                                display: grid;
-                                grid-template-columns: 1fr;
-                                gap: 16px;
-                                align-items: start;
-                            "
-                        >
+                        <!-- Card 3 -->
+                        <article class="card-lg">
                             <a
-                                class="recipe-thumb"
+                                class="card-media"
                                 href="recipes_steak.html"
-                                aria-label="View Jerry steak"
-                                style="
-                                    display: block;
-                                    aspect-ratio: 4/3;
-                                    border: 1px solid var(--border);
-                                    border-radius: var(--radius);
-                                    overflow: hidden;
-                                    box-shadow: var(--shadow);
-                                "
+                                aria-label="View Jerry Steak"
                             >
                                 <img
                                     src="assets/recipes/steak_jerry.jpg"
                                     alt="Jerry steak preview"
-                                    style="
-                                        width: 100%;
-                                        height: 100%;
-                                        object-fit: cover;
-                                    "
                                 />
                             </a>
-
-                            <div class="recipe-body">
-                                <h3
-                                    class="recipe-title"
-                                    style="
-                                        font-size: clamp(22px, 3vw, 36px);
-                                        margin-bottom: 8px;
-                                    "
-                                >
-                                    <a
-                                        href="recipes_steak.html"
-                                        class="text-link"
-                                        style="
-                                            text-decoration: none;
-                                            color: inherit;
-                                        "
-                                        >Jerry Steak</a
+                            <div class="card-body">
+                                <h3 class="card-title">
+                                    <a href="recipes_steak.html"
+                                        >Jerry's Steak</a
                                     >
                                 </h3>
-
-                                <p class="lead">
-                                    Cheese, Basil, Pepper…<br />……30 min……<br />XXXXXXXX
+                                <div class="card-meta">
+                                    <span class="badge-soft">Amercian</span>
+                                    <span class="dot"
+                                        >2 Sep 2025</span
+                                    >
+                                    <span class="dot"
+                                        >Recipes</span
+                                    >
+                                </div>
+                                <p class="card-desc">
+                                    Grill the perfect steak while hearing
+                                    stories from a seasoned chef.
                                 </p>
-
-                                <div class="actions" style="margin-top: 16px">
+                                <div class="card-actions">
                                     <a class="btn" href="recipes_steak.html"
-                                        >Button</a
+                                        >See details</a
                                     >
                                 </div>
                             </div>
@@ -333,7 +235,10 @@
             <!-- Footer -->
             <footer class="site-footer" role="contentinfo">
                 <div class="container">
-                    <p>&copy; 2025 Food & Culinary Community | All rights reserved.</p>
+                    <p>
+                        &copy; 2025 Food & Culinary Community | All rights
+                        reserved.
+                    </p>
                 </div>
             </footer>
         </main>

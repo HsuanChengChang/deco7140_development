@@ -1,5 +1,5 @@
 // 本檔：讀取 localStorage 中的留言並渲染到頁面
-const LOCAL_COMMENTS_KEY = "localComments";
+const LOCAL_COMMENTS_KEY = "localPizza_recipe_comments";
 const SARA_NAME = "Sarah"; // 固定登入者
 const SARA_AVATAR = "assets/profile/Sarah.jpg"; // 你的頭像路徑
 
