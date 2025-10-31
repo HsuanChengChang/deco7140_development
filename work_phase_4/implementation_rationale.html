@@ -10,9 +10,40 @@
         <link rel="stylesheet" href="css/base.css" />
         <link rel="stylesheet" href="css/layout.css" />
         <link rel="stylesheet" href="css/components.css" />
-        <link rel="stylesheet" href="css/page_css/rationale_genai.css" />
         <link rel="stylesheet" href="css/highlight.css" />
+        <link rel="stylesheet" href="css/page_css/rationale_genai.css" />
         <link rel="icon" type="image/x-icon" href="assets/favicon.icon.ico" />
+        <style>
+            /* GitHub Link Button — Chrome/Safari/Firefox Compatible */
+            #ltg {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                height: 44px;
+                padding: 0 20px;
+                border-radius: 12px;
+                border: none;
+                cursor: pointer;
+                background: #8b4513;
+                color: #ffffff;
+                font-weight: 600;
+
+                text-decoration: none;
+                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+                transition: transform 0.15s ease, box-shadow 0.15s ease,
+                    background 0.2s ease;
+            }
+
+            #ltg:hover {
+                background: #5e2c08;
+                transform: translateY(-1px);
+                box-shadow: 0 10px 34px rgba(0, 0, 0, 0.12);
+            }
+
+            #ltg:visited {
+                color: #ffffff;
+            }
+        </style>
     </head>
     <body>
         <!-- ===== Header / Navigation ===== -->
@@ -66,11 +97,13 @@
         <main class="section">
             <div class="container">
                 <a
-                    class="ltg"
+                    id="ltg"
                     href="https://github.com/HsuanChengChang/deco7140_development/tree/main/work_phase_4"
                     target="_blank"
-                    >Link to GitHub</a
+                    rel="noopener"
                 >
+                    Link to GitHub
+                </a>
                 <h1>Implementation Rationale – Key Highlights</h1>
                 <p class="lead">
                     This summary highlights the key design and development
