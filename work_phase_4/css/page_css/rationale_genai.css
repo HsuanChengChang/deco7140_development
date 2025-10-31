@@ -186,8 +186,8 @@ main a:hover {
         padding: 0 20px;
         border-radius: calc(var(--radius) - 4px);
         border: 1px solid transparent;
-        background: var(--brand);
-        color: var(--bg-light, #ffffff);
+        background: var(--brand) !important;
+        color: var(--bg-light, #ffffff) !important;
         font-weight: 600;
         box-shadow: var(--shadow);
         transition: transform 0.15s ease, box-shadow 0.15s ease,
