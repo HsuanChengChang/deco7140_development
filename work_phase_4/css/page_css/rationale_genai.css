@@ -177,3 +177,27 @@ main a:hover {
         padding: 16px;
     }
 }
+/* Github link Buttons */
+.ltg {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        height: 44px;
+        padding: 0 20px;
+        border-radius: calc(var(--radius) - 4px);
+        border: 1px solid transparent;
+        background: var(--brand);
+        color: var(--bg-light, #ffffff);
+        font-weight: 600;
+        box-shadow: var(--shadow);
+        transition: transform 0.15s ease, box-shadow 0.15s ease,
+            background 0.2s ease;
+}
+.ltg:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 34px rgba(0, 0, 0, 0.12);
+}
+.ltg:active {
+    transform: translateY(0);
+    box-shadow: var(--shadow);
+}
